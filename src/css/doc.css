@@ -1,11 +1,13 @@
 .doc {
   color: var(--doc-font-color);
+  background-color: var(--doc-background-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
   font-size: var(--doc-font-size);
   hyphens: auto;
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
-  padding: 0 1rem 4rem;
+  padding: 0.5rem 1rem 4rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -13,6 +15,7 @@
     flex: auto;
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
+    padding: 0.5rem 2rem 4rem;
     max-width: var(--doc-max-width--desktop);
     min-width: 0;
   }

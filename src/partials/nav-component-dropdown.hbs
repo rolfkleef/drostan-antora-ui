@@ -1,0 +1,33 @@
+{{#if (eq site.components.length 1)}}
+<a class="navbar-item" href="#">{{page.component.title}}</a>
+{{else}}
+<div class="navbar-item has-dropdown is-hoverable">
+  {{#if page.component}}
+    <a class="navbar-link" href="#">{{page.component.title}}</a>
+  {{else}}
+    <a class="navbar-link" href="#">Components</a>
+  {{/if}}
+  <div class="navbar-dropdown">
+    {{#each site.components}}
+      {{#unless (eq this @root.page.component)}}
+        <a class="navbar-item" href="{{{relativize ./url}}}">{{{./title}}}</a>
+      {{/unless}}
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+{{#unless (eq page.component.versions.length 1)}}
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">version {{page.componentVersion.displayVersion}}</a>
+  <div class="navbar-dropdown">
+    {{#each page.component.versions}}
+      {{#unless (or
+        (and (eq .. @root.page.component) (eq this @root.page.componentVersion))
+        (eq "main" ./displayVersion)) }}
+        <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+      {{/unless}}      
+    {{/each}}
+  </div>
+</div>
+{{/unless}}

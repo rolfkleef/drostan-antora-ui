@@ -12,9 +12,9 @@
   --color-gray-70: #5d5d5d;
   --color-jet-20: #4a4a4a;
   --color-jet-30: #424242;
-  --color-jet-50: #333;
-  --color-jet-70: #222;
-  --color-jet-80: #191919;
+  --color-jet-50: #2f3033;
+  --color-jet-70: #3a3435;
+  --color-jet-80: #e91e63;
   --color-black: #000;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
@@ -23,12 +23,12 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
-  --body-font-weight-bold: 500;
+  --body-font-family: "Alegreya Sans", "Helvetica Neue", helvetica, arial, "Lucida Grande", sans-serif;
+  --body-font-weight-bold: 700;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
   /* base */
-  --body-background: var(--color-white);
+  --body-background: var(--color-smoke-90);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-thumb-color: var(--color-gray-10);
@@ -52,8 +52,8 @@
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
-  --toolbar-border-color: var(--panel-border-color);
+  --toolbar-background: var(--body-background);
+  --toolbar-border-color: var(--color-gray-10);
   --toolbar-font-color: var(--color-gray-70);
   --toolbar-muted-color: var(--color-gray-30);
   --page-version-menu-background: var(--color-smoke-70);
@@ -71,16 +71,17 @@
   --warning-on-color: var(--color-white);
   /* doc */
   --doc-font-color: var(--color-jet-50);
+  --doc-background-color: var(--color-white);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
-  --doc-margin: 0 auto;
-  --doc-margin--desktop: 0 2rem;
+  --doc-margin: 1em auto;
+  --doc-margin--desktop: 1rem 2rem;
   --heading-font-color: var(--color-jet-80);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
+  --link-font-color: #4eaad1;
   --link_hover-font-color: #104d92;
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
@@ -114,9 +115,9 @@
   --toc-line-height: 1.2;
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
-  --footer-link-font-color: var(--color-jet-80);
+  --footer-background: var(--color-jet-50);
+  --footer-font-color: var(--color-smoke-90);
+  --footer-link-font-color: var(--link-font-color);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
@@ -133,10 +134,10 @@
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --doc-max-width--desktop: calc(1028 / var(--rem-base) * 1rem);
   /* stacking */
-  --z-index-nav: 1;
-  --z-index-toolbar: 2;
+  --z-index-nav: 2;
+  --z-index-toolbar: 1;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
 }

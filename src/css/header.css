@@ -8,6 +8,7 @@ body {
 
 .navbar {
   background: var(--navbar-background);
+  box-shadow: 0 0.1em 0.5em var(--color-gray-50);
   color: var(--navbar-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   height: var(--navbar-height);
