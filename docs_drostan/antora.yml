@@ -1,0 +1,4 @@
+name: documentation_system # <1>
+title: Documentation system
+version: master
+display_version: main # <2>
