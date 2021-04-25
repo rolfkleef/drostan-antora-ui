@@ -15,7 +15,7 @@
     flex: auto;
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
-    padding: 0.5rem 2rem 4rem;
+    padding: 0.5rem 4rem 4rem;
     max-width: var(--doc-max-width--desktop);
     min-width: 0;
   }
