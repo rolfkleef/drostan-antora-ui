@@ -1,4 +1,7 @@
-name: documentation_system # <1>
+name: documentation_system
 title: Documentation system
 version: master
-display_version: main # <2>
+display_version: main
+
+# this portion to be included in the main antora module
+# define navigation via partials/nav-antora-ui.adoc

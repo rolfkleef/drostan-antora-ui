@@ -1,0 +1,8 @@
+= Antora UI
+
+This section contains additional documentation for the drostan.org version of the UI.
+
+== Antora defaults and limitations
+
+* Antora uses the front-end highlight.js library for syntax highlighting.
+  It registers its own set of languages instead of the highlight.js common set.
