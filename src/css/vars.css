@@ -23,7 +23,7 @@
   --body-font-size--print: 1rem; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Alegreya Sans", "Helvetica Neue", helvetica, arial, "Lucida Grande", sans-serif;
+  --body-font-family: "Roboto", sans-serif;
   --body-font-weight-bold: 700;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;

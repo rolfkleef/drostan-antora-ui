@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('~@fontsource/material-icons/files/material-icons-base-400-normal.woff2') format('woff2'), url('~@fontsource/material-icons/files/material-icons-base-400-normal.woff') format('woff');
+}
+
 .csl-bib-body {
   margin-top: 1rem;
 }
@@ -14,6 +22,8 @@
   font-family: "Material Icons", sans-serif;
   content: "\e895";
   margin-left: 4px;
+  font-size: x-small;
+  vertical-align: super;
 }
 
 .tableblock:not(:first-child) {
