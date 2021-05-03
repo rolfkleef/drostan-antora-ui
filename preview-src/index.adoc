@@ -1,10 +1,447 @@
-= Hardware and Software Requirements
+= Antora User Interface Styling Overview
 Author Name
 :idprefix:
 :idseparator: -
 :!example-caption:
 :!table-caption:
 :page-pagination:
+:sectnums:
+
+== Colours
+
+[cols="2a,3"]
+|===
+|Colours |Application
+
+|+++<div class="colorswath" style="background-color: var(--doc-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--heading-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--link-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--link_hover-font-color);"></div>+++
+|Document text: body, heading, link, hovered link
+
+|+++<div class="colorswath" style="background-color: var(--nav-heading-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--nav-muted-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--nav-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-menu_hover-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--nav-border-color);"></div>+++
+|Content navigation: heading, muted, background, hover, border
+
+|+++<div class="colorswath" style="background-color: var(--navbar-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar_hover-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-button-background);"></div>+++
+|Navigation bar: text, background, hover, button
+
+|+++<div class="colorswath" style="background-color: var(--navbar-menu-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-menu-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-menu_hover-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--navbar-menu-border-color);"></div>+++
+|Navigation menu: text, background, hover, border
+
+|+++<div class="colorswath" style="background-color: var(--doc-background-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--body-background)"></div>+++
++++<div class="colorswath" style="background-color: var(--panel-background)"></div>+++
+|Backgrounds: document, page, panel
+
+|+++<div class="colorswath" style="background-color: var(--footer-background);"></div>+++
++++<div class="colorswath" style="background-color: var(--footer-font-color);"></div>+++
++++<div class="colorswath" style="background-color: var(--footer-link-font-color);"></div>+++
+|Footer: background, text, link
+
+|+++<div class="colorswath" style="background-color: var(--important-color); color: var(--important-on-color)">Important</div>+++
++++<div class="colorswath" style="background-color: var(--warning-color); color: var(--warning-on-color)">Warning</div>+++
++++<div class="colorswath" style="background-color: var(--caution-color); color: var(--caution-on-color)">Caution</div>+++
++++<div class="colorswath" style="background-color: var(--note-color); color: var(--note-on-color)">Note</div>+++
++++<div class="colorswath" style="background-color: var(--tip-color); color: var(--tip-on-color)">Tip</div>+++
+|Admonitions: important, warning, caution, note, tip
+
+|===
+
+== Typography
+
+=== Headings
+
+[discrete]
+== Heading 1
+
+[discrete]
+=== Heading 2
+
+[discrete]
+==== Heading 3
+
+[discrete]
+===== Heading 4
+
+[discrete]
+====== Heading 5
+
+=== Paragraphs 
+
+[.lead]
+*Lead paragraph (preamble).*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vivamus sollicitudin ac mauris eget imperdiet.
+Etiam vulputate nunc eget volutpat aliquam.
+Nulla quis luctus ex.
+Morbi varius lorem pharetra justo convallis blandit.
+Nullam lobortis, justo at sodales rhoncus, leo neque iaculis orci, ac mattis elit tellus ac magna.
+
+*Normal paragraph.*
+Phasellus porttitor mi at ante convallis ultrices.
+Pellentesque ultricies risus a lacus facilisis, id suscipit nisl tincidunt.
+Integer viverra mi in augue sollicitudin auctor.
+Nullam vel dolor quis turpis consectetur pulvinar.
+Nulla ut arcu et turpis tempor tincidunt at ac odio.
+Nullam magna sem, cursus non leo et, semper placerat tellus.
+Nam diam lectus, porttitor vel eros in, aliquet venenatis ipsum.
+
+=== Text formatting
+
+Bold::
+*Fusce at lectus elementum ex ornare volutpat eu sit amet leo.*
+
+Italic::
+_Nullam a urna eget risus facilisis ultrices ut ut turpis._
+
+Monospace::
+Integer `eget aliquam urna, a viverra` dolor.
+
+Highlight::
+Maecenas #commodo euismod mauris#, at dignissim augue.
+
+Subscript, superscript::
+Maecenas ~nec~ sem ^metus^.
+
+Curved quotation marks and apostrophes:: 
+Praesent "`sapien`" nisi, '`rutrum`' in justo `'sit amet, inter'dum molestie`' dui.
+
+Underline and strikethrough::
+Nullam [.underline]#id urna# sed [.line-through]#dui aliquet# varius.
+
+Keyboard, button, menu::
+--
+[horizontal]
+kbd:[Shift+F10]::
+Vestibulum blandit ullamcorper sollicitudin.
+kbd:[Ctrl+Alt+Del]::
+Nam vel nibh ultricies, mattis tellus vitae, cursus dolor.
+kbd:[Ctrl+C], kbd:[Ctrl+V]::
+Fusce blandit ante orci.
+btn:[OK]::
+Vestibulum sit btn:[amet] tincidunt ipsum.
+Proin tincidunt::
+Proin sit amet menu:libero[in nulla] consequat menu:tincidunt[non sit > amet mi].
+--
+
+=== Links
+
+With URI scheme::
+Nunc dignissim https://asciidoctor.org risus nec convallis laoreet.
+Nunc https://asciidoctor.org[porttitor eleifend] sodales.
+
+Open in new tab or window::
+Duis https://asciidoctor.org[ut velit in lorem^] vulputate porta.
+Nam eget https://asciidoctor.org[^] facilisis felis.
+
+:hide-uri-scheme:
+Without URI scheme::
+Mauris cursus https://asciidoctor.org sed ligula in porta.
+Vivamus vehicula https://asciidoctor.org[^] justo eget nisl semper hendrerit.
+
+
+Mauris elit orci, venenatis id luctus ac, fermentum ac eros.
+Pellentesque nec facilisis ex, sollicitudin consectetur dolor.
+
+
+== Lists
+
+=== Unordered list
+
+.Unordered list title
+* Morbi sit amet arcu vitae lacus sollicitudin pretium nec quis leo.
+* Fusce consequat faucibus nisi, ut elementum erat semper non.
+* Cras euismod eleifend rutrum.
+* Proin condimentum metus ut tellus mattis pellentesque.
+** Sed interdum ac nibh at dapibus.
+** Pellentesque at mattis sapien.
+** Praesent at nisi vitae libero convallis malesuada imperdiet sed velit.
+*** Suspendisse potenti.
+*** Proin ultricies sem urna, a sagittis purus viverra vitae.
+* Phasellus ultricies erat nec sem volutpat, a vulputate orci vulputate.
+
+=== Ordered list
+
+.Ordered list title
+. Quisque a porta odio.
+. Phasellus non ultricies ante, et condimentum orci.
+. Praesent hendrerit, erat nec aliquam hendrerit, neque odio facilisis diam, nec sollicitudin dui diam sit amet sem.
+. Morbi sed sagittis ante, eget tristique sem.
+.. Vestibulum tincidunt suscipit orci, sed faucibus massa dignissim vel.
+.. Aliquam placerat at est vel luctus.
+.. Donec ut nulla vitae urna egestas semper a in tortor.
+... Mauris tempus facilisis nisl, facilisis scelerisque dui bibendum vel.
+... Praesent volutpat, enim nec sollicitudin sollicitudin, ante metus dictum odio, egestas interdum nibh leo sit amet sapien.
+. Pellentesque vestibulum augue dapibus tellus vulputate, id aliquam ante tempor.
+
+=== Checklists
+
+* [*] Curabitur elementum tempor ex sit amet lacinia.
+* [ ] Sed feugiat diam non neque maximus volutpat at a velit.
+** [ ] Aenean luctus, mauris sed porta tempor, purus erat porta ex, eget lacinia urna ante vitae dolor.
+** [x] Nam dignissim placerat nisi, eget dignissim augue cursus hendrerit.
+
+=== Description list
+.Regular description list
+Donec ipsum libero, mattis non tincidunt vel, vulputate non sapien.::
+Ut auctor turpis id posuere pellentesque.
+Sed et tincidunt tellus.::
+Praesent felis lorem, finibus et eros eget, convallis blandit dolor.
+Nulla et facilisis ligula.::
+Nullam et consequat magna.
+Mauris sollicitudin nibh mi, quis vestibulum nisl vestibulum at.::
+Nulla id porttitor enim.
+
+[horizontal]
+.Compact description list
+Nullam leo est:: scelerisque a erat et, venenatis pulvinar turpis.
+Morbi id purus:: eget augue aliquam scelerisque et ut nisl.
+Nunc sed:: consequat purus, vitae lacinia quam.
+
+=== Question and answer list
+
+[qanda]
+Nullam id urna sed dui aliquet varius.::
+Nunc dignissim risus nec convallis laoreet.
+Nunc porttitor eleifend sodales.::
+Duis ut velit in lorem vulputate porta.
+Nam eget facilisis felis.::
+Mauris cursus sed ligula in porta.
+
+== Blocks
+
+=== Admonitions
+
+==== Tip
+
+[TIP]
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Proin lobortis rhoncus venenatis.
+Mauris at dolor vel urna tristique mattis.
+Nam dignissim neque ante, quis tincidunt leo consequat vel.
+
+==== Note
+
+[NOTE]
+Curabitur lacinia dolor in nunc consectetur, quis commodo tortor molestie.
+Suspendisse potenti.
+Duis euismod est vel tempor rutrum.
+Ut elementum purus et ligula rhoncus dapibus.
+
+==== Warning
+
+[WARNING]
+Nunc nec euismod massa, a porttitor nisl.
+Nam faucibus fringilla dolor, a sollicitudin urna pretium vel.
+Nam eu risus convallis purus fringilla imperdiet.
+Phasellus luctus felis quis lacus scelerisque, eget convallis enim tristique.
+
+==== Caution
+
+[CAUTION]
+Nulla facilisi.
+Donec dictum elit et turpis tincidunt mattis.
+Nullam tempus hendrerit orci at venenatis.
+Nulla facilisi.
+
+==== Important
+
+[IMPORTANT]
+Aenean tincidunt nunc ac dui scelerisque vestibulum non sit amet felis.
+Mauris sodales turpis at sollicitudin vestibulum.
+Sed gravida posuere scelerisque.
+Nam tristique finibus diam eget convallis.
+
+=== Blocks
+
+==== Sidebar
+
+.Optional title
+****
+Ut dapibus, arcu at facilisis scelerisque, tellus velit posuere odio, at sagittis lorem nisi quis augue.
+Curabitur rhoncus in quam tempus rhoncus.
+Curabitur non lacus pellentesque, scelerisque dui sit amet, aliquet velit.
+
+Praesent consectetur ultricies justo, at gravida massa commodo non.
+Suspendisse potenti.
+Vivamus lectus urna, gravida vitae aliquam eget, vestibulum id magna.
+****
+
+==== Example
+
+.Optional title
+====
+Duis egestas scelerisque dapibus.
+Praesent feugiat feugiat ullamcorper.
+Donec ex neque, viverra et commodo sit amet, eleifend ac quam.
+
+Curabitur ut sollicitudin quam, nec maximus nisi.
+Mauris mollis sollicitudin elementum.
+Sed dolor tellus, posuere nec tortor non, dignissim ullamcorper est.
+====
+
+==== Quote
+
+.Optional title
+"Phasellus gravida, nunc sed congue dictum, massa nisi rutrum ligula, sed commodo libero diam non nibh.
+Fusce risus tortor, dapibus a varius quis, mattis ut nulla.
+Aenean et risus id ex ornare ultricies."
+-- Quisque sit amet congue urna., Donec laoreet vehicula neque, porttitor vulputate libero lobortis semper.
+
+==== Verse
+
+.Optional title
+[verse,Curabitur sollicitudin efficitur elit et sagittis., Aenean pellentesque convallis quam nec mollis.]
+Proin at bibendum dolor.
+Nam rutrum pulvinar finibus.
+Nam at lacinia purus.
+Pellentesque posuere cursus ligula, vitae auctor mi euismod sit amet.
+Morbi pulvinar auctor mauris vulputate viverra.
+
+==== Source code
+
+.Optional title
+[source,ruby,linenums,highlight=4..5]
+----
+require 'sinatra' # <1>
+
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+
+get '/hi' do
+  "Hello World!" # <2>
+end
+----
+<1> Callout. Proin at feugiat ante, sagittis feugiat massa.
+Phasellus lectus nisl, dignissim quis pellentesque eget, sodales eget ligula.
+<2> Proin mi libero, varius nec laoreet ac, ultrices et urna.
+
+==== Listing
+
+.Optional title
+[listing]
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Morbi dui enim, fringilla sit amet sollicitudin ut, sodales quis lorem.
+Ut at semper dolor.
+In hac habitasse platea dictumst.
+
+==== Command line
+
+ $ ls -la && echo "done."
+
+=== Images
+
+.Optional title
+image::multirepo-ssg.svg[Aenean tempus in mauris non pretium.,400]
+
+.Optional title
+[plantuml]
+....
+@startuml
+!include <C4/C4_Container>
+
+Person(person, "Nunc ut tempus velit", "Morbi a nisl sit amet leo egestas pellentesque id ut nisi.")
+
+Boundary(boundary, "Vestibulum nec imperdiet nunc.") {
+  System(sys1, "Mauris a accumsan quam", "Sed faucibus massa nec libero varius, a porttitor enim ultrices.")
+  System(sys2, "Nunc eget mollis justo", "Phasellus dolor elit, fermentum lacinia lacinia sit amet, condimentum ut metus.")
+  Rel_R(sys1, sys2, "phasellus non faucibus lacus")
+}
+
+System_Ext(ext, "Cras viverra commodo blandit", "Suspendisse pellentesque augue sit amet massa pharetra, eu lobortis nulla tincidunt.")
+
+Rel(person, sys1, "suspendisse in sagittis ipsum")
+Rel_R(sys2, ext, "aliquam eget tincidunt lacus")
+
+@enduml
+....
+
+=== Tables
+
+.Optional title
+[cols="3*", options="footer"]
+|===
+|Table header |Phasellus ullamcorper et odio aliquam ornare. |Phasellus finibus placerat tellus, vel pellentesque mauris ornare sed.
+
+|Odd row
+|Sed condimentum vestibulum euismod.
+|Sed odio sem, accumsan eu tortor quis, porta tincidunt massa.
+
+|Even row
+|Pellentesque quis imperdiet mi.
+|Maecenas egestas porttitor urna id pulvinar.
+
+|Fusce tristique nulla vitae ante mattis, luctus tincidunt eros rhoncus.
+|Praesent feugiat placerat justo, et dictum ipsum blandit ut.
+|Proin dictum augue sapien, non convallis dolor ultrices nec.
+
+|Suspendisse diam lectus, dignissim vel aliquam eget, lacinia a est.
+|Curabitur condimentum vehicula dolor, vel aliquam ligula ullamcorper ut.
+|Nunc erat eros, vehicula sit amet ornare at, auctor vel ligula.
+
+|Vivamus semper molestie augue, id semper diam commodo id.
+|Morbi hendrerit tempor quam, a fermentum nisi tincidunt sed.
+|Pellentesque rutrum vulputate nisi, ac tincidunt neque euismod in.
+
+|Footer
+|Aenean sollicitudin arcu vestibulum posuere dictum.
+|Curabitur interdum fringilla purus, vel venenatis nisi iaculis eu.
+|===
+
+=== Special document sections
+
+[abstract]
+==== Abstract 
+
+[abstract]
+Morbi suscipit risus quis rutrum eleifend.
+Quisque non placerat mi.
+Quisque venenatis venenatis metus, vitae viverra orci hendrerit vel.
+
+[appendix]
+==== Appendix
+
+Aliquam placerat massa purus, bibendum pellentesque dui rhoncus vel.
+Sed nec tortor ac ante ultrices eleifend sit amet sed elit.
+Aenean non est viverra, imperdiet risus quis, auctor ex.
+
+[glossary]
+==== Glossary
+
+[glossary]
+Cras efficitur condimentum aliquam.
+Etiam condimentum turpis sed rhoncus placerat.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Nullam sit amet nunc sit amet orci vestibulum porta.
+
+[bibliography]
+==== Bibliography
+
+Quisque luctus ultricies libero, in ultricies tellus lacinia quis.
+Sed volutpat sodales quam.
+Cras in diam molestie, lobortis mauris eu, dictum ligula.
+Praesent massa ex, ullamcorper ut convallis non, mattis sed eros.
+
+
+'''
+
+:sectnums!:
+
+== Hardware and Software Requirements
 
 image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
