@@ -514,6 +514,11 @@ h1.page + aside.toc.embedded {
   padding: 0;
 }
 
+
+.doc .ulist .title,
+.doc .olist .title,
+.doc .dlist .title,
+.doc .hdlist .title,
 .doc .admonitionblock .title,
 .doc .exampleblock .title,
 .doc .imageblock .title,
