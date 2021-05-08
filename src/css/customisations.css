@@ -48,3 +48,24 @@ mark {
   text-align: center;
   vertical-align: middle;
 }
+
+table.storymap tr:nth-child(1)>*,
+table.storymap tr:nth-child(2)>* {
+  border: 0;
+}
+
+table.storymap tr:nth-child(1) th>* {
+  background-color: var(--color-second-regular);
+  color: white;
+  padding: 0.5em;
+}
+
+table.storymap tr:nth-child(2) th>* {
+  background-color: var(--color-highlight);
+  padding: 0.5em;
+}
+
+table.storymap td>* {
+  background-color: var(--panel-background);
+  padding: 0.5em;
+}
