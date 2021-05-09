@@ -3,9 +3,9 @@
 {{else}}
 <div class="navbar-item has-dropdown is-hoverable">
   {{#if page.component}}
-    <a class="navbar-link" href="#">{{page.component.title}}</a>
+    <a class="navbar-link">{{page.component.title}}</a>
   {{else}}
-    <a class="navbar-link" href="#">Components</a>
+    <a class="navbar-link">Components</a>
   {{/if}}
   <div class="navbar-dropdown">
     {{#each site.components}}

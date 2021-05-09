@@ -1,0 +1,16 @@
+{{#if page.attributes.sections }}
+  {{#if (eq page.attributes.sections.length 1)}}
+  <a class="navbar-item" href="#">{{site.title}}</a>
+  {{else}}
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">{{site.title}}</a>
+    <div class="navbar-dropdown">
+      {{#each page.attributes.sections}}
+        {{#unless (eq this.title @root.site.title)}}
+          <a class="navbar-item" href="{{{url}}}">{{{title}}}</a>
+        {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+{{/if}}

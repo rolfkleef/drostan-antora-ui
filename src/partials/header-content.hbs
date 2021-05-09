@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{{or site.url (or siteRootUrl siteRootPath)}}}/index.html">dev.drostan.org</a>
+      <a class="navbar-item" href="{{{or site.url (or siteRootUrl siteRootPath)}}}/index.html">{{or page.attributes.brand "page-brand"}}</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -10,18 +10,11 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="{{{or site.url (or siteRootUrl siteRootPath)}}}/index.html">{{site.title}}</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="file:///home/rolf/dev/websites/localhost/htdocs/docs/index.html">Workstation docs</a>
-            <a class="navbar-item" href="file:///home/rolf/dev/websites/localhost/htdocs/lib/antora/index.html">Antora &amp; Asciidoc</a>
-            <a class="navbar-item" href="file:///home/rolf/dev/websites/localhost/htdocs/lib/hop/index.html">Apache Hop</a>
-          </div>
-        </div>
+        {{> nav-section-dropdown }}
         {{> nav-component-dropdown }}
         {{#if env.DOCSEARCH_ENABLED}}
           <div class="navbar-item">
-            <input id="search-input" type="text" placeholder="Search all documentation">
+            <input id="search-input" type="text" placeholder="Search this section">
           </div>
         {{/if}}
       </div>
