@@ -40,7 +40,7 @@ mark {
   background-color: var(--color-highlight);
 }
 
-.colorswath {
+.colorswatch {
   width: 3em;
   height: 3em;
   border: 0.2em solid var(--table-border-color);
@@ -68,4 +68,137 @@ table.storymap tr:nth-child(2) th > * {
 table.storymap td > * {
   background-color: var(--panel-background);
   padding: 0.5em;
+}
+
+#frames-black-edges {
+  border-width: 0 !important;
+}
+
+/* for colour swatches */
+.bg--doc-font-color {
+  background-color: var(--doc-font-color);
+}
+
+.bg--heading-font-color {
+  background-color: var(--heading-font-color);
+}
+
+.bg--link-font-color {
+  background-color: var(--link-font-color);
+}
+
+.bg--link_hover-font-color {
+  background-color: var(--link_hover-font-color);
+}
+
+.bg--nav-heading-font-color {
+  background-color: var(--nav-heading-font-color);
+}
+
+.bg--nav-muted-color {
+  background-color: var(--nav-muted-color);
+}
+
+.bg--nav-background {
+  background-color: var(--nav-background);
+}
+
+.bg--navbar-menu_hover-background {
+  background-color: var(--navbar-menu_hover-background);
+}
+
+.bg--nav-border-color {
+  background-color: var(--nav-border-color);
+}
+
+.bg--navbar-font-color {
+  background-color: var(--navbar-font-color);
+}
+
+.bg--navbar-background {
+  background-color: var(--navbar-background);
+}
+
+.bg--navbar_hover-background {
+  background-color: var(--navbar_hover-background);
+}
+
+.bg--navbar-button-background {
+  background-color: var(--navbar-button-background);
+}
+
+.bg--navbar-menu-font-color {
+  background-color: var(--navbar-menu-font-color);
+}
+
+.bg--navbar-menu-background {
+  background-color: var(--navbar-menu-background);
+}
+
+.bg--navbar-menu-border-color {
+  background-color: var(--navbar-menu-border-color);
+}
+
+.bg--doc-background-color {
+  background-color: var(--doc-background-color);
+}
+
+.bg--body-background {
+  background-color: var(--body-background);
+}
+
+.bg--panel-background {
+  background-color: var(--panel-background);
+}
+
+.bg--footer-background {
+  background-color: var(--footer-background);
+}
+
+.bg--footer-font-color {
+  background-color: var(--footer-font-color);
+}
+
+.bg--footer-link-font-color {
+  background-color: var(--footer-link-font-color);
+}
+
+.bg--important-color {
+  background-color: var(--important-color);
+}
+
+.bg--warning-color {
+  background-color: var(--warning-color);
+}
+
+.bg--caution-color {
+  background-color: var(--caution-color);
+}
+
+.bg--note-color {
+  background-color: var(--note-color);
+}
+
+.bg--tip-color {
+  background-color: var(--tip-color);
+}
+
+.fg--important-on-color {
+  color: var(--important-on-color);
+}
+
+.fg--warning-on-color {
+  color: var(--warning-on-color);
+}
+
+.fg--caution-on-color {
+  color: var(--caution-on-color);
+}
+
+.fg--note-on-color {
+  color: var(--note-on-color);
+}
+
+.fg--tip-on-color {
+  color: var(--tip-on-color);
 }

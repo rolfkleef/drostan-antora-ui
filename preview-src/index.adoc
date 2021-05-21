@@ -1,4 +1,4 @@
-= Antora User Interface Styling Overview
+= Antora UI styling
 Author Name
 :idprefix:
 :idseparator: -
@@ -7,55 +7,60 @@ Author Name
 :page-pagination:
 :sectnums:
 
+// tag::colours[]
+
 == Colours
 
 [cols="2a,3"]
 |===
 |Colours |Application
 
-|+++<div class="colorswath" style="background-color: var(--doc-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--heading-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--link-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--link_hover-font-color);"></div>+++
+|+++<div class="colorswatch bg--doc-font-color"></div>+++
++++<div class="colorswatch bg--heading-font-color"></div>+++
++++<div class="colorswatch bg--link-font-color"></div>+++
++++<div class="colorswatch bg--link_hover-font-color"></div>+++
 |Document text: body, heading, link, hovered link
 
-|+++<div class="colorswath" style="background-color: var(--nav-heading-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--nav-muted-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--nav-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-menu_hover-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--nav-border-color);"></div>+++
+|+++<div class="colorswatch bg--nav-heading-font-color"></div>+++
++++<div class="colorswatch bg--nav-muted-color"></div>+++
++++<div class="colorswatch bg--nav-background"></div>+++
++++<div class="colorswatch bg--navbar-menu_hover-background"></div>+++
++++<div class="colorswatch bg--nav-border-color"></div>+++
 |Content navigation: heading, muted, background, hover, border
 
-|+++<div class="colorswath" style="background-color: var(--navbar-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar_hover-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-button-background);"></div>+++
+|+++<div class="colorswatch bg--navbar-font-color"></div>+++
++++<div class="colorswatch bg--navbar-background"></div>+++
++++<div class="colorswatch bg--navbar_hover-background"></div>+++
++++<div class="colorswatch bg--navbar-button-background"></div>+++
 |Navigation bar: text, background, hover, button
 
-|+++<div class="colorswath" style="background-color: var(--navbar-menu-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-menu-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-menu_hover-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--navbar-menu-border-color);"></div>+++
+|+++<div class="colorswatch bg--navbar-menu-font-color"></div>+++
++++<div class="colorswatch bg--navbar-menu-background"></div>+++
++++<div class="colorswatch bg--navbar-menu_hover-background"></div>+++
++++<div class="colorswatch bg--navbar-menu-border-color"></div>+++
 |Navigation menu: text, background, hover, border
 
-|+++<div class="colorswath" style="background-color: var(--doc-background-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--body-background)"></div>+++
-+++<div class="colorswath" style="background-color: var(--panel-background)"></div>+++
+|+++<div class="colorswatch bg--doc-background-color"></div>+++
++++<div class="colorswatch bg--body-background)"></div>+++
++++<div class="colorswatch bg--panel-background)"></div>+++
 |Backgrounds: document, page, panel
 
-|+++<div class="colorswath" style="background-color: var(--footer-background);"></div>+++
-+++<div class="colorswath" style="background-color: var(--footer-font-color);"></div>+++
-+++<div class="colorswath" style="background-color: var(--footer-link-font-color);"></div>+++
+|+++<div class="colorswatch bg--footer-background"></div>+++
++++<div class="colorswatch bg--footer-font-color"></div>+++
++++<div class="colorswatch bg--footer-link-font-color"></div>+++
 |Footer: background, text, link
 
-|+++<div class="colorswath" style="background-color: var(--important-color); color: var(--important-on-color)">Important</div>+++
-+++<div class="colorswath" style="background-color: var(--warning-color); color: var(--warning-on-color)">Warning</div>+++
-+++<div class="colorswath" style="background-color: var(--caution-color); color: var(--caution-on-color)">Caution</div>+++
-+++<div class="colorswath" style="background-color: var(--note-color); color: var(--note-on-color)">Note</div>+++
-+++<div class="colorswath" style="background-color: var(--tip-color); color: var(--tip-on-color)">Tip</div>+++
+|+++<div class="colorswatch bg--important-color fg--important-on-color">Important</div>+++
++++<div class="colorswatch bg--warning-color fg--warning-on-color">Warning</div>+++
++++<div class="colorswatch bg--caution-color fg--caution-on-color">Caution</div>+++
++++<div class="colorswatch bg--note-color fg--note-on-color">Note</div>+++
++++<div class="colorswatch bg--tip-color fg--tip-on-color">Tip</div>+++
 |Admonitions: important, warning, caution, note, tip
 
 |===
+
+// end::colours[]
+// tag::typography[]
 
 == Typography
 
@@ -149,10 +154,11 @@ Without URI scheme::
 Mauris cursus https://asciidoctor.org sed ligula in porta.
 Vivamus vehicula https://asciidoctor.org[^] justo eget nisl semper hendrerit.
 
-
 Mauris elit orci, venenatis id luctus ac, fermentum ac eros.
 Pellentesque nec facilisis ex, sollicitudin consectetur dolor.
 
+// end::typography[]
+// tag::lists[]
 
 == Lists
 
@@ -218,6 +224,9 @@ Duis ut velit in lorem vulputate porta.
 Nam eget facilisis felis.::
 Mauris cursus sed ligula in porta.
 
+// end::lists[]
+// tag::blocks[]
+
 == Blocks
 
 === Admonitions
@@ -262,9 +271,7 @@ Mauris sodales turpis at sollicitudin vestibulum.
 Sed gravida posuere scelerisque.
 Nam tristique finibus diam eget convallis.
 
-=== Blocks
-
-==== Sidebar
+=== Sidebar
 
 .Optional title
 ****
@@ -277,7 +284,7 @@ Suspendisse potenti.
 Vivamus lectus urna, gravida vitae aliquam eget, vestibulum id magna.
 ****
 
-==== Example
+=== Example
 
 .Optional title
 ====
@@ -290,7 +297,7 @@ Mauris mollis sollicitudin elementum.
 Sed dolor tellus, posuere nec tortor non, dignissim ullamcorper est.
 ====
 
-==== Quote
+=== Quote
 
 .Optional title
 "Phasellus gravida, nunc sed congue dictum, massa nisi rutrum ligula, sed commodo libero diam non nibh.
@@ -298,7 +305,7 @@ Fusce risus tortor, dapibus a varius quis, mattis ut nulla.
 Aenean et risus id ex ornare ultricies."
 -- Quisque sit amet congue urna., Donec laoreet vehicula neque, porttitor vulputate libero lobortis semper.
 
-==== Verse
+=== Verse
 
 .Optional title
 [verse,Curabitur sollicitudin efficitur elit et sagittis., Aenean pellentesque convallis quam nec mollis.]
@@ -308,7 +315,7 @@ Nam at lacinia purus.
 Pellentesque posuere cursus ligula, vitae auctor mi euismod sit amet.
 Morbi pulvinar auctor mauris vulputate viverra.
 
-==== Source code
+=== Source code
 
 .Optional title
 [source,ruby,linenums,highlight=4..5]
@@ -330,7 +337,7 @@ end
 Phasellus lectus nisl, dignissim quis pellentesque eget, sodales eget ligula.
 <2> Proin mi libero, varius nec laoreet ac, ultrices et urna.
 
-==== Listing
+=== Listing
 
 .Optional title
 [listing]
@@ -339,14 +346,22 @@ Morbi dui enim, fringilla sit amet sollicitudin ut, sodales quis lorem.
 Ut at semper dolor.
 In hac habitasse platea dictumst.
 
-==== Command line
+=== Command line
 
  $ ls -la && echo "done."
 
-=== Images
+// end::blocks[]
+
+== Images
+
+=== Image file
 
 .Optional title
 image::multirepo-ssg.svg[Aenean tempus in mauris non pretium.,400]
+
+=== PlantUML diagram
+
+==== C4 model
 
 .Optional title
 [plantuml]
@@ -370,7 +385,7 @@ Rel_R(sys2, ext, "aliquam eget tincidunt lacus")
 @enduml
 ....
 
-=== Tables
+== Tables
 
 .Optional title
 [cols="3*", options="footer"]
@@ -402,10 +417,10 @@ Rel_R(sys2, ext, "aliquam eget tincidunt lacus")
 |Curabitur interdum fringilla purus, vel venenatis nisi iaculis eu.
 |===
 
-=== Special document sections
+== Special document sections
 
 [abstract]
-==== Abstract 
+=== Abstract 
 
 [abstract]
 Morbi suscipit risus quis rutrum eleifend.
@@ -413,309 +428,24 @@ Quisque non placerat mi.
 Quisque venenatis venenatis metus, vitae viverra orci hendrerit vel.
 
 [appendix]
-==== Appendix
+=== Appendix
 
 Aliquam placerat massa purus, bibendum pellentesque dui rhoncus vel.
 Sed nec tortor ac ante ultrices eleifend sit amet sed elit.
 Aenean non est viverra, imperdiet risus quis, auctor ex.
 
 [glossary]
-==== Glossary
+=== Glossary
 
-[glossary]
 Cras efficitur condimentum aliquam.
 Etiam condimentum turpis sed rhoncus placerat.
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 Nullam sit amet nunc sit amet orci vestibulum porta.
 
 [bibliography]
-==== Bibliography
+=== Bibliography
 
 Quisque luctus ultricies libero, in ultricies tellus lacinia quis.
 Sed volutpat sodales quam.
 Cras in diam molestie, lobortis mauris eu, dictum ligula.
 Praesent massa ex, ullamcorper ut convallis non, mattis sed eros.
-
-
-'''
-
-:sectnums!:
-
-== Hardware and Software Requirements
-
-image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
-Platonem complectitur mediocritatem ea eos.
-Ei nonumy deseruisse ius.
-Mel id omnes verear.
-Vis no velit audiam, sonet <<dependencies,praesent>> eum ne.
-*Prompta eripuit* nec ad.
-Integer diam enim, dignissim eget eros et, ultricies mattis odio.
-Vestibulum consectetur nec urna a luctus.
-Quisque pharetra tristique arcu fringilla dapibus.
-https://example.org[Curabitur,role=unresolved] ut massa aliquam, cursus enim et, accumsan lectus.
-
-== Cu solet
-
-Nominavi luptatum eos, an vim hinc philosophia intellegebat.
-Lorem pertinacia `expetenda` et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
-Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
-Eu mea inani iriure.
-
-[source,json]
-----
-{
-  "name": "module-name",
-  "version": "10.0.1",
-  "description": "An example module to illustrate the usage of package.json",
-  "author": "Author Name <author@example.com>",
-  "scripts": {
-    "test": "mocha",
-    "lint": "eslint"
-  }
-}
-----
-
-.Example paragraph syntax
-[source,asciidoc]
-----
-.Optional title
-[example]
-This is an example paragraph.
-----
-
-.Optional title
-[example]
-This is an example paragraph.
-
-=== Some Code
-
-How about some code?
-
-[source,js]
-----
-vfs
-  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
-  .pipe(tap((file) => { // <1>
-    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
-  }))
-  .pipe(buffer()) // <2>
-  .pipe(uglify())
-  .pipe(gulp.dest('build'))
-----
-<1> The tap function is used to wiretap the data in the pipe.
-<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
-Uglify can only work with buffers, not streams.
-
-Execute these commands to validate and build your site:
-
- $ podman run -v $PWD:/antora:Z --rm -t antora/antora \
-   version
- 3.0.0
- $ podman run -v $PWD:/antora:Z --rm -it antora/antora \
-   --clean \
-   antora-playbook.yml
-
-Cum dicat #putant# ne.
-Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-....
-pom.xml
-src/
-  main/
-    java/
-      HelloWorld.java
-  test/
-    java/
-      HelloWorldTest.java
-....
-
-Eu mea munere vituperata constituam.
-
-[%autowidth]
-|===
-|Input | Output | Example
-
-m|"foo\nbar"
-l|foo
-bar
-a|
-[source,ruby]
-----
-puts "foo\nbar"
-----
-|===
-
-Select menu:File[Open Project] to open the project in your IDE.
-Per ea btn:[Cancel] inimicus.
-Ferri kbd:[F11] tacimates constituam sed ex, eu mea munere vituperata kbd:[Ctrl,T] constituam.
-
-.Sidebar Title
-****
-Platonem complectitur mediocritatem ea eos.
-Ei nonumy deseruisse ius.
-Mel id omnes verear.
-
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-****
-
-=== Liber recusabo
-
-No sea, at invenire voluptaria mnesarchum has.
-Ex nam suas nemore dignissim, vel apeirian democritum et.
-At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.
-
-[upperalpha]
-. potenti donec cubilia tincidunt
-. etiam pulvinar inceptos velit quisque aptent himenaeos
-. lacus volutpat semper porttitor aliquet ornare primis nulla enim
-
-Natum facilisis theophrastus an duo.
-No sea, at invenire voluptaria mnesarchum has.
-
-[square]
-* ultricies sociosqu tristique integer
-* lacus volutpat semper porttitor aliquet ornare primis nulla enim
-* etiam pulvinar inceptos velit quisque aptent himenaeos
-
-Eu sed antiopam gloriatur.
-Ea mea agam graeci philosophia.
-
-* [ ] todo
-* [x] done!
-
-Vis veri graeci legimus ad.
-
-sed::
-splendide sed
-
-mea::
-agam graeci
-
-Let's look at that another way.
-
-[horizontal]
-sed::
-splendide sed
-
-mea::
-agam graeci
-
-At ornatus splendide sed.
-
-.Library dependencies
-[#dependencies%autowidth%footer,stripes=hover]
-|===
-|Library |Version
-
-|eslint
-|^1.7.3
-
-|eslint-config-gulp
-|^2.0.0
-
-|expect
-|^1.20.2
-
-|istanbul
-|^0.4.3
-
-|istanbul-coveralls
-|^1.0.3
-
-|jscs
-|^2.3.5
-
-h|Total
-|6
-|===
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[TIP]
-This oughta do it!
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[NOTE]
-====
-You've been down _this_ road before.
-====
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[WARNING]
-====
-Watch out!
-====
-
-[CAUTION]
-====
-[#inline]#I wouldn't try that if I were you.#
-====
-
-[IMPORTANT]
-====
-Don't forget this step!
-====
-
-.Key Points to Remember
-[TIP]
-====
-If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
-
- $ npm i -g @antora/cli @antora/site-generator-default
-====
-
-Nominavi luptatum eos, an vim hinc philosophia intellegebat.
-Eu mea inani iriure.
-
-[discrete]
-== Voluptua singulis
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Ex nam suas nemore dignissim, vel apeirian democritum et.
-
-.Antora is a multi-repo documentation site generator
-image::multirepo-ssg.svg[Multirepo SSG,250]
-
-Make the switch today!
-
-[#english+中文]
-== English + 中文
-
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[quote, 'Famous Person. Cum dicat putant ne.', 'Cum dicat putant ne. https://example.com[Famous Person Website]']
-____
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
-Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
-Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
-____
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-[verse]
-____
-The fog comes
-on little cat feet.
-____
-
-== Fin
-
-That's all, folks!
