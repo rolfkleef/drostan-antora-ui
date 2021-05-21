@@ -1,2 +1,4 @@
 * xref:index.adoc[]
 ** xref:antora-ui.adoc[]
+** xref:plantuml.adoc[]
+** xref:mermaid.adoc[]
