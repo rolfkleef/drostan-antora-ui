@@ -1,7 +1,4 @@
-name: documentation_system
-title: Documentation system
+name: styleguide
+title: Style guide
 version: master
 display_version: main
-
-# this portion to be included in the main antora module
-# define navigation via partials/nav-antora-ui.adoc

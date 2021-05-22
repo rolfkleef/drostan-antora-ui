@@ -11,7 +11,7 @@ Author Name
 
 == Colours
 
-[cols="2a,3"]
+[cols="2,3"]
 |===
 |Colours |Application
 
@@ -358,32 +358,6 @@ In hac habitasse platea dictumst.
 
 .Optional title
 image::multirepo-ssg.svg[Aenean tempus in mauris non pretium.,400]
-
-=== PlantUML diagram
-
-==== C4 model
-
-.Optional title
-[plantuml]
-....
-@startuml
-!include <C4/C4_Container>
-
-Person(person, "Nunc ut tempus velit", "Morbi a nisl sit amet leo egestas pellentesque id ut nisi.")
-
-Boundary(boundary, "Vestibulum nec imperdiet nunc.") {
-  System(sys1, "Mauris a accumsan quam", "Sed faucibus massa nec libero varius, a porttitor enim ultrices.")
-  System(sys2, "Nunc eget mollis justo", "Phasellus dolor elit, fermentum lacinia lacinia sit amet, condimentum ut metus.")
-  Rel_R(sys1, sys2, "phasellus non faucibus lacus")
-}
-
-System_Ext(ext, "Cras viverra commodo blandit", "Suspendisse pellentesque augue sit amet massa pharetra, eu lobortis nulla tincidunt.")
-
-Rel(person, sys1, "suspendisse in sagittis ipsum")
-Rel_R(sys2, ext, "aliquam eget tincidunt lacus")
-
-@enduml
-....
 
 == Tables
 
