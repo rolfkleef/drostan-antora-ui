@@ -16,18 +16,3 @@
   </div>
 </div>
 {{/if}}
-
-{{#unless (eq page.component.versions.length 1)}}
-<div class="navbar-item has-dropdown is-hoverable">
-  <a class="navbar-link" href="#">version {{page.componentVersion.displayVersion}}</a>
-  <div class="navbar-dropdown">
-    {{#each page.component.versions}}
-      {{#unless (or
-        (and (eq .. @root.page.component) (eq this @root.page.componentVersion))
-        (eq "main" ./displayVersion)) }}
-        <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-      {{/unless}}      
-    {{/each}}
-  </div>
-</div>
-{{/unless}}
