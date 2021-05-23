@@ -202,3 +202,9 @@ table.storymap td > * {
 .fg--tip-on-color {
   color: var(--tip-on-color);
 }
+
+/* add spacing for hypothes.is bar on the right */
+.toolbar,
+.navbar {
+  padding-right: 2.2rem;
+}

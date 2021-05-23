@@ -5,3 +5,9 @@
 <script src="{{uiRootPath}}/js/vendor/search.js" id="search-script" data-base-path="{{or siteRootPath (or site.url siteRootUrl)}}" data-page-path="{{@root.page.url}}"></script>
 <script async src="{{uiRootPath}}/../search-index.js"></script>
 {{/if}}
+<script type="application/json" class="js-hypothesis-config">
+{
+  "showHighlights": "whenSidebarOpen"
+}
+</script>
+<script async src="https://hypothes.is/embed.js"></script>
