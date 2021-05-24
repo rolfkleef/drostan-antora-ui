@@ -9,10 +9,10 @@ This section contains additional documentation for the drostan.org version of th
 . Use the URL of your fork in the Antora playbook.
 +
 .Example for my version: repository under `rolfkleef`, branch `drostan`
-[yaml]
+[source, yaml]
 ....
 ui:
   bundle:
     url: https://gitlab.com/rolfkleef/antora-ui-default/-/jobs/artifacts/drostan/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-.... 
+....
