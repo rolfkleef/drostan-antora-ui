@@ -16,3 +16,5 @@ ui:
     url: https://gitlab.com/rolfkleef/antora-ui-default/-/jobs/artifacts/drostan/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
 ....
+
+Once a new version of the UI is built, instruct Antora to get the new version with the `--fetch` command line parameter.
