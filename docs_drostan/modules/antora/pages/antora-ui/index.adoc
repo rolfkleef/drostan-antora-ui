@@ -2,7 +2,17 @@
 
 This section contains additional documentation for the drostan.org version of the UI.
 
-== Antora defaults and limitations
+== Adapting the Antora default UI
 
-* Antora uses the front-end highlight.js library for syntax highlighting.
-  It registers its own set of languages instead of the highlight.js common set.
+. Create a fork of https://gitlab.com/antora/antora-ui-default[the Antora Default UI repository^].
+. Specify the appropriate branches and repository specified under `bundle-stable` and `bundle-dev` to let Gitlab build a bundle for the UI.
+. Use the URL of your fork in the Antora playbook.
++
+.Example for my version: repository under `rolfkleef`, branch `drostan`
+[yaml]
+....
+ui:
+  bundle:
+    url: https://gitlab.com/rolfkleef/antora-ui-default/-/jobs/artifacts/drostan/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+.... 
