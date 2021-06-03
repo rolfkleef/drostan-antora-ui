@@ -15,6 +15,36 @@ ui:
   bundle:
     url: https://gitlab.com/rolfkleef/antora-ui-default/-/jobs/artifacts/drostan/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  supplemental_files: antora-supplemental-ui
 ....
 
 Once a new version of the UI is built, instruct Antora to get the new version with the `--fetch` command line parameter.
+
+Use the supplemental files to override a selection of files in the bundle.
+
+[NOTE]
+====
+The CSS files are processed and packed in the bundle.
+You can only override it as a whole.
+====
+
+The Handlebars templates are present as sources in the bundle.
+It is possible to override an HBS template by including a new one via the `supplemental_files` folder.
+
+.Add a specific brand link via `nav-brand.hbs`
+[source, html]
+....
+include::example$nav-brand.hbs[]
+....
+
+.Add the links to sections of documentation via `nav-sections.hbs`
+[source, html]
+....
+include::example$nav-sections.hbs[]
+....
+
+.To remove the sections dropdown menu, override `nav-section-dropdown.hbs`
+[source, html]
+....
+include::example$nav-section-dropdown.hbs[]
+....
