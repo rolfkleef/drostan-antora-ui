@@ -7,8 +7,8 @@ footer.footer {
 }
 
 .footer .columns {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, auto));
 }
 
 .footer .credits {

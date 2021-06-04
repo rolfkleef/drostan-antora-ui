@@ -208,3 +208,13 @@ table.storymap td > * {
 .navbar {
   padding-right: 2.2rem;
 }
+
+footer svg.icon {
+  width: 2em;
+  height: 2em;
+  fill: var(--footer-font-color);
+}
+
+footer svg.icon:hover {
+  fill: var(--footer-link-font-color);
+}
