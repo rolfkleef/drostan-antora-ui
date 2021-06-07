@@ -218,3 +218,11 @@ footer svg.icon {
 footer svg.icon:hover {
   fill: var(--footer-link-font-color);
 }
+
+.navbar img {
+  max-height: calc(var(--navbar-height) * 0.6);
+  padding-right: 1rem;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}

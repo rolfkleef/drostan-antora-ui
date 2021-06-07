@@ -9,9 +9,11 @@
       </button>
     </div>
     <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
+      <div class="navbar-section">
         {{> nav-section-dropdown }}
         {{> nav-component-dropdown }}
+      </div>
+      <div class="navbar-section navbar-end">
         {{#if env.DOCSEARCH_ENABLED}}
           <div class="navbar-item">
             <input id="search-input" type="text" placeholder="Search this section">
