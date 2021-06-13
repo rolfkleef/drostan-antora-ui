@@ -1,0 +1,22 @@
+  @startuml
+!include <C4/C4_Container>
+
+Person(editor, "Editor", "Writes and reviews documentation content.")
+Person(publisher, "Publisher", "Updates the documentation website and style.")
+
+Boundary(doc_sys, "Documentation system") {
+  System(sources, "Content sources", "Stores content material in components and modules.")
+  System(sitegen, "Website generator", "Combines sources to produce the documentation website.")
+  Rel_R(sources, sitegen, "are input for")
+}
+
+System_Ext(tools, "Editing tools", "Support planning and writing content.")
+System_Ext(site, "Documentation website", "Informs users and developers.")
+
+Rel(editor, tools, "works with")
+Rel(tools, sources, "contribute content material to")
+Rel(publisher, sitegen, "configures and runs")
+Rel(sitegen, site, "publishes")
+
+Lay_L(publisher, tools)
+@enduml

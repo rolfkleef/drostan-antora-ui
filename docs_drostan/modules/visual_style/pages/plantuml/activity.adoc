@@ -1,0 +1,29 @@
+= Activity diagram
+
+== Elements
+
+.Core elements of an activity diagram
+[plantuml]
+....
+include::./../../examples/puml/activity.puml[]
+....
+
+.PlantUML source
+[source, plantuml]
+....
+include::./../../examples/puml/activity.puml[]
+....
+
+== Example
+
+.Activity diagram sample
+[plantuml]
+....
+include::./../../examples/puml/activity-example.puml[]
+....
+
+.PlantUML source
+[source, plantuml]
+....
+include::./../../examples/puml/activity-example.puml[]
+....

@@ -1,0 +1,31 @@
+@startuml
+
+actor user as "User"
+actor developer as "Developer"
+actor appman as "Application Manager"
+actor dwb as "DataWorkbench"
+
+user <|-- appman
+appman <|-right- developer
+developer <|-right- dwb
+
+usecase hfeedback as "Get human-readable feedback"
+usecase mfeedback as "Get machine-readable feedback"
+usecase api as "Access an API"
+usecase run as "Run the validator software"
+usecase ws as "Access a web service"
+
+(api) <|-- (mfeedback)
+(api) <|-- (hfeedback)
+(run) <|-- (api)
+(ws) <|-- (run)
+
+user --> (ws)
+
+appman -> (api): "access"
+
+developer -down-> (run)
+
+dwb -> (ws): "operate"
+
+@enduml

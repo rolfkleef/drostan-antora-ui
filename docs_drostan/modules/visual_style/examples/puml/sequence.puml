@@ -1,0 +1,53 @@
+@startuml
+' don't show participants at end of lifeline
+hide footbox
+
+participant Participant <<Stereotype>>
+actor       Actor <<Stereotype>>
+boundary    Boundary <<Stereotype>>
+control     Control <<Stereotype>>
+entity      Entity <<Stereotype>>
+database    Database <<Stereotype>>
+collections Collections <<Stereotype>>
+queue       Queue <<Stereotype>>
+
+autonumber
+Participant -> Actor: Message
+autonumber stop
+
+alt Main case
+  Actor -> Boundary : Main message
+else Alternative case #1
+  Actor -> Control : Alternative message
+  note right: Note
+
+  group Group [Extra label]
+    Control -> Entity
+
+    loop 1000 times
+        Entity -> Database ++
+        Entity -> Collections
+        return
+        Collections -> Entity
+    end
+
+    Database -> Collections
+  end
+else Alternative case #2
+  Collections -> Actor
+end
+
+== Divider ==
+
+...delay...
+
+Actor -> Boundary ++
+  Boundary -> Boundary ++
+    Boundary -> Control ++
+      Control -> Entity !!
+    return
+  return
+return
+
+ref over Entity: reference
+@enduml

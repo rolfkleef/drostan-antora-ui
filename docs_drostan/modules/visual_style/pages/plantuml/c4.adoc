@@ -1,0 +1,17 @@
+= C4 models
+
+== Elements C4
+
+=== Container
+
+.Core elements of a C4 container model diagram
+[plantuml]
+....
+include::example$puml/c4-container.puml[]
+....
+
+.PlantUML source
+[source, plantuml]
+....
+include::example$puml/c4-container.puml[]
+....

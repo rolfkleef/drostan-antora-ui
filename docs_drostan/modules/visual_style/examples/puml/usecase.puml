@@ -1,0 +1,10 @@
+@startuml
+  actor "Actor" <<Stereotype>>
+  note right of :Actor:: Note
+
+  package "Package" <<Stereotype>> {
+    usecase UseCase as "Use case" <<Stereotype>>
+  }
+  
+  :Actor: --> UseCase
+@enduml
