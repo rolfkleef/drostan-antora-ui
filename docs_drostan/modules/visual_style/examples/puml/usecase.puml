@@ -5,6 +5,9 @@
   package "Package" <<Stereotype>> {
     usecase UseCase as "Use case" <<Stereotype>>
   }
+ 
+  useCase UseCase2 as "Additional use case"
   
   :Actor: --> UseCase
+  UseCase <|-- UseCase2
 @enduml

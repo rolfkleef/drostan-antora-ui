@@ -1,0 +1,155 @@
+= PlantUML diagrams styling
+
+== Overview
+
+.UML Diagrams
+[plantuml]
+....
+@startmindmap
+* PlantUML
+ * UML diagrams
+  * Behaviour diagrams
+   * Use cases
+   * Activities
+   * States
+   * Interactions
+    * Sequences
+    * Communication
+  * Structure diagrams
+   * Classes
+   * Objects
+   * Packages
+   * Components
+   * Deployment
+ * Other diagrams
+  * Mindmaps
+  * Work Breakdown Structures (WBS)
+  * C4 models
+@endmindmap
+....
+
+The next pages show examples of diagrams with their available elements, to verify the styling.
+Two pointers for more information on the syntax and the meaning of diagrams:
+
+- The https://plantuml.com[PlantUML website^] shows how to specify and adapt elements of diagrams in more detail.
+- https://www.uml-diagrams.org/[Find out more about UML diagrams^]
+
+== Color conventions
+
+We use a PlantUML configuration file to be included when generating diagram images.
+The configuration file uses color variables across UML elements, divided in types of diagram elements.
+
+.Color conventions for types of diagram elements
+[plantuml]
+....
+@startuml
+skinparam Participant {
+  BackgroundColor<<node 1>> $node_1_background_color
+  BorderColor<<node 1>> $node_1_border_color
+  FontColor<<node 1>> $node_1_color
+  StereotypeFontColor<<node 1>> $node_1_color
+
+  BackgroundColor<<node 2>> $node_2_background_color
+  BorderColor<<node 2>> $node_2_border_color
+  FontColor<<node 2>> $node_2_color
+  StereotypeFontColor<<node 2>> $node_2_color
+
+  BackgroundColor<<logic>> $logic_background_color
+  BorderColor<<logic>> $logic_border_color
+  FontColor<<logic>> $logic_color
+  StereotypeFontColor<<logic>> $logic_color
+
+  BackgroundColor<<group>> $group_color
+  BorderColor<<group>> $group_border_color
+  FontColor<<group>> $group_color
+  StereotypeFontColor<<group>> $group_color
+
+  BackgroundColor<<divider>> $divider_background_color
+  BorderColor<<divider>> $divider_border_color
+  FontColor<<divider>> $divider_color
+  StereotypeFontColor<<divider>> $divider_color
+
+  BackgroundColor<<note>> $note_1_background_color
+  BorderColor<<note>> $note_1_border_color
+  FontColor<<note>> $note_1_color
+  StereotypeFontColor<<note>> $note_1_color
+}
+hide footbox
+
+participant "Primary node" <<node 1>>
+participant "Secondary node" <<node 2>>
+participant "Logic element" <<logic>>
+participant "Grouping element" <<group>>
+participant "Divider element" <<divider>>
+participant "Note" <<note>>
+
+"Primary node" -> "Note" : messages and flows
+@enduml
+....
+
+The admonition colors are also included, to make it easy to use them in diagrams as well.
+
+.Using admonition colors for elements
+[plantuml]
+....
+@startuml
+hide footbox
+
+participant tip <<(T,$tip_color)>>
+note over tip $tip_color: Tip
+
+participant note <<(N,$note_color)>>
+/ note over note $note_color: Note
+
+participant warning <<(W,$warning_color)>>
+/ note over warning $warning_color: Warning
+
+participant caution <<(C,$caution_color)>>
+/ note over caution $caution_color: Caution
+
+participant important <<(I,$important_color)>>
+/ note over important $important_color: Important
+@enduml
+....
+
+.Source for the example above
+[source, plantuml]
+....
+@startuml
+hide footbox
+
+participant tip <<(T,$tip_color)>>
+note over tip $tip_color: Tip
+
+participant note <<(N,$note_color)>>
+/ note over note $note_color: Note
+
+participant warning <<(W,$warning_color)>>
+/ note over warning $warning_color: Warning
+
+participant caution <<(C,$caution_color)>>
+/ note over caution $caution_color: Caution
+
+participant important <<(I,$important_color)>>
+/ note over important $important_color: Important
+@enduml
+....
+
+
+== Add the PlantUML configuration
+
+The Kroki server that generates PlantUML diagrams has an option to include the PlantUML configuration file.
+ 
+.In Antora playbook, add a reference to the PlantUML configuration
+[source, yaml]
+....
+asciidoc:
+  extensions:
+  - asciidoctor-kroki
+  attributes:
+    ... # <1>
+    kroki-server-url: http://localhost:18181
+    kroki-plantuml-include: plantuml-styling.cfg # <2>
+....
+<1> Other configuration options
+<2> Location of the PlantUML styling

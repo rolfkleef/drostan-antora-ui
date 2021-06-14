@@ -4,9 +4,11 @@ hide footbox
 
 participant Participant <<Stereotype>>
 actor       Actor <<Stereotype>>
+box Box
 boundary    Boundary <<Stereotype>>
 control     Control <<Stereotype>>
 entity      Entity <<Stereotype>>
+end box
 database    Database <<Stereotype>>
 collections Collections <<Stereotype>>
 queue       Queue <<Stereotype>>
@@ -21,7 +23,7 @@ else Alternative case #1
   Actor -> Control : Alternative message
   note right: Note
 
-  group Group [Extra label]
+  group group [Extra label]
     Control -> Entity
 
     loop 1000 times
@@ -41,13 +43,15 @@ end
 
 ...delay...
 
-Actor -> Boundary ++
+!pragma teoz true
+{a} Actor -> Boundary ++
   Boundary -> Boundary ++
     Boundary -> Control ++
       Control -> Entity !!
     return
   return
-return
+{b} Boundary --> Actor --
+{a} <-> {b}: label
 
-ref over Entity: reference
+ref over Database: reference
 @enduml

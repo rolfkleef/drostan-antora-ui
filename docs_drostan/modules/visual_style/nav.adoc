@@ -1,6 +1,6 @@
 * xref:index.adoc[]
 ** xref:antora-ui.adoc[]
-** xref:plantuml.adoc[]
+** xref:plantuml/index.adoc[]
 *** xref:plantuml/usecase.adoc[]
 *** xref:plantuml/activity.adoc[]
 *** xref:plantuml/sequence.adoc[]
