@@ -6,6 +6,16 @@
   src: url('~@fontsource/material-icons/files/material-icons-base-400-normal.woff2') format('woff2'), url('~@fontsource/material-icons/files/material-icons-base-400-normal.woff') format('woff');
 }
 
+body.wide .doc {
+  max-width: 100vw;
+}
+
+@media screen and (min-width: 1024px) {
+  body.wide .doc {
+    max-width: 100vw;
+  }
+}
+
 .csl-bib-body {
   margin-top: 1rem;
 }

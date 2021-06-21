@@ -48,3 +48,15 @@ include::example$nav-sections.hbs[]
 ....
 include::example$nav-section-dropdown.hbs[]
 ....
+
+== Page role "wide"
+
+To make the document section of a page stretch to its maximum width, add:
+
+[source, asciidoc]
+----
+= Page Title
+:page-role: wide
+
+(rest of the page)
+----
