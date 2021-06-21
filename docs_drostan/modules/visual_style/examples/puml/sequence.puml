@@ -53,5 +53,5 @@ end
 {b} Boundary --> Actor --
 {a} <-> {b}: label
 
-ref over Database: reference
+ref over Entity, Database: reference
 @enduml
