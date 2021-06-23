@@ -4,7 +4,7 @@ mindmapDiagram {
     BackgroundColor #1168bd
     LineColor #1168bd
     FontColor #fff
-    MaximumWidth 100
+    MaximumWidth 150
   }
   boxless {
     FontColor #1168bd

@@ -1,22 +1,25 @@
-  @startuml
+@startuml
 !include <C4/C4_Container>
 
-Person(editor, "Editor", "Writes and reviews documentation content.")
-Person(publisher, "Publisher", "Updates the documentation website and style.")
+LAYOUT_WITH_LEGEND()
 
-Boundary(doc_sys, "Documentation system") {
-  System(sources, "Content sources", "Stores content material in components and modules.")
-  System(sitegen, "Website generator", "Combines sources to produce the documentation website.")
-  Rel_R(sources, sitegen, "are input for")
+System_Boundary(boundary1, "System_Boundary", "Boundary type") {
+  Container(container1, "Container", "Technology", "Optional Description")
+  ContainerQueue(cqueue, "ContainerQueue", "Tech")
+  ContainerDb(cdb, "ContainerDb", "Technology", "Optional Description")
+
+  Rel_R(container1, cdb, "Rel_R", "Optional Technology")
+  BiRel_L(container1, cqueue, "BiRel", "Optional")
 }
 
-System_Ext(tools, "Editing tools", "Support planning and writing content.")
-System_Ext(site, "Documentation website", "Informs users and developers.")
+System_Boundary(boundary2, "Boundary", "Boundary type") {
+  Container_Ext(container2, "Container_Ext", "Technology", "Optional Description")
+  ContainerQueue_Ext(cqueue2, "ContainerQueue_Ext", "Tech")
+  ContainerDb_Ext(cdb2, "ContainerDb_Ext", "Technology", "Optional Description")
 
-Rel(editor, tools, "works with")
-Rel(tools, sources, "contribute content material to")
-Rel(publisher, sitegen, "configures and runs")
-Rel(sitegen, site, "publishes")
+  Rel_R(container2, cdb2, "Rel_R", "Optional Technology")
+  BiRel_L(container2, cqueue2, "BiRel", "Optional")
+}
 
-Lay_L(publisher, tools)
+Rel(container1, container2, "Rel")
 @enduml

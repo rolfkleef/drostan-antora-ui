@@ -2,11 +2,11 @@
 
 == Overview
 
-.UML Diagrams
+.PlantUML Diagrams
 [plantuml]
 ....
 @startmindmap
-include::example$plantuml-wbsmm-style.iuml[]
+include::partial$plantuml-wbsmm-style.iuml[]
 * PlantUML
  * UML diagrams
   * Behaviour diagrams
@@ -25,7 +25,7 @@ include::example$plantuml-wbsmm-style.iuml[]
  * Other diagrams
   * Mindmaps
   * Work Breakdown Structures (WBS)
-  * C4 models
+  * C4 diagrams
 @endmindmap
 ....
 
@@ -44,37 +44,25 @@ The configuration file uses color variables across UML elements, divided in type
 [plantuml]
 ....
 @startuml
-skinparam Participant {
-  BackgroundColor<<node 1>> $node_1_background_color
-  BorderColor<<node 1>> $node_1_border_color
-  FontColor<<node 1>> $node_1_color
-  StereotypeFontColor<<node 1>> $node_1_color
-
-  BackgroundColor<<node 2>> $node_2_background_color
-  BorderColor<<node 2>> $node_2_border_color
-  FontColor<<node 2>> $node_2_color
-  StereotypeFontColor<<node 2>> $node_2_color
-
-  BackgroundColor<<logic>> $logic_background_color
-  BorderColor<<logic>> $logic_border_color
-  FontColor<<logic>> $logic_color
-  StereotypeFontColor<<logic>> $logic_color
-
-  BackgroundColor<<group>> $group_color
-  BorderColor<<group>> $group_border_color
-  FontColor<<group>> $group_color
-  StereotypeFontColor<<group>> $group_color
-
-  BackgroundColor<<divider>> $divider_background_color
-  BorderColor<<divider>> $divider_border_color
-  FontColor<<divider>> $divider_color
-  StereotypeFontColor<<divider>> $divider_color
-
-  BackgroundColor<<note>> $note_1_background_color
-  BorderColor<<note>> $note_1_border_color
-  FontColor<<note>> $note_1_color
-  StereotypeFontColor<<note>> $note_1_color
+skinparam participant<<node_1>> {
+  $node_1_style(1)
 }
+skinparam participant<<node_2>> {
+  $node_2_style(1)
+}
+skinparam participant<<logic>> {
+  $logic_style(1)
+}
+skinparam participant<<group>> {
+  $group_style(1)
+}
+skinparam participant<<divider>> {
+  $divider_style(1)
+}
+skinparam participant<<note>> {
+  $note_1_style(1)
+}
+
 hide footbox
 
 participant "Primary node" <<node 1>>
