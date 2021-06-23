@@ -6,6 +6,7 @@
 [plantuml]
 ....
 @startmindmap
+include::example$plantuml-wbsmm-style.iuml[]
 * PlantUML
  * UML diagrams
   * Behaviour diagrams
