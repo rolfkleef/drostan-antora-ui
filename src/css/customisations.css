@@ -222,11 +222,11 @@ table.storymap td > * {
 footer svg.icon {
   width: 2em;
   height: 2em;
-  fill: var(--footer-font-color);
+  fill: var(--footer-link-font-color);
 }
 
 footer svg.icon:hover {
-  fill: var(--footer-link-font-color);
+  fill: var(--footer-font-color);
 }
 
 .navbar img {
