@@ -9,8 +9,8 @@ Person(group1, "Group", "Optional Description", $sprite="users")
 
 Boundary(boundary1, "Boundary", "Boundary type") {
   System(system1, "System", "Optional Description")
-  SystemQueue(squeue, "SystemQueue", "Tech")
-  SystemDb(sdb, "SystemDb", "Technology", "Optional Description")
+  SystemQueue(squeue, "SystemQueue", "Optional Description")
+  SystemDb(sdb, "SystemDb", "Optional Description")
 
   Rel_R(system1, sdb, "Rel_R", "Optional Technology")
   BiRel_L(system1, squeue, "BiRel_L", "Optional")
@@ -20,8 +20,8 @@ Rel(person1, system1, "Rel", "Optional Technology")
 
 Boundary(boundary2, "Boundary", "Boundary type") {
   System_Ext(system2, "System_Ext", "Optional Description")
-  SystemQueue_Ext(squeue2, "SystemQueue_Ext", "Tech")
-  SystemDb_Ext(sdb2, "SystemDb_Ext", "Technology", "Optional Description")
+  SystemQueue_Ext(squeue2, "SystemQueue_Ext", "Optional Description")
+  SystemDb_Ext(sdb2, "SystemDb_Ext", "Optional Description")
 
   Rel_R(system2, sdb2, "Rel_R", "Optional Technology")
   BiRel_L(system2, squeue2, "BiRel_L", "Optional")

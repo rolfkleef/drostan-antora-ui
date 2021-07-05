@@ -1,6 +1,6 @@
 = C4 diagrams
 
-The https://c4model.com/[C4 Models^] offers multiple diagram types.
+The https://c4model.com/[C4 Models^] offer multiple diagram types.
 
 .C4 Diagrams
 [plantuml]
@@ -15,7 +15,7 @@ include::partial$plantuml-wbsmm-style.iuml[]
   * Level 4, Code
  * Supplementary diagrams
   * System landscape
-  * Dynaimics
+  * Dynamics
   * Deployment
 @endmindmap
 ....

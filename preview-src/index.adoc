@@ -141,6 +141,7 @@ Proin sit amet menu:libero[in nulla] consequat menu:tincidunt[non sit > amet mi]
 
 === Links
 
+:!hide-uri-scheme:
 With URI scheme::
 Nunc dignissim https://asciidoctor.org risus nec convallis laoreet.
 Nunc https://asciidoctor.org[porttitor eleifend] sodales.

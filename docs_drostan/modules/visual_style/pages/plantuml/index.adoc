@@ -37,8 +37,8 @@ Two pointers for more information on the syntax and the meaning of diagrams:
 
 == Color conventions
 
-We use a PlantUML configuration file to be included when generating diagram images.
-The configuration file uses color variables across UML elements, divided in types of diagram elements.
+We include a PlantUML configuration file when generating diagram images.
+This configuration file uses color variables across UML elements, divided in types of diagram elements.
 
 .Color conventions for types of diagram elements
 [plantuml]
