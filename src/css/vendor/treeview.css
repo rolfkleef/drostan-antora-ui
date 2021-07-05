@@ -3,86 +3,33 @@
  * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
  * https://github.com/asciidocfx/highlight-treeview.js
  */
+:root {
+  --folder-icon-height: 1rem;
+  --folder-icon-width: 1rem;
+}
+
 .hljs-folder,
 .hljs-hiddenfile,
 .hljs-file {
-    position: relative;
-    vertical-align: top;
-    display: inline-block;
-    height: 16px;
+  position: relative;
+  vertical-align: baseline;
+  display: inline-block;
+  height: var(--folder-icon-height);
 }
+
 .hljs-folder:before,
 .hljs-file:before,
 .hljs-hiddenfile:before {
-    top: 0;
-    content: '';
-    width: 14px;
-    height: 12px;
-    margin-top: 0px;
-    margin-right: 3px;
-    position: relative;
-    display: inline-block;
-    background-size: 14px;
-    background-repeat: no-repeat;
+  top: 2px;
+  content: "";
+  width: var(--folder-icon-width);
+  height: var(--folder-icon-height);
+  /* margin-top: 0px; */
+  margin-right: 3px;
+  position: relative;
+  display: inline-block;
 }
-.hljs-file:before,
-.hljs-hiddenfile:before {
-    height: 14px;
-    margin-left: 1px;
-}
-.hljs-hiddenfile {
-    opacity: 0.6;
-}
-.hljs-file.photo:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e3f4";
-}
-.hljs-file.plain:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e24d";
-}
-.hljs-file.source:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e86f";
-}
-.hljs-file.archive:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e149";
-}
-.hljs-file.audio:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e3a1";
-}
-.hljs-file.video:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e63a";
-}
-.hljs-file.pdf:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e415";
-}
-.hljs-file.xls:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\fibe";
-}
-.hljs-file.doc:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e873";
-}
-.hljs-file.ppt:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e41b";
-}
+
 .hljs-folder:before {
   font-family: "Material Icons", sans-serif;
   color: var(--heading-font-color);
@@ -92,19 +39,115 @@
 .hljs-hiddenfile:before {
   font-family: "Material Icons", sans-serif;
   color: var(--color-second-regular);
-  content: "\f023";
+  content: "\e8f5";
 }
+
+.hljs-file:before,
+.hljs-hiddenfile:before {
+  height: var(--folder-icon-height);
+  margin-left: 1px;
+}
+
+.hljs-hiddenfile {
+  opacity: 0.6;
+}
+
+.hljs-file.photo:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e3f4";
+}
+
+.hljs-file.plain:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e24d";
+}
+
+.hljs-file.source:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e86f";
+}
+
+.hljs-file.css:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e41d";
+}
+
+.hljs-file.settings:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e896";
+}
+
+.hljs-file.layout:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e8f1";
+}
+
+.hljs-file.archive:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e149";
+}
+
+.hljs-file.audio:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e3a1";
+}
+
+.hljs-file.video:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e63a";
+}
+
+.hljs-file.pdf:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e415";
+}
+
+.hljs-file.book:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\ea19";
+}
+
+.hljs-file.xls:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e265";
+}
+
+.hljs-file.document:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e873";
+}
+
+.hljs-file.ppt:before {
+  font-family: "Material Icons", sans-serif;
+  color: var(--color-second-regular);
+  content: "\e41b";
+}
+
 .hljs-tvline {
     margin-left: 6px;
     position: absolute;
     text-indent: -99em;
     padding-bottom: 8px;
-    vertical-align: top;
+    vertical-align: sub;
     display: inline-block;
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: rgb(94, 144, 117);
+    border-left-color: var(--toolbar-muted-color);
 }
+
 .hljs-folder-branch {
     width: 8px;
     height: 8px;
@@ -112,31 +155,34 @@
     margin-left: 6px;
     text-indent: -99em;
     position: relative;
-    vertical-align: top;
+    vertical-align: sub;
     display: inline-block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(94, 144, 117);
+    border-bottom-color: var(--toolbar-muted-color);
 }
+
 .hljs-folder-branch.win {
     width: 14px;
     margin-right: 2px;
 }
+
 .hljs-folder-last-branch {
     height: 7px;
     width: 7px;
     margin-left: 6px;
     text-indent: -99em;
     position: relative;
-    vertical-align: top;
+    vertical-align: sub;
     display: inline-block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(94, 144, 117);
+    border-bottom-color: var(--toolbar-muted-color);
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: rgb(94, 144, 117);
+    border-left-color: var(--toolbar-muted-color);
 }
+
 .hljs-folder-last-branch.win {
     width: 13px;
     margin-right: 2px;

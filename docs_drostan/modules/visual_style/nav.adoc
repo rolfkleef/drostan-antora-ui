@@ -6,3 +6,4 @@
 *** xref:plantuml/sequence.adoc[]
 *** xref:plantuml/c4.adoc[]
 ** xref:mermaid.adoc[]
+** xref:treeview.adoc[]
