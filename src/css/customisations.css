@@ -236,3 +236,9 @@ footer svg.icon:hover {
   height: auto;
   max-width: 100%;
 }
+
+.resizable {
+  resize: both;
+  overflow: auto;
+  border: 1px solid var(--section-divider-color);
+}
