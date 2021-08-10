@@ -99,6 +99,11 @@
           relevance: 0
         },
         {
+          className: 'file source',
+          begin: /[^ \n\t  ].+\.(xslt?)\b/,
+          relevance: 0
+        },
+        {
           className: 'file settings',
           begin: /[^ \n\t  ].+\.(json)/,
           relevance: 0
