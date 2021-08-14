@@ -20,7 +20,7 @@ lint:
 bundle-stable:
   stage: deploy
   only:
-  - drostan@rolfkleef/antora-ui-default
+  - drostan
   cache: *pull_cache
   script:
   - *npm_install
@@ -44,7 +44,7 @@ bundle-dev:
 pages:
   stage: deploy
   only:
-  - drostan@rolfkleef/antora-ui-default
+  - drostan
   cache: *pull_cache
   script:
   - *npm_install
