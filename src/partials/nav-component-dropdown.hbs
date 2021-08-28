@@ -9,7 +9,7 @@
   {{/if}}
   <div class="navbar-dropdown">
     {{#each site.components}}
-      {{#unless (eq this @root.page.component)}}
+      {{#unless (or (eq this @root.page.component) (eq ./name "lib-style"))}}
         <a class="navbar-item" href="{{{relativize ./url}}}">{{{./title}}}</a>
       {{/unless}}
     {{/each}}
