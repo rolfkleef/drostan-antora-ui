@@ -45,8 +45,12 @@
   }
 }
 
-h1.page + aside.toc.embedded {
+.doc > h1.page:first-child + aside.toc.embedded {
   margin-top: -0.5rem;
+}
+
+.doc > h2#name + .sectionbody {
+  margin-top: 1rem;
 }
 
 #preamble + .sect1,
@@ -133,7 +137,8 @@ h1.page + aside.toc.embedded {
 }
 
 .doc p code,
-.doc thead code {
+.doc thead code,
+.doc .colist > table code {
   color: var(--code-font-color);
   background: var(--code-background);
   border-radius: 0.25em;
@@ -207,6 +212,10 @@ h1.page + aside.toc.embedded {
   margin-top: 1.5rem;
 }
 
+.doc p.tableblock + p.tableblock {
+  margin-top: 0.5rem;
+}
+
 .doc td.tableblock > .content > :first-child {
   margin-top: 0;
 }
@@ -216,14 +225,58 @@ h1.page + aside.toc.embedded {
   padding: 0.5rem;
 }
 
-.doc table.tableblock thead th {
-  border-bottom: 2.5px solid var(--table-border-color);
+.doc table.tableblock,
+.doc table.tableblock > * > tr > * {
+  border: 0 solid var(--table-border-color);
 }
 
-.doc table.tableblock td,
-.doc table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--table-border-color);
-  border-bottom: 1px solid var(--table-border-color);
+.doc table.grid-all > * > tr > * {
+  border-width: 1px;
+}
+
+.doc table.grid-cols > * > tr > * {
+  border-width: 0 1px;
+}
+
+.doc table.grid-rows > * > tr > * {
+  border-width: 1px 0;
+}
+
+.doc table.grid-all > thead th,
+.doc table.grid-rows > thead th {
+  border-bottom-width: 2.5px;
+}
+
+.doc table.frame-all {
+  border-width: 1px;
+}
+
+.doc table.frame-ends {
+  border-width: 1px 0;
+}
+
+.doc table.frame-sides {
+  border-width: 0 1px;
+}
+
+.doc table.frame-none > colgroup + * > :first-child > *,
+.doc table.frame-sides > colgroup + * > :first-child > * {
+  border-top-width: 0;
+}
+
+/* NOTE let the grid win in case of frame-none */
+.doc table.frame-sides > :last-child > :last-child > * {
+  border-bottom-width: 0;
+}
+
+.doc table.frame-none > * > tr > :first-child,
+.doc table.frame-ends > * > tr > :first-child {
+  border-left-width: 0;
+}
+
+.doc table.frame-none > * > tr > :last-child,
+.doc table.frame-ends > * > tr > :last-child {
+  border-right-width: 0;
 }
 
 .doc table.stripes-all > tbody > tr,
@@ -348,7 +401,11 @@ h1.page + aside.toc.embedded {
 }
 
 .doc .imageblock img,
-.doc .image > img {
+.doc .imageblock object,
+.doc .imageblock svg,
+.doc .image > img,
+.doc .image > object,
+.doc .image > svg {
   display: inline-block;
   height: auto;
   max-width: 100%;
@@ -503,9 +560,9 @@ h1.page + aside.toc.embedded {
   margin-top: 0.5rem;
 }
 
-.doc .olist li,
-.doc .ulist li {
-  margin-bottom: 0.5rem;
+.doc .olist li + li,
+.doc .ulist li + li {
+  margin-top: 0.5rem;
 }
 
 .doc .ulist .listingblock,
@@ -540,14 +597,78 @@ h1.page + aside.toc.embedded {
   padding-bottom: 0;
 }
 
-.doc .exampleblock > .content {
+.doc details {
+  margin-left: 1rem;
+}
+
+.doc details > summary {
+  display: block;
+  position: relative;
+  line-height: var(--doc-line-height);
+  margin-bottom: 0.5rem;
+}
+
+.doc details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.doc details > summary::before {
+  content: "";
+  border: solid transparent;
+  border-left-color: currentColor;
+  border-width: 0.3em 0 0.3em 0.5em;
+  position: absolute;
+  top: calc((var(--doc-line-height) * 0.5 - 0.3) * 1em);
+  left: -1rem;
+  transform: translateX(15%);
+}
+
+.doc details[open] > summary::before {
+  border-color: currentColor transparent transparent;
+  border-width: 0.5rem 0.3rem 0;
+  transform: translateY(15%);
+}
+
+.doc details > summary::after {
+  content: "";
+  width: 1rem;
+  height: 1em;
+  position: absolute;
+  top: calc((var(--doc-line-height) * 0.5 - 0.5) * 1em);
+  left: -1rem;
+}
+
+.doc details.result {
+  margin-top: 0.25rem;
+}
+
+.doc details.result > summary {
+  color: var(--caption-font-color);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.doc details.result > .content {
+  margin-left: -1rem;
+}
+
+.doc .exampleblock > .content,
+.doc details.result > .content {
   background: var(--example-background);
   border: 0.25rem solid var(--example-border-color);
   border-radius: 0.5rem;
   padding: 0.75rem;
 }
 
-.doc .exampleblock > .content > :first-child {
+.doc .exampleblock > .content::after,
+.doc details.result > .content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.doc .exampleblock > .content > :first-child,
+.doc details > .content > :first-child {
   margin-top: 0;
 }
 
@@ -819,11 +940,42 @@ h1.page + aside.toc.embedded {
   line-height: calc(1 / 1.1);
 }
 
-.doc .nowrap {
+.doc :not(pre).nowrap {
   white-space: nowrap;
 }
 
 .doc .nobreak {
   hyphens: none;
   word-wrap: normal;
+}
+
+#footnotes {
+  font-size: 0.85em;
+  line-height: 1.5;
+  margin: 2rem -0.5rem 0;
+}
+
+.doc td.tableblock > .content #footnotes {
+  margin: 2rem 0 0;
+}
+
+#footnotes hr {
+  border-top-width: 1px;
+  margin-top: 0;
+  width: 20%;
+}
+
+#footnotes .footnote {
+  margin: 0.5em 0 0 1em;
+}
+
+#footnotes .footnote + .footnote {
+  margin-top: 0.25em;
+}
+
+#footnotes .footnote > a:first-of-type {
+  display: inline-block;
+  margin-left: -2em;
+  text-align: right;
+  width: 1.5em;
 }
