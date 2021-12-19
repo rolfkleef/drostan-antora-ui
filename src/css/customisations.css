@@ -10,13 +10,6 @@ body.wide .doc {
   max-width: 100vw;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar-brand .navbar-item + .navbar-item {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   body.wide .doc {
     max-width: 100vw;
@@ -248,17 +241,6 @@ footer svg.icon:hover {
   resize: both;
   overflow: auto;
   border: 1px solid var(--section-divider-color);
-}
-
-#search-input {
-  color: var(--body-font-color);
-  font-family: inherit;
-  font-size: 0.95rem;
-  width: 150px;
-  border: 0;
-  border-radius: 0.1em;
-  line-height: 1.5;
-  padding: 0 0.25em;
 }
 
 @media screen and (min-width: 769px) {
