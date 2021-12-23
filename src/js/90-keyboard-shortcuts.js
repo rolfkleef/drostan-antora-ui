@@ -17,22 +17,24 @@
         switch (event.key) {
           case 'ArrowLeft':
           case 'k':
-          case 'p':
-            if (document.querySelector('link[rel="prev"]')) {
-              window.location.assign(document.querySelector('link[rel="prev"]').href)
-            }
+          case 'p': {
+            const prev = document.querySelector('link[rel="prev"]')
+            if (prev) window.location.assign(prev.href)
             break
+          }
           case 'ArrowRight':
           case 'j':
-          case 'n':
-            if (document.querySelector('link[rel="next"]')) {
-              window.location.assign(document.querySelector('link[rel="next"]').href)
-            }
+          case 'n': {
+            const next = document.querySelector('link[rel="next"]')
+            if (next) window.location.assign(next.href)
             break
-          case '/':
-            document.getElementById('search-input').focus()
+          }
+          case '/': {
+            const search = document.getElementById('search-input')
+            if (search) search.focus()
             event.preventDefault()
             break
+          }
         }
       } else {
         switch (event.key) {
