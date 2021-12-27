@@ -34,13 +34,6 @@
   color: #333;
 }
 
-.search-result-highlight {
-  color: var(--link-font-color);
-  background: rgba(143, 187, 237, 0.1);
-  padding: 0.1em 0.05em;
-  font-weight: 700;
-}
-
 .search-result-item {
   display: flex;
   font-size: 1rem;
@@ -74,4 +67,11 @@
 
 .search-result-document-hit > a:hover {
   background-color: rgba(69, 142, 225, 0.05);
+}
+
+.search-result-highlight {
+  color: var(--link-font-color);
+  background: rgba(143, 187, 237, 0.1);
+  padding: 0.1em 0.05em;
+  font-weight: 700;
 }

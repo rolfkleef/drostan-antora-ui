@@ -1,10 +1,8 @@
 <script src="{{{uiRootPath}}}/js/site.js"></script>
-{{#if (eq env.SITE_SEARCH_PROVIDER 'lunr')}}
-<script src="{{uiRootPath}}/js/vendor/lunr.js"></script>
-<script src="{{uiRootPath}}/js/vendor/search.js" id="search-script" data-base-path="{{siteRootPath}}" data-stylesheet="{{uiRootPath}}/css/search.css"></script>
-<script async src="{{siteRootPath}}/search-index.js"></script>
-{{/if}}
 <script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
+{{#if (eq env.SITE_SEARCH_PROVIDER 'lunr')}}
+{{> search-scripts}}
+{{/if}}
 <script type="application/json" class="js-hypothesis-config">
 {
   "showHighlights": "whenSidebarOpen"
