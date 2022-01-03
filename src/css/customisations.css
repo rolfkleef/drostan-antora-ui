@@ -28,6 +28,10 @@ body.wide .doc {
   margin-left: 2.5em !important;
 }
 
+.doc .notargeticon a[target="_blank"]::after {
+  content: "";
+}
+
 .doc a[target="_blank"]::after {
   font-family: "Material Icons", sans-serif;
   content: "\e895";
