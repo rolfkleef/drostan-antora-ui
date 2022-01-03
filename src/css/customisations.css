@@ -248,3 +248,18 @@ footer svg.icon:hover {
     width: 200px;
   }
 }
+
+.skip-to-main {
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0 0 0.25rem;
+  position: absolute;
+  left: 0.5rem;
+  z-index: 5;
+  transform: translateY(-5.5rem);
+  transition: transform 300ms ease-in;
+}
+
+.skip-to-main:focus {
+  transform: translateY(-3.5rem);
+}
