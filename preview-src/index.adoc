@@ -15,18 +15,27 @@ Author Name
 |===
 |Colours |Application
 
-|+++<div class="colorswatch bg--doc-font-color"></div>+++
-+++<div class="colorswatch bg--heading-font-color"></div>+++
-+++<div class="colorswatch bg--link-font-color"></div>+++
-+++<div class="colorswatch bg--link_hover-font-color"></div>+++
-|Document text: body, heading, link, hovered link
+[,json]
+----
+{
+  "name": "module-name",
+  "version": "10.0.1",
+  "description": "An example module to illustrate the usage of package.json",
+  "author": "Author Name <author@example.com>",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint"
+  }
+}
+----
 
-|+++<div class="colorswatch bg--nav-heading-font-color"></div>+++
-+++<div class="colorswatch bg--nav-muted-color"></div>+++
-+++<div class="colorswatch bg--nav-background"></div>+++
-+++<div class="colorswatch bg--navbar-menu_hover-background"></div>+++
-+++<div class="colorswatch bg--nav-border-color"></div>+++
-|Content navigation: heading, muted, background, hover, border
+.Example paragraph syntax
+[,asciidoc]
+----
+.Optional title
+[example]
+This is an example paragraph.
+----
 
 |+++<div class="colorswatch bg--navbar-font-color"></div>+++
 +++<div class="colorswatch bg--navbar-background"></div>+++
@@ -34,28 +43,46 @@ Author Name
 +++<div class="colorswatch bg--navbar-button-background"></div>+++
 |Navigation bar: text, background, hover, button
 
-|+++<div class="colorswatch bg--navbar-menu-font-color"></div>+++
-+++<div class="colorswatch bg--navbar-menu-background"></div>+++
-+++<div class="colorswatch bg--navbar-menu_hover-background"></div>+++
-+++<div class="colorswatch bg--navbar-menu-border-color"></div>+++
-|Navigation menu: text, background, hover, border
+.Summary *Spoiler Alert!*
+[%collapsible]
+====
+Details.
 
-|+++<div class="colorswatch bg--doc-background-color"></div>+++
-+++<div class="colorswatch bg--body-background)"></div>+++
-+++<div class="colorswatch bg--panel-background)"></div>+++
-|Backgrounds: document, page, panel
+Loads of details.
+====
+
+[,asciidoc]
+----
+Voila!
+----
+
+.Result
+[%collapsible.result]
+====
+Voila!
+====
+
+=== Some Code
 
 |+++<div class="colorswatch bg--footer-background"></div>+++
 +++<div class="colorswatch bg--footer-font-color"></div>+++
 +++<div class="colorswatch bg--footer-link-font-color"></div>+++
 |Footer: background, text, link
 
-|+++<div class="colorswatch bg--important-color fg--important-on-color">Important</div>+++
-+++<div class="colorswatch bg--warning-color fg--warning-on-color">Warning</div>+++
-+++<div class="colorswatch bg--caution-color fg--caution-on-color">Caution</div>+++
-+++<div class="colorswatch bg--note-color fg--note-on-color">Note</div>+++
-+++<div class="colorswatch bg--tip-color fg--tip-on-color">Tip</div>+++
-|Admonitions: important, warning, caution, note, tip
+[,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <.>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <.>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+<.> The `tap` function is used to wiretap the data in the pipe.
+<.> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
 
 |===
 
@@ -72,8 +99,15 @@ Author Name
 [discrete]
 === Heading 2
 
-[discrete]
-==== Heading 3
+m|"foo\nbar"
+l|foo
+bar
+a|
+[,ruby]
+----
+puts "foo\nbar"
+----
+|===
 
 [discrete]
 ===== Heading 4
@@ -83,14 +117,8 @@ Author Name
 
 === Paragraphs 
 
-[.lead]
-*Lead paragraph (preamble).*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Vivamus sollicitudin ac mauris eget imperdiet.
-Etiam vulputate nunc eget volutpat aliquam.
-Nulla quis luctus ex.
-Morbi varius lorem pharetra justo convallis blandit.
-Nullam lobortis, justo at sodales rhoncus, leo neque iaculis orci, ac mattis elit tellus ac magna.
+[.rolename]
+=== Liber recusabo
 
 *Normal paragraph.*
 Phasellus porttitor mi at ante convallis ultrices.
@@ -330,13 +358,14 @@ ORDERED_LIST_KEYWORDS = {
   'upperroman' => 'I',
 }
 
-get '/hi' do
-  "Hello World!" # <2>
-end
-----
-<1> Callout. Proin at feugiat ante, sagittis feugiat massa.
-Phasellus lectus nisl, dignissim quis pellentesque eget, sodales eget ligula.
-<2> Proin mi libero, varius nec laoreet ac, ultrices et urna.
+[,'Famous Person. Cum dicat putant ne.','Cum dicat putant ne. https://example.com[Famous Person Website]']
+____
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+____
 
 === Listing
 
