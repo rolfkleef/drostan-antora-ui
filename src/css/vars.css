@@ -72,6 +72,10 @@
   --tip-on-color: var(--color-white);
   --warning-color: #e18114;
   --warning-on-color: var(--color-white);
+  --primary-color: #08427b;
+  --primary-on-color: var(--color-white);
+  --secondary-color: #1168bd;
+  --secondary-on-color: var(--color-white);
   /* doc */
   --doc-font-color: var(--color-jet-50);
   --doc-background-color: var(--color-white);

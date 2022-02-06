@@ -89,132 +89,185 @@ table.storymap td > * {
 }
 
 /* for colour swatches */
-.bg--doc-font-color {
+.boxed-doc-font-color {
   background-color: var(--doc-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--heading-font-color {
+.boxed-heading-font-color {
   background-color: var(--heading-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--link-font-color {
+.boxed-link-font-color {
   background-color: var(--link-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--link_hover-font-color {
+.boxed-link_hover-font-color {
   background-color: var(--link_hover-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--nav-heading-font-color {
+.boxed-nav-heading-font-color {
   background-color: var(--nav-heading-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--nav-muted-color {
+.boxed-nav-muted-color {
   background-color: var(--nav-muted-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--nav-background {
+.boxed-nav-background {
   background-color: var(--nav-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-menu_hover-background {
+.boxed-navbar-menu_hover-background {
   background-color: var(--navbar-menu_hover-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--nav-border-color {
+.boxed-nav-border-color {
   background-color: var(--nav-border-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-font-color {
+.boxed-navbar-font-color {
   background-color: var(--navbar-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-background {
+.boxed-navbar-background {
   background-color: var(--navbar-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar_hover-background {
+.boxed-navbar_hover-background {
   background-color: var(--navbar_hover-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-button-background {
+.boxed-navbar-button-background {
   background-color: var(--navbar-button-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-menu-font-color {
+.boxed-navbar-menu-font-color {
   background-color: var(--navbar-menu-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-menu-background {
+.boxed-navbar-menu-background {
   background-color: var(--navbar-menu-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--navbar-menu-border-color {
+.boxed-navbar-menu-border-color {
   background-color: var(--navbar-menu-border-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--doc-background-color {
+.boxed-doc-background-color {
   background-color: var(--doc-background-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--body-background {
+.boxed-body-background {
   background-color: var(--body-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--panel-background {
+.boxed-panel-background {
   background-color: var(--panel-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--footer-background {
+.boxed-footer-background {
   background-color: var(--footer-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--footer-font-color {
+.boxed-footer-font-color {
   background-color: var(--footer-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--footer-link-font-color {
+.boxed-footer-link-font-color {
   background-color: var(--footer-link-font-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.bg--important-color {
+.boxed-important-color {
   background-color: var(--important-color);
-}
-
-.bg--warning-color {
-  background-color: var(--warning-color);
-}
-
-.bg--caution-color {
-  background-color: var(--caution-color);
-}
-
-.bg--note-color {
-  background-color: var(--note-color);
-}
-
-.bg--tip-color {
-  background-color: var(--tip-color);
-}
-
-.fg--important-on-color {
   color: var(--important-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.fg--warning-on-color {
+.boxed-warning-color {
+  background-color: var(--warning-color);
   color: var(--warning-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.fg--caution-on-color {
+.boxed-caution-color {
+  background-color: var(--caution-color);
   color: var(--caution-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.fg--note-on-color {
+.boxed-note-color {
+  background-color: var(--note-color);
   color: var(--note-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
-.fg--tip-on-color {
+.boxed-tip-color {
+  background-color: var(--tip-color);
   color: var(--tip-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.boxed-primary-color {
+  background-color: var(--primary-color);
+  color: var(--primary-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.boxed-secondary-color {
+  background-color: var(--secondary-color);
+  color: var(--secondary-on-color);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
 }
 
 /* add spacing for hypothes.is bar on the right */
