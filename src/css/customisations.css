@@ -88,186 +88,138 @@ table.storymap td > * {
   border-width: 0 !important;
 }
 
+.boxed {
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.label {
+  padding: 0.2rem 0.7rem;
+  border-radius: 2em;
+}
+
 /* for colour swatches */
-.boxed-doc-font-color {
+.cs-doc-font-color {
   background-color: var(--doc-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-heading-font-color {
+.cs-heading-font-color {
   background-color: var(--heading-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-link-font-color {
+.cs-link-font-color {
   background-color: var(--link-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-link_hover-font-color {
+.cs-link_hover-font-color {
   background-color: var(--link_hover-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-nav-heading-font-color {
+.cs-nav-heading-font-color {
   background-color: var(--nav-heading-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-nav-muted-color {
+.cs-nav-muted-color {
   background-color: var(--nav-muted-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-nav-background {
+.cs-nav-background {
   background-color: var(--nav-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-menu_hover-background {
+.cs-navbar-menu_hover-background {
   background-color: var(--navbar-menu_hover-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-nav-border-color {
+.cs-nav-border-color {
   background-color: var(--nav-border-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-font-color {
+.cs-navbar-font-color {
   background-color: var(--navbar-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-background {
+.cs-navbar-background {
   background-color: var(--navbar-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar_hover-background {
+.cs-navbar_hover-background {
   background-color: var(--navbar_hover-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-button-background {
+.cs-navbar-button-background {
   background-color: var(--navbar-button-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-menu-font-color {
+.cs-navbar-menu-font-color {
   background-color: var(--navbar-menu-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-menu-background {
+.cs-navbar-menu-background {
   background-color: var(--navbar-menu-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-navbar-menu-border-color {
+.cs-navbar-menu-border-color {
   background-color: var(--navbar-menu-border-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-doc-background-color {
+.cs-doc-background-color {
   background-color: var(--doc-background-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-body-background {
+.cs-body-background {
   background-color: var(--body-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-panel-background {
+.cs-panel-background {
   background-color: var(--panel-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-footer-background {
+.cs-footer-background {
   background-color: var(--footer-background);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-footer-font-color {
+.cs-footer-font-color {
   background-color: var(--footer-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-footer-link-font-color {
+.cs-footer-link-font-color {
   background-color: var(--footer-link-font-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-important-color {
+.cs-important-color {
   background-color: var(--important-color);
   color: var(--important-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-warning-color {
+.cs-warning-color {
   background-color: var(--warning-color);
   color: var(--warning-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-caution-color {
+.cs-caution-color {
   background-color: var(--caution-color);
   color: var(--caution-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-note-color {
+.cs-note-color {
   background-color: var(--note-color);
   color: var(--note-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-tip-color {
+.cs-tip-color {
   background-color: var(--tip-color);
   color: var(--tip-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-primary-color {
+.cs-primary-color {
   background-color: var(--primary-color);
   color: var(--primary-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
-.boxed-secondary-color {
+.cs-secondary-color {
   background-color: var(--secondary-color);
   color: var(--secondary-on-color);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
 }
 
 /* add spacing for hypothes.is bar on the right */
