@@ -11,7 +11,7 @@ Author Name
 
 == Colours
 
-[cols="2,3"]
+[cols="2,3a"]
 |===
 |Colours |Application
 
@@ -115,7 +115,7 @@ puts "foo\nbar"
 [discrete]
 ====== Heading 5
 
-=== Paragraphs 
+=== Paragraphs
 
 [.rolename]
 === Liber recusabo
@@ -146,7 +146,7 @@ Maecenas #commodo euismod mauris#, at dignissim augue.
 Subscript, superscript::
 Maecenas ~nec~ sem ^metus^.
 
-Curved quotation marks and apostrophes:: 
+Curved quotation marks and apostrophes::
 Praesent "`sapien`" nisi, '`rutrum`' in justo `'sit amet, inter'dum molestie`' dui.
 
 Underline and strikethrough::
@@ -334,6 +334,15 @@ Fusce risus tortor, dapibus a varius quis, mattis ut nulla.
 Aenean et risus id ex ornare ultricies."
 -- Quisque sit amet congue urna., Donec laoreet vehicula neque, porttitor vulputate libero lobortis semper.
 
+[,'Famous Person. Cum dicat putant ne.','Cum dicat putant ne. https://example.com[Famous Person Website]']
+____
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+____
+
 === Verse
 
 .Optional title
@@ -346,10 +355,20 @@ Morbi pulvinar auctor mauris vulputate viverra.
 
 === Source code
 
+[source]
+----
+plain text
+----
+
 .Optional title
 [source,ruby,linenums,highlight=4..5]
 ----
 require 'sinatra' # <1>
+.Full Circle with Jake Blauvelt
+video::300817511[vimeo,600,300]
+
+[#english+中文]
+== English + 中文
 
 ORDERED_LIST_KEYWORDS = {
   'loweralpha' => 'a',
@@ -357,15 +376,12 @@ ORDERED_LIST_KEYWORDS = {
   'upperalpha' => 'A',
   'upperroman' => 'I',
 }
+----
 
-[,'Famous Person. Cum dicat putant ne.','Cum dicat putant ne. https://example.com[Famous Person Website]']
-____
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
-Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
-Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
-____
+=== Video
+
+.Video from Vimeo
+video::300817511[vimeo,600,300]
 
 === Listing
 
@@ -424,7 +440,7 @@ image::multirepo-ssg.svg[Aenean tempus in mauris non pretium.,400]
 == Special document sections
 
 [abstract]
-=== Abstract 
+=== Abstract
 
 [abstract]
 Morbi suscipit risus quis rutrum eleifend.
