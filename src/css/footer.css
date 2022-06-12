@@ -1,4 +1,4 @@
-footer.footer {
+footer {
   background-color: var(--footer-background);
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -6,39 +6,39 @@ footer.footer {
   padding: 1.5rem;
 }
 
-.footer .columns {
+footer .columns {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16em, auto));
 }
 
-.footer .credits {
+footer .credits {
   margin-top: 2em;
   color: var(--color-gray-30);
   display: flex;
   justify-content: center;
 }
 
-.footer .credits a {
+footer .credits a {
   font-weight: bolder;
   color: inherit;
 }
 
-.footer aside {
+footer aside {
   margin: 1rem;
 }
 
-.footer p {
+footer p {
   margin: 0;
 }
 
-.footer a {
+footer a {
   color: var(--footer-link-font-color);
 }
 
-.footer h1 {
+footer h1 {
   font-size: calc(15 / var(--rem-base) * 1rem);
 }
 
-.footer ul {
+footer ul {
   padding-left: 1em;
 }

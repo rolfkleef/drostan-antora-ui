@@ -224,7 +224,7 @@ table.storymap td > * {
 
 /* add spacing for hypothes.is bar on the right */
 .toolbar,
-.navbar {
+header > nav {
   padding-right: 2.2rem;
 }
 

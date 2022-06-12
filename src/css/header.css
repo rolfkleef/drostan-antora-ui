@@ -6,7 +6,7 @@ body {
   padding-top: var(--navbar-height);
 }
 
-.navbar {
+header > nav {
   background: var(--navbar-background);
   box-shadow: 0 0.1em 0.5em var(--color-gray-50);
   color: var(--navbar-font-color);
@@ -18,7 +18,7 @@ body {
   z-index: var(--z-index-navbar);
 }
 
-.navbar a {
+header > nav a {
   text-decoration: none;
 }
 
@@ -220,7 +220,7 @@ body {
     display: none;
   }
 
-  .navbar,
+  header > nav,
   .navbar-menu,
   .navbar-section {
     display: flex;
