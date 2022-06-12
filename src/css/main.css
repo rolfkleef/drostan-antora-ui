@@ -26,6 +26,10 @@
     flex: 0 0 var(--toc-width);
     order: 1;
   }
+
+  .body {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1216px) {
