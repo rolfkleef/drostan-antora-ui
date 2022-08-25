@@ -29,6 +29,10 @@ header > nav a {
   padding-right: 1rem;
 }
 
+.navbar-brand .navbar-item {
+  color: var(--navbar-font-color);
+}
+
 .navbar-brand .navbar-item:first-child {
   align-self: center;
   padding: 0;
