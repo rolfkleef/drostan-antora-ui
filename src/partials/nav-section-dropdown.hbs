@@ -1,9 +1,6 @@
 {{!-- option 1: create an empty supplemental file if you do not want a section menu --}}
 {{!-- option 2: create a single item <a class-"navbar-item" href="...">{{site.title}}</a> --}}
 {{!-- option 3: create a dropdown and override the link list nav-sections.hbs --}}
-<div class="navbar-item has-dropdown is-hoverable">
-  <a class="navbar-link">{{site.title}}</a>
-  <div class="navbar-dropdown">
-    {{> nav-sections }}
-  </div>
+<div class="navbar-item">
+  <a class="navbar-link">{{site.title}} ❯</a>
 </div>

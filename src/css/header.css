@@ -261,22 +261,6 @@ header > nav a {
     top: 50%;
   }
 
-  .navbar-section > .navbar-item,
-  .navbar-section .navbar-link {
-    color: var(--navbar-font-color);
-  }
-
-  .navbar-section > a.navbar-item:hover,
-  .navbar-section .navbar-link:hover,
-  .navbar-section .navbar-item.has-dropdown:hover .navbar-link {
-    background: var(--navbar_hover-background);
-    color: var(--navbar-font-color);
-  }
-
-  .navbar-section .navbar-link::after {
-    border-color: currentColor;
-  }
-
   .navbar-dropdown {
     background: var(--navbar-menu-background);
     border: 1px solid var(--navbar-menu-border-color);
@@ -306,4 +290,20 @@ header > nav a {
   .navbar-dropdown a.navbar-item:hover {
     background: var(--navbar-menu_hover-background);
   }
+}
+
+.navbar-section > .navbar-item,
+.navbar-section .navbar-link {
+  color: var(--navbar-font-color);
+}
+
+.navbar-section > a.navbar-item:hover,
+.navbar-section .navbar-link:hover,
+.navbar-section .navbar-item.has-dropdown:hover .navbar-link {
+  background: var(--navbar_hover-background);
+  color: var(--navbar-font-color);
+}
+
+.navbar-section .navbar-link::after {
+  border-color: currentColor;
 }

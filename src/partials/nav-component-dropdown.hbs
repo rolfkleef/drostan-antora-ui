@@ -1,18 +1,18 @@
 {{#if (eq site.components.length 1)}}
-<a class="navbar-item" href="#">{{page.component.title}}</a>
+    <a class="navbar-item" href="#">{{page.component.title}}</a>
 {{else}}
-<div class="navbar-item has-dropdown is-hoverable">
-  {{#if page.component}}
-    <a class="navbar-link">{{page.component.title}}</a>
-  {{else}}
-    <a class="navbar-link">Components</a>
-  {{/if}}
-  <div class="navbar-dropdown">
-    {{#each site.components}}
-      {{#unless (or (eq this @root.page.component) (eq ./name "lib-style"))}}
-        <a class="navbar-item" href="{{{relativize ./url}}}">{{{./title}}}</a>
-      {{/unless}}
-    {{/each}}
-  </div>
-</div>
+    <div class="navbar-item has-dropdown is-hoverable">
+      {{#if page.component}}
+        <a class="navbar-link">{{page.component.title}}</a>
+      {{else}}
+        <a class="navbar-link">Components</a>
+      {{/if}}
+      <div class="navbar-dropdown">
+        {{#each site.components}}
+          {{#unless (or (eq this @root.page.component) (eq ./name "lib-style"))}}
+            <a class="navbar-item" href="{{{relativize ./url}}}">{{{./title}}}</a>
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
 {{/if}}
