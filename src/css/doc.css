@@ -522,15 +522,21 @@
 }
 
 .doc ul.circle {
-  list-style-type: square;
+  list-style-type: circle;
 }
 
 .doc ul.disc {
-  list-style-type: square;
+  list-style-type: disc;
 }
 
 .doc ul.square {
   list-style-type: square;
+}
+
+.doc ul.circle ul:not([class]),
+.doc ul.disc ul:not([class]),
+.doc ul.square ul:not([class]) {
+  list-style: inherit;
 }
 
 .doc ol.arabic {
@@ -618,12 +624,22 @@
 .doc .tableblock caption {
   color: var(--caption-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
+  font-style: var(--caption-font-style);
   font-weight: var(--caption-font-weight);
-  font-style: italic;
   hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
+}
+
+.doc .tableblock caption {
   text-align: left;
+}
+
+.doc .ulist .title,
+.doc .olist .title {
+  font-style: var(--caption-font-style);
+  font-weight: var(--caption-font-weight);
+  margin-bottom: 0.25rem;
 }
 
 .doc .imageblock .title {
@@ -737,10 +753,10 @@
   box-shadow: inset 0 0 1.75px var(--pre-border-color);
   display: block;
   overflow-x: auto;
-  padding: 0.75rem;
+  padding: 0.875em;
 }
 
-.doc pre.highlight {
+.doc .listingblock > .content {
   position: relative;
 }
 
@@ -752,8 +768,10 @@
   right: 0.5rem;
   color: var(--pre-annotation-font-color);
   font-family: var(--body-font-family);
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-size: calc(13 / var(--rem-base) * 1rem);
   line-height: 1;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .doc .listingblock:hover .source-toolbox {
@@ -763,8 +781,6 @@
 .doc .source-toolbox .source-lang {
   text-transform: uppercase;
   letter-spacing: 0.075em;
-  font-size: 0.96em;
-  line-height: 1.0425;
 }
 
 .doc .source-toolbox > :not(:last-child)::after {
@@ -777,7 +793,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
+  background: none;
   border: none;
   color: inherit;
   outline: none;
@@ -814,7 +830,7 @@
   color: var(--color-white);
   cursor: auto;
   opacity: 0;
-  transition: opacity 0.5s ease 0.75s;
+  transition: opacity 0.5s ease 0.5s;
 }
 
 .doc .source-toolbox .copy-toast::after {
