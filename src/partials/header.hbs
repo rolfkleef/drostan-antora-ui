@@ -49,8 +49,7 @@
     {{/if}}
 
     <nav class="mdc-list mdc-drawer__list" role="listbox">
-      <a href="http://localhost:8001/" class="mdc-list-item mdc-list-item--activated" tabindex="0"
-         aria-selected="true"><span class="mdc-list-item__text">Home</span></a>
+      <a href="http://localhost:8001/" class="mdc-list-item" tabindex="0"><span class="mdc-list-item__text">Home</span></a>
       <a href="http://localhost:8001/about/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">About Rolf</span></a>
       <ul class="sub-menu">
         <a href="http://localhost:8001/secondary-pages/copyright/" class="mdc-list-item" tabindex="-1"><span
@@ -63,14 +62,20 @@
       <a href="https://notes.drostan.org/" class="mdc-list-item" tabindex="-1"><span
         class="mdc-list-item__text">Notes</span></a>
       <ul class="sub-menu">
-        <a href="https://notes.localhost/website" class="mdc-list-item" tabindex="-1"><span
-          class="mdc-list-item__text">Website</span></a>
-        <a href="https://notes.localhost/website" class="mdc-list-item" tabindex="-1"><span
-          class="mdc-list-item__text">desktop</span></a>
-        <a href="https://notes.localhost/website" class="mdc-list-item" tabindex="-1"><span
-          class="mdc-list-item__text">Documentation system</span></a>
+        {{#each site.components}}
+          {{#unless (eq ./name "lib-style")}}
+            {{#if (eq this @root.page.component)}}
+              <a href="{{{relativize ./url}}}" class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="-1">
+                <span class="mdc-list-item__text">{{{./title}}}</span>
+              </a>
+            {{else}}
+              <a href="{{{relativize ./url}}}" class="mdc-list-item" tabindex="-1">
+                <span class="mdc-list-item__text">{{{./title}}}</span>
+              </a>
+            {{/if}}
+          {{/unless}}
+        {{/each}}
       </ul>
-
     </nav>
   </div>
 </aside>
@@ -163,7 +168,7 @@
           <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
                style="margin-bottom: 0px;">
             <div class="mdc-tab-scroller__scroll-content">
-              <a href="http://localhost:8001/" class="mdc-tab mdc-tab--active" aria-selected="true" id="mdc-tab-1">		<span
+              <a href="http://localhost:8001/" class="mdc-tab" id="mdc-tab-1">		<span
                 class="mdc-tab__content">
 			<span class="mdc-tab__text-label">Home</span>
 		</span>
@@ -193,7 +198,7 @@
 			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 		</span>
               <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-            </a><a href="https://notes.drostan.org/" class="mdc-tab" id="mdc-tab-4">		<span
+            </a><a href="https://notes.drostan.org/" class="mdc-tab mdc-tab--active" aria-selected="true" id="mdc-tab-4">		<span
               class="mdc-tab__content">
 			<span class="mdc-tab__text-label">Notes</span>
 		</span>
