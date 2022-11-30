@@ -1,0 +1,40 @@
+
+:root {
+  --mdc-theme-background: #ffffff;
+  --mdc-theme-background-rgb: 255, 255, 255;
+  --mdc-theme-on-background: #000000;
+  --mdc-theme-on-background-rgb: 0, 0, 0;
+  --mdc-theme-footer: #ffffff;
+  --mdc-theme-footer-rgb: 255, 255, 255;
+  --mdc-theme-on-footer: #000000;
+  --mdc-theme-on-footer-rgb: 0, 0, 0;
+}
+
+/* Forced dark mode */
+body[data-color-scheme='dark'] {
+  --mdc-theme-background: #323232;
+  --mdc-theme-background-rgb: 50, 50, 50;
+  --mdc-theme-on-background: #ffffff;
+  --mdc-theme-on-background-rgb: 255, 255, 255;
+}
+
+/* Forced light mode */
+body[data-color-scheme='light'] {
+  --mdc-theme-background: #ffffff;
+  --mdc-theme-background-rgb: 255, 255, 255;
+  --mdc-theme-on-background: #000000;
+  --mdc-theme-on-background-rgb: 0, 0, 0;
+  --mdc-theme-footer: #ffffff;
+  --mdc-theme-footer-rgb: 255, 255, 255;
+  --mdc-theme-on-footer: #000000;
+  --mdc-theme-on-footer-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mdc-theme-background: #323232;
+    --mdc-theme-background-rgb: 50, 50, 50;
+    --mdc-theme-on-background: #ffffff;
+    --mdc-theme-on-background-rgb: 255, 255, 255;
+  }
+}

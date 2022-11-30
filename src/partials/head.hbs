@@ -1,8 +1,20 @@
 <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
 <title>{{{detag (or page.title defaultPageTitle)}}}{{#with site.title}} :: {{this}}{{/with}}</title>
+<!--<meta name="description" content="Internet trailblazer. Weaving the web to help humanity." class="yoast-seo-meta-tag">-->
+<!--<meta property="og:locale" content="en_US" class="yoast-seo-meta-tag">-->
+<!--<meta property="og:type" content="website" class="yoast-seo-meta-tag">-->
+<!--<meta property="og:title" content="Rolf Kleef, drostan.org" class="yoast-seo-meta-tag">-->
+<!--<meta property="og:description" content="Internet trailblazer. Weaving the web to help humanity."-->
+<!--      class="yoast-seo-meta-tag">-->
+<!--<meta property="og:url" content="http://localhost:8001/" class="yoast-seo-meta-tag">-->
+<!--<meta property="og:site_name" content="Rolf Kleef, drostan.org" class="yoast-seo-meta-tag">-->
+<!--<meta name="twitter:card" content="summary_large_image" class="yoast-seo-meta-tag">-->
 
 {{#with page.canonicalUrl}}
   <link rel="canonical" href="{{{this}}}">
@@ -25,7 +37,24 @@
   <meta name="generator" content="Antora {{{this}}}">
 {{/with}}
 
-<link rel="stylesheet" href="{{{uiRootPath}}}/css/site.css">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+
+<!--<link rel="stylesheet" href="{{{uiRootPath}}}/css/site.css">-->
+<!--<link rel="stylesheet" href="{{{uiRootPath}}}/css/vendor/snippets.css">-->
+<link rel="stylesheet" id="material-css-variables" href="{{{uiRootPath}}}/css/vendor/material-css-variables.css">
+<link rel="stylesheet" id="global-styles-inline-css" href="{{{uiRootPath}}}/css/vendor/global-styles-inline.css">
+<link rel="stylesheet" id="material-google-fonts-cdn-css" href="{{{uiRootPath}}}/css/vendor/fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="material-design-google-style-css" href="{{{uiRootPath}}}/css/vendor/google-wordpress-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="material-design-google-style-inline-css" href="{{{uiRootPath}}}/css/vendor/material-design-google-style-inline.css">
+<link rel="stylesheet" id="material-design-google-front-end-css-css" href="{{{uiRootPath}}}/css/vendor/front-end-compiled.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="material-front-end-css-css" href="{{{uiRootPath}}}/css/vendor/front-end-compiled.css" type="text/css" media="all">
+
+<script type="text/javascript" src="{{{uiRootPath}}}/js/vendor/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="{{{uiRootPath}}}/js/vendor/jquery-migrate.js" id="jquery-migrate-js"></script>
+
+<link rel="icon" href="{{{uiRootPath}}}/img/rolfkleef_512x512-32x32.png" sizes="32x32">
+<link rel="icon" href="{{{uiRootPath}}}/img/rolfkleef_512x512-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="{{{uiRootPath}}}/img/rolfkleef_512x512-180x180.png">
+<meta name="msapplication-TileImage" content="{{{uiRootPath}}}/img/rolfkleef_512x512-270x270.png">
 
 <script>var uiRootPath = '{{{uiRootPath}}}'</script>
-{{!-- <link rel="icon" href="{{{uiRootPath}}}/img/favicon.ico" type="image/x-icon"> --}}
