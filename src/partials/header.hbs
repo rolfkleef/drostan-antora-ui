@@ -13,7 +13,7 @@
       <div class="site-title__wrapper">
         <div class="site-title__row">
           <h1 class="site-title mdc-typography mdc-typography--headline6">
-            <a href="http://localhost:8001/" rel="home">Rolf Kleef, drostan.org</a>
+            <a href="http://localhost:8001/" rel="home">Rolf Kleef</a>
           </h1>
 
           <button type="button"
@@ -33,9 +33,11 @@
 
     {{#if env.SITE_SEARCH_PROVIDER}}
       <form class="search-form" method="get" role="search" id="search-638766d00c179"
-          data-hs-cf-bound="true">
+            data-hs-cf-bound="true">
         <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
-          <input id="search-input" class="mdc-text-field__input" type="text" aria-labelledby="search-label-638766d00c17c" name="s" placeholder="Search (press &quot;/&quot; to focus)">
+          <input id="search-input" class="mdc-text-field__input" type="text"
+                 aria-labelledby="search-label-638766d00c17c" name="s"
+                 placeholder="Search (press &quot;/&quot; to focus)">
           <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">search</i>
           <div class="mdc-notched-outline mdc-notched-outline--upgraded">
             <div class="mdc-notched-outline__leading"></div>
@@ -59,13 +61,14 @@
       </ul>
 
       <a href="http://localhost:8001/contact/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">Contact</span></a>
-      <a href="https://notes.drostan.org/" class="mdc-list-item" tabindex="-1"><span
-        class="mdc-list-item__text">Notes</span></a>
+      <a href="{{{or site.url siteRootPath}}}" class="mdc-list-item" tabindex="-1"><span
+        class="mdc-list-item__text">{{site.title}}</span></a>
       <ul class="sub-menu">
         {{#each site.components}}
           {{#unless (eq ./name "lib-style")}}
             {{#if (eq this @root.page.component)}}
-              <a href="{{{relativize ./url}}}" class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="-1">
+              <a href="{{{relativize ./url}}}" class="mdc-list-item mdc-list-item--activated" aria-selected="true"
+                 tabindex="-1">
                 <span class="mdc-list-item__text">{{{./title}}}</span>
               </a>
             {{else}}
@@ -106,7 +109,7 @@
 					<div class="site-title__wrapper">
 		<div class="site-title__row">
 			<h1 class="site-title mdc-typography mdc-typography--headline6">
-				<a href="http://localhost:8001/" rel="home">Rolf Kleef, drostan.org</a>
+				<a href="http://localhost:8001/" rel="home">Rolf Kleef</a>
 			</h1>
 
 			<button type="button" class="mdc-icon-button mdc-drawer__close mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
@@ -174,7 +177,7 @@
 		</span>
 
                 <span class="mdc-tab-indicator
-			mdc-tab-indicator--active		">
+					">
 			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 		</span>
                 <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
@@ -198,12 +201,13 @@
 			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 		</span>
               <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-            </a><a href="https://notes.drostan.org/" class="mdc-tab mdc-tab--active" aria-selected="true" id="mdc-tab-4">		<span
+            </a><a href="{{{or site.url siteRootPath}}}" class="mdc-tab mdc-tab--active" aria-selected="true"
+                   id="mdc-tab-4">		<span
               class="mdc-tab__content">
-			<span class="mdc-tab__text-label">Notes</span>
+			<span class="mdc-tab__text-label">{{site.title}}</span>
 		</span>
 
-              <span class="mdc-tab-indicator
+              <span class="mdc-tab-indicator mdc-tab-indicator--active
 					">
 			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 		</span>

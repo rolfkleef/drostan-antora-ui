@@ -1,12 +1,26 @@
 {{#unless (eq page.attributes.pagination undefined)}}
-{{#if (or page.previous page.next)}}
-<nav class="pagination">
-  {{#with page.previous}}
-  <span class="prev"><a href="{{{relativize ./url}}}">{{{./content}}}</a></span>
-  {{/with}}
-  {{#with page.next}}
-  <span class="next"><a href="{{{relativize ./url}}}">{{{./content}}}</a></span>
-  {{/with}}
-</nav>
-{{/if}}
+  <div class="post-navigation section-inner">
+      {{#if page.previous}}
+        {{#with page.previous}}
+          <div class="post-navigation__previous">
+            <i class="material-icons mdc-button__icon">chevron_left</i>
+            <a href="{{relativize ./url}}" rel="prev">{{{./content}}}</a>
+          </div>
+        {{/with}}
+      {{else}}
+        <div class="post-navigation__previous">
+        </div>
+      {{/if}}
+      {{#if page.next}}
+        {{#with page.next}}
+          <div class="post-navigation__next">
+            <a href="{{relativize ./url}}" rel="next">{{{./content}}}</a>
+            <i class="material-icons mdc-button__icon">chevron_right</i>
+          </div>
+        {{/with}}
+      {{else}}
+        <div class="post-navigation__next">
+        </div>
+      {{/if}}
+  </div>
 {{/unless}}
