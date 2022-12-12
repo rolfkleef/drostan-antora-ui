@@ -272,3 +272,74 @@ header > nav img {
 .skip-to-main:focus {
   transform: translateY(-3.5rem);
 }
+
+nav.nav-menu a {
+  text-decoration: none;
+}
+
+details.components-versions {
+  transition: 0.7s;
+  max-height: 3em;
+  overflow-x: hidden;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--nav-panel-divider-color);
+}
+
+details.components-versions[open] {
+  max-height: 90vh;
+}
+
+details.components-versions > summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+details.components-versions > summary > .title {
+  flex-grow: 1;
+}
+
+details.components-versions span.version {
+}
+
+details.components-versions summary .mdc-button__icon {
+  transition: 0.7s;
+}
+
+details.components-versions[open] summary .mdc-button__icon {
+  transform: rotate(-0.5turn);
+}
+
+ul.components {
+  list-style: none;
+  margin-left: 0;
+  padding-inline-start: 0;
+  line-height: 1.6;
+}
+
+li.component {
+  margin-left: 0;
+}
+
+ul.versions {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-inline-start: 0;
+
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: -0.25rem;
+}
+
+li.version {
+  margin: .375rem .375rem 0 0;
+}
+
+summary > .version,
+li.version a {
+  border: 1px solid var(--mdc-theme-surface-mix-12);
+  border-radius: .25rem;
+  padding: .1rem .2rem;
+  whitespace: nowrap;
+}

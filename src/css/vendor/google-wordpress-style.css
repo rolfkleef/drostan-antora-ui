@@ -432,7 +432,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: var(--mdc-theme-surface);
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;

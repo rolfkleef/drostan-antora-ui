@@ -1,11 +1,13 @@
 .nav-container {
-  position: fixed;
-  top: var(--navbar-height);
-  left: 0;
   width: 100%;
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
+  background: var(--nav-background);
+}
+
+.-has-tab-bar + .site-content .content-area {
+  margin-top: 0 !important;
 }
 
 @media screen and (min-width: 769px) {
@@ -18,21 +20,19 @@
   .nav-container {
     font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
-    position: static;
-    top: 0;
+    position: sticky;
     visibility: visible;
+    padding-top: 9rem;
+  }
+
+  /* override front-end-compiled */
+  .-has-tab-bar + .site-content .content-area {
+    margin-top: 9rem !important;
   }
 }
 
 .nav-container.is-active {
   visibility: visible;
-}
-
-.nav {
-  background: var(--nav-background);
-  position: relative;
-  top: var(--toolbar-height);
-  height: var(--nav-height);
 }
 
 @media screen and (min-width: 769px) {
@@ -43,10 +43,8 @@
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: var(--navbar-height);
     box-shadow: none;
     position: sticky;
-    height: var(--nav-height--desktop);
   }
 }
 
@@ -64,32 +62,13 @@ html.is-clipped--nav {
   overflow-y: hidden;
 }
 
-.nav-panel-menu {
+.nav-menu {
   overflow-y: scroll;
   overscroll-behavior: none;
-  height: var(--nav-panel-menu-height);
-}
-
-.nav-panel-menu:not(.is-active) .nav-menu {
-  opacity: 0.75;
-}
-
-.nav-panel-menu:not(.is-active)::after {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.nav-menu {
-  min-height: 100%;
+  /*min-height: 100%;*/
   padding: 0.5rem 0.75rem;
   line-height: var(--nav-line-height);
-  position: relative;
+  /*position: relative;*/
 }
 
 .nav-menu h3.title {
@@ -153,7 +132,7 @@ html.is-clipped--nav {
 
 .nav-panel-explore {
   background: var(--nav-background);
-  display: none;
+  display: block;
   flex-direction: column;
   position: absolute;
   top: 0;
