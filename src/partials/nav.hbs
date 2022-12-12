@@ -1,8 +1,49 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
-  <aside class="nav">
-    <div class="panels">
-{{> nav-menu}}
-{{> nav-explore}}
-    </div>
-  </aside>
+    <nav class="nav-menu">
+      <form class="search-form" action="https://drostan.org/" method="get" role="search" id="search-6395d96c23802"
+            data-hs-cf-bound="true">
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
+          <input class="mdc-text-field__input" type="text" aria-labelledby="search-label-6395d96c23803" name="s" value="">
+          <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0"
+             role="button">search</i>
+          <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch" style="">
+              <span class="mdc-floating-label" id="search-label-6395d96c23803" style="">Search</span>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
+          </div>
+        </label>
+      </form>
+
+      <details class="components-versions">
+        <summary>
+          {{#with @root.page.componentVersion}}
+            <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
+          {{/with}}
+          <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+          <i class="material-icons mdc-button__icon">expand_more</i>
+        </summary>
+        <ul class="components">
+          {{#each site.components}}
+            <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+              <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
+              <ul class="versions">
+                {{#each ./versions}}
+                  <li class="version
+          {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+                    {{~#if (eq this ../latest)}} is-latest{{/if}}">
+                    <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+      </details>
+
+      {{#with page.navigation}}
+        {{> nav-tree navigation=this}}
+      {{/with}}
+    </nav>
 </div>
