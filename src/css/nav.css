@@ -1,6 +1,5 @@
 .nav-container {
   width: 100%;
-  font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
   background: var(--nav-background);
@@ -18,7 +17,6 @@
 
 @media screen and (min-width: 1024px) {
   .nav-container {
-    font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
     position: sticky;
     visibility: visible;
@@ -65,10 +63,8 @@ html.is-clipped--nav {
 .nav-menu {
   overflow-y: scroll;
   overscroll-behavior: none;
-  /*min-height: 100%;*/
   padding: 0.5rem 0.75rem;
   line-height: var(--nav-line-height);
-  /*position: relative;*/
 }
 
 .nav-menu h3.title {
