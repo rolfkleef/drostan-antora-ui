@@ -1,0 +1,96 @@
+:root {
+  /* Theme color vars */
+  --mdc-theme-primary: #c2185b;
+  --mdc-theme-primary-rgb: 194, 24, 91;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-on-primary-rgb: 255, 255, 255;
+  --mdc-theme-secondary: #80cbc4;
+  --mdc-theme-secondary-rgb: 128, 203, 196;
+  --mdc-theme-on-secondary: #000000;
+  --mdc-theme-on-secondary-rgb: 0, 0, 0;
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-surface-rgb: 255, 255, 255;
+  --mdc-theme-on-surface: #000000;
+  --mdc-theme-on-surface-rgb: 0, 0, 0;
+  --mdc-theme-surface-mix-4: #f5f5f5;
+  --mdc-theme-surface-mix-12: #e0e0e0;
+
+  /* Icon collection type var */
+  --mdc-icons-font-family: "Material Icons";
+
+  /* Typography vars */
+  --mdc-typography-headline1-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-headline2-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-headline3-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-headline4-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-headline5-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-headline6-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-subtitle1-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-subtitle2-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-body1-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-body2-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-caption-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-button-font-family: "Alegreya Sans", sans-serif;
+  --mdc-typography-overline-font-family: "Alegreya Sans", sans-serif;
+
+  /* Corner Styles vars */
+  --mdc-button-radius: 4px;
+  --mdc-card-radius: 4px;
+  --mdc-chip-radius: 4px;
+  --mdc-data-table-radius: 4px;
+  --mdc-image-list-radius: 4px;
+  --mdc-nav-drawer-radius: 4px;
+  --mdc-text-field-radius: 4px;
+}
+
+/* Forced dark mode */
+body[data-color-scheme='dark'] {
+  --mdc-theme-primary: #880e4f;
+  --mdc-theme-primary-rgb: 136, 14, 79;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-on-primary-rgb: 255, 255, 255;
+  --mdc-theme-secondary: #03dac5;
+  --mdc-theme-secondary-rgb: 3, 218, 197;
+  --mdc-theme-on-secondary: #000000;
+  --mdc-theme-on-secondary-rgb: 0, 0, 0;
+  --mdc-theme-surface: #121212;
+  --mdc-theme-surface-rgb: 18, 18, 18;
+  --mdc-theme-on-surface: #ffffff;
+  --mdc-theme-on-surface-rgb: 255, 255, 255;
+}
+
+/* Forced light mode */
+body[data-color-scheme='light'] {
+  --mdc-theme-primary: #c2185b;
+  --mdc-theme-primary-rgb: 194, 24, 91;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-on-primary-rgb: 255, 255, 255;
+  --mdc-theme-secondary: #80cbc4;
+  --mdc-theme-secondary-rgb: 128, 203, 196;
+  --mdc-theme-on-secondary: #000000;
+  --mdc-theme-on-secondary-rgb: 0, 0, 0;
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-surface-rgb: 255, 255, 255;
+  --mdc-theme-on-surface: #000000;
+  --mdc-theme-on-surface-rgb: 0, 0, 0;
+  --mdc-theme-surface-mix-4: #f5f5f5;
+  --mdc-theme-surface-mix-12: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mdc-theme-primary: #880e4f;
+    --mdc-theme-primary-rgb: 136, 14, 79;
+    --mdc-theme-on-primary: #ffffff;
+    --mdc-theme-on-primary-rgb: 255, 255, 255;
+    --mdc-theme-secondary: #03dac5;
+    --mdc-theme-secondary-rgb: 3, 218, 197;
+    --mdc-theme-on-secondary: #000000;
+    --mdc-theme-on-secondary-rgb: 0, 0, 0;
+    --mdc-theme-surface: #121212;
+    --mdc-theme-surface-rgb: 18, 18, 18;
+    --mdc-theme-on-surface: #ffffff;
+    --mdc-theme-on-surface-rgb: 255, 255, 255;
+  }
+}

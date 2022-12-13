@@ -1,0 +1,14 @@
+.entry-meta span.posted-on::after {
+  content: ">";
+  padding: 0 0.5rem;
+}
+
+.entry-meta span.posted-on:last-of-type::after {
+  content: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .body {
+    display: flex;
+  }
+}

@@ -1,30 +1,202 @@
-<header>
-  <a class="skip-to-main" href="#main">skip navigation</a>
-  <nav>
-    <div class="navbar-brand">
-      <div class="navbar-section">
-        {{> nav-brand }}
-        {{> navbar-general}}
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<aside class="mdc-drawer material-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__header">
+    <div class="logo">
+      <a href="http://localhost:8001/" class="custom-logo-link" rel="home" aria-current="page"><img
+        src="{{{uiRootPath}}}/img/rolfkleef_512x512.png" class="custom-logo"
+        alt="Rolf Kleef, drostan.org" decoding="async"
+        srcset="{{{uiRootPath}}}/img/rolfkleef_512x512.png 512w, {{{uiRootPath}}}/img/rolfkleef_512x512-300x300.png 300w, {{{uiRootPath}}}/img/rolfkleef_512x512-150x150.png 150w, {{{uiRootPath}}}/img/rolfkleef_512x512-50x50.png 50w"
+        sizes="(max-width: 512px) 100vw, 512px" width="512" height="512"></a></div>
+
+    <div class="mdc-drawer__title">
+      <div class="site-title__wrapper">
+        <div class="site-title__row">
+          <h1 class="site-title mdc-typography mdc-typography--headline6">
+            <a href="http://localhost:8001/" rel="home">Rolf Kleef</a>
+          </h1>
+
+          <button type="button"
+                  class="mdc-icon-button mdc-drawer__close mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                  style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
+            <span class="mdc-button__ripple"></span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+            <span class="screen-reader-text">Close drawer</span>
+          </button>
+        </div>
+        <div class="site-tagline mdc-typography--subtitle1">Internet trailblazer. Weaving the web to help humanity.
+        </div>
       </div>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
+    </div>
+  </div>
+  <div class="mdc-drawer__content">
+
+    <nav class="mdc-list mdc-drawer__list" role="listbox">
+      <a href="http://localhost:8001/" class="mdc-list-item" tabindex="0"><span class="mdc-list-item__text">Home</span></a>
+      <a href="http://localhost:8001/about/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">About Rolf</span></a>
+      <ul class="sub-menu">
+        <a href="http://localhost:8001/secondary-pages/copyright/" class="mdc-list-item" tabindex="-1"><span
+          class="mdc-list-item__text">Copyright and license info</span></a>
+        <a href="http://localhost:8001/who-was-drostan/" class="mdc-list-item" tabindex="-1"><span
+          class="mdc-list-item__text">Who was Drostan?</span></a>
+      </ul>
+
+      <a href="http://localhost:8001/contact/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">Contact</span></a>
+      <a href="{{{or site.url siteRootPath}}}" class="mdc-list-item" tabindex="-1"><span
+        class="mdc-list-item__text">{{site.title}}</span></a>
+      <ul class="sub-menu">
+        {{#each site.components}}
+          {{#unless (eq ./name "lib-style")}}
+            {{#if (eq this @root.page.component)}}
+              <a href="{{{relativize ./url}}}" class="mdc-list-item mdc-list-item--activated" aria-selected="true"
+                 tabindex="-1">
+                <span class="mdc-list-item__text">{{{./title}}}</span>
+              </a>
+            {{else}}
+              <a href="{{{relativize ./url}}}" class="mdc-list-item" tabindex="-1">
+                <span class="mdc-list-item__text">{{{./title}}}</span>
+              </a>
+            {{/if}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>
+
+<div class="
+		site__navigation
+					-has-tab-bar
+				" role="banner">
+
+  <div class="mdc-top-app-bar top-app-bar ">
+    <div class="mdc-top-app-bar__row top-app-bar__header">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button
+          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger mdc-ripple-upgraded--unbounded mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"
+          style="--mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">
+          menu
+        </button>
+
+        <div class="logo">
+          <a href="http://localhost:8001/" class="custom-logo-link" rel="home" aria-current="page"><img
+            src="{{{uiRootPath}}}/img/rolfkleef_512x512.png" class="custom-logo"
+            alt="Rolf Kleef, drostan.org" decoding="async"
+            srcset="{{{uiRootPath}}}/img/rolfkleef_512x512.png 512w, {{{uiRootPath}}}/img/rolfkleef_512x512-300x300.png 300w, {{{uiRootPath}}}/img/rolfkleef_512x512-150x150.png 150w, {{{uiRootPath}}}/img/rolfkleef_512x512-50x50.png 50w"
+            sizes="(max-width: 512px) 100vw, 512px" width="512" height="512"></a></div>
+        <span class="mdc-top-app-bar__title top-app-bar__title">
+					<div class="site-title__wrapper">
+		<div class="site-title__row">
+			<h1 class="site-title mdc-typography mdc-typography--headline6">
+				<a href="http://localhost:8001/" rel="home">Rolf Kleef</a>
+			</h1>
+
+			<button type="button" class="mdc-icon-button mdc-drawer__close mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+              style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+				<span class="screen-reader-text">Close drawer</span>
+			</button>
+		</div>
+		<div class="site-tagline mdc-typography--subtitle1">Internet trailblazer. Weaving the web to help humanity.</div>
+	</div>
+				</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
+{{!--        <button--}}
+{{!--          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button search__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"--}}
+{{!--          aria-label="Search"--}}
+{{!--          style="--mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">--}}
+{{!--          <span class="mdc-button__ripple"></span>--}}
+{{!--          search--}}
+{{!--        </button>--}}
+
+{{!--        <button--}}
+{{!--          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button dark-mode__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"--}}
+{{!--          aria-label="Toggle Dark Mode"--}}
+{{!--          style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">--}}
+{{!--          <span class="mdc-button__ripple"></span>--}}
+{{!--          <span class="dark-mode__icon">dark_mode</span>--}}
+{{!--        </button>--}}
+      </section>
+    </div>
+
+    <div class="mdc-top-app-bar__row top-app-bar__search">
+
+      <form class="search-form" action="http://localhost:8001/" method="get" id="search-638766d011a7c"
+      "="" data-hs-cf-bound="true">
+      <div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label mdc-ripple-upgraded">
+        <div class="mdc-text-field__ripple"></div>
+        <input class="mdc-text-field__input" id="search-input" placeholder="Search the site" aria-label="Search" type="search" name="s">
+      </div>
+      <button class="mdc-button mdc-button--unelevated button__search mdc-ripple-upgraded" type="submit">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">Search</span>
       </button>
+      <button
+        class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-button--unelevated button__back mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+        type="button" aria-label="Exit search form"
+        style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
+        <span class="mdc-button__ripple"></span>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      </button>
+      </form>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-section">
-        {{> nav-component-dropdown }}
-      </div>
-      <div class="navbar-section navbar-end">
-        {{#if env.SITE_SEARCH_PROVIDER}}
-          <div class="navbar-item search hide-for-print">
-            <div id="search-field" class="field">
-              <input id="search-input" type="text" placeholder="Search (press &quot;/&quot; to focus)">
-            </div>
+
+
+    <div class="tab-bar__wrap">
+      <div class="mdc-tab-bar tab-bar" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+               style="margin-bottom: 0px;">
+            <div class="mdc-tab-scroller__scroll-content">
+              <a href="http://localhost:8001/" class="mdc-tab" id="mdc-tab-1">		<span
+                class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Home</span>
+		</span>
+
+                <span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+                <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+              </a><a href="http://localhost:8001/about/" class="mdc-tab" id="mdc-tab-2">		<span
+              class="mdc-tab__content">
+			<span class="mdc-tab__text-label">About Rolf</span>
+		</span>
+
+              <span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+            </a><a href="http://localhost:8001/contact/" class="mdc-tab" id="mdc-tab-3">		<span
+              class="mdc-tab__content">
+			<span class="mdc-tab__text-label">Contact</span>
+		</span>
+
+              <span class="mdc-tab-indicator
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+            </a><a href="{{{or site.url siteRootPath}}}" class="mdc-tab mdc-tab--active" aria-selected="true"
+                   id="mdc-tab-4">		<span
+              class="mdc-tab__content">
+			<span class="mdc-tab__text-label">{{site.title}}</span>
+		</span>
+
+              <span class="mdc-tab-indicator mdc-tab-indicator--active
+					">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+            </a></div>
           </div>
-        {{/if}}
+        </div>
       </div>
     </div>
-  </nav>
-</header>
+  </div>
+</div>

@@ -1,8 +1,41 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
-  <aside class="nav">
-    <div class="panels">
-{{> nav-menu}}
-{{> nav-explore}}
-    </div>
-  </aside>
+  <nav class="nav-menu nav">
+{{!--      {{> search }}--}}
+
+    <details class="components-versions">
+      <summary>
+        {{#with @root.page.componentVersion}}
+          <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
+        {{/with}}
+        {{#if (ne @root.page.component.versions.length 1) }}
+          <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+        {{/if}}
+        <i class="material-icons mdc-button__icon">expand_more</i>
+      </summary>
+      <ul class="components">
+        {{#each site.components}}
+          {{#unless (eq ./name "lib-style") }}
+            <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+              <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
+              {{#if (ne ./versions.length 1) }}
+                <ul class="versions">
+                  {{#each ./versions}}
+                    <li class="version
+            {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+                      {{~#if (eq this ../latest)}} is-latest{{/if}}">
+                      <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </details>
+
+    {{#with page.navigation}}
+      {{> nav-tree navigation=this}}
+    {{/with}}
+  </nav>
 </div>

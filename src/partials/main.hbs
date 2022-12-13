@@ -1,11 +1,15 @@
-<main class="article">
-{{> toolbar}}
-  <div class="content">
+<article class="entry-content hentry">
+{{!-- > toolbar --}}
 {{#if (eq page.layout '404')}}
-{{> article-404}}
+  {{> article-404 }}
 {{else}}
-{{> toc}}
-{{> article}}
+{{!-- > toc --}}
+  <header class="entry-header section-inner">
+{{> meta }}
+    {{#with page.title}}
+      <h1 class="entry-title mdc-typography mdc-typography--headline2">{{{this}}}</h1>
+    {{/with}}
+  </header>
+    {{{page.contents}}}
 {{/if}}
-  </div>
-</main>
+</article>

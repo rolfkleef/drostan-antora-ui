@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 {{> head defaultPageTitle='Untitled'}}
-  </head>
-  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+</head>
+
+<body class="home wp-custom-logo mdc-typography hfeed no-sidebar customize-support article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 {{> header}}
-{{> content}}
+<div id="content" class="body site-content">
+{{> nav }}
+  {{!--    <span class="toc">--}}
+  {{!--      <i class="material-icons mdc-button__icon">toc</i>--}}
+  {{!--    </span>--}}
+  <div>
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main doc">
+        {{> main }}
+        {{> pagination }}
+      </main><!-- #main -->
+    </div><!-- #primary -->
+
+    {{> secondary }}
+  </div>
+</div>
 {{> footer}}
 {{> icons-svg }}
 {{> footer-scripts}}
-  </body>
+</body>
+
 </html>
