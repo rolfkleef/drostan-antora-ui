@@ -6,24 +6,20 @@
 </head>
 
 <body class="home wp-custom-logo mdc-typography hfeed no-sidebar customize-support article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
-  <div id="page" class="site">
 {{> header}}
-    <div id="content" class="body site-content">
+<div id="content" class="body site-content">
 {{> nav }}
+  <div>
+    <div id="primary" class="content-area material-archive__wide">
+      <main id="main" class="site-main">
+        {{> main }}
+        {{> pagination }}
+      </main><!-- #main -->
+    </div><!-- #primary -->
 
-      <div>
-        <div id="primary" class="content-area material-archive__wide">
-          <button class="nav-toggle"></button>
-          <main id="main" class="site-main">
-            {{> main }}
-            {{> pagination }}
-          </main><!-- #main -->
-        </div><!-- #primary -->
-
-        {{> secondary }}
-      </div>
-    </div>
-  </div><!-- #page -->
+    {{> secondary }}
+  </div>
+</div>
 {{> footer}}
 {{> icons-svg }}
 {{> footer-scripts}}

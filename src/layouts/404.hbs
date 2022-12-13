@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-{{> head defaultPageTitle='Page Not Found'}}
-  </head>
-  <body class="status-404">
+
+<head>
+{{> head defaultPageTitle='Untitled'}}
+</head>
+
+<body class="status-404 home wp-custom-logo mdc-typography hfeed no-sidebar customize-support article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 {{> header}}
-{{> content}}
+<div id="content" class="body site-content">
+{{> nav }}
+  <div>
+    <div id="primary" class="content-area material-archive__wide">
+      <main id="main" class="site-main">
+        {{> main }}
+        {{> pagination }}
+      </main><!-- #main -->
+    </div><!-- #primary -->
+
+    {{> secondary }}
+  </div>
+</div>
 {{> footer}}
 {{> icons-svg }}
 {{> footer-scripts}}
-  </body>
+</body>
+
 </html>
