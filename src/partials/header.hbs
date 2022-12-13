@@ -31,25 +31,6 @@
   </div>
   <div class="mdc-drawer__content">
 
-    {{#if env.SITE_SEARCH_PROVIDER}}
-      <form class="search-form" method="get" role="search" id="search-638766d00c179"
-            data-hs-cf-bound="true">
-        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
-          <input id="search-input" class="mdc-text-field__input" type="text"
-                 aria-labelledby="search-label-638766d00c17c" name="s"
-                 placeholder="Search (press &quot;/&quot; to focus)">
-          <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">search</i>
-          <div class="mdc-notched-outline mdc-notched-outline--upgraded">
-            <div class="mdc-notched-outline__leading"></div>
-            <div class="mdc-notched-outline__notch">
-              <span class="mdc-floating-label" id="search-label-638766d00c17c" style="">Search</span>
-            </div>
-            <div class="mdc-notched-outline__trailing"></div>
-          </div>
-        </label>
-      </form>
-    {{/if}}
-
     <nav class="mdc-list mdc-drawer__list" role="listbox">
       <a href="http://localhost:8001/" class="mdc-list-item" tabindex="0"><span class="mdc-list-item__text">Home</span></a>
       <a href="http://localhost:8001/about/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">About Rolf</span></a>
@@ -124,21 +105,21 @@
 				</span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
-        <button
-          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button search__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-          aria-label="Search"
-          style="--mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">
-          <span class="mdc-button__ripple"></span>
-          search
-        </button>
+{{!--        <button--}}
+{{!--          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button search__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"--}}
+{{!--          aria-label="Search"--}}
+{{!--          style="--mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">--}}
+{{!--          <span class="mdc-button__ripple"></span>--}}
+{{!--          search--}}
+{{!--        </button>--}}
 
-        <button
-          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button dark-mode__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-          aria-label="Toggle Dark Mode"
-          style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
-          <span class="mdc-button__ripple"></span>
-          <span class="dark-mode__icon">dark_mode</span>
-        </button>
+{{!--        <button--}}
+{{!--          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button dark-mode__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"--}}
+{{!--          aria-label="Toggle Dark Mode"--}}
+{{!--          style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">--}}
+{{!--          <span class="mdc-button__ripple"></span>--}}
+{{!--          <span class="dark-mode__icon">dark_mode</span>--}}
+{{!--        </button>--}}
       </section>
     </div>
 
@@ -148,7 +129,7 @@
       "="" data-hs-cf-bound="true">
       <div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label mdc-ripple-upgraded">
         <div class="mdc-text-field__ripple"></div>
-        <input class="mdc-text-field__input" placeholder="Search the site" aria-label="Search" type="search" name="s">
+        <input class="mdc-text-field__input" id="search-input" placeholder="Search the site" aria-label="Search" type="search" name="s">
       </div>
       <button class="mdc-button mdc-button--unelevated button__search mdc-ripple-upgraded" type="submit">
         <span class="mdc-button__ripple"></span>
