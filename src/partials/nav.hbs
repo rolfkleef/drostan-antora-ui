@@ -21,22 +21,26 @@
           {{#with @root.page.componentVersion}}
             <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
           {{/with}}
-          <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+          {{#if (ne @root.page.component.versions.length 1) }}
+            <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+          {{/if}}
           <i class="material-icons mdc-button__icon">expand_more</i>
         </summary>
         <ul class="components">
           {{#each site.components}}
             <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
               <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
-              <ul class="versions">
-                {{#each ./versions}}
-                  <li class="version
-          {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
-                    {{~#if (eq this ../latest)}} is-latest{{/if}}">
-                    <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-                  </li>
-                {{/each}}
-              </ul>
+              {{#if (ne ./versions.length 1) }}
+                <ul class="versions">
+                  {{#each ./versions}}
+                    <li class="version
+            {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+                      {{~#if (eq this ../latest)}} is-latest{{/if}}">
+                      <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
             </li>
           {{/each}}
         </ul>
