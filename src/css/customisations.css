@@ -339,3 +339,12 @@ li.version a {
   padding: 0.1rem 0.2rem;
   white-space: nowrap;
 }
+
+.toc {
+  align-self: flex-start;
+  margin-top: 9rem;
+  background: var(--nav-background);
+  border-radius: 0 0.5em 0.5em 0;
+  padding: 0.25rem;
+  line-height: 1;
+}
