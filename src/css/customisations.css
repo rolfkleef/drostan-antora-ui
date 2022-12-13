@@ -307,6 +307,20 @@ details.components-versions[open] summary .mdc-button__icon {
   transform: rotate(-0.5turn);
 }
 
+nav > ul.nav-list {
+  list-style: none;
+  margin-left: 0;
+  padding-inline-start: 0;
+}
+
+nav > ul > li.nav-item {
+  margin-left: 0;
+}
+
+nav li.nav-item {
+  margin-left: 0.5rem;
+}
+
 ul.components {
   list-style: none;
   margin-left: 0;

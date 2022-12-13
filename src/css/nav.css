@@ -101,7 +101,7 @@ html.is-clipped--nav {
 }
 
 .nav-item:not(.is-active) > .nav-list {
-  display: none;
+  /* display: none; */
 }
 
 .nav-item-toggle {
