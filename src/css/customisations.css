@@ -362,3 +362,11 @@ li.version a {
   padding: 0.25rem;
   line-height: 1;
 }
+
+.colist table {
+  border: 0;
+}
+
+.colist table tr {
+  border-top: 0;
+}
