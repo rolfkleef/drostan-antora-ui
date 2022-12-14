@@ -12,3 +12,48 @@
     display: flex;
   }
 }
+
+.wp-block-social-links,
+.wp-block-social-links.has-normal-icon-size {
+  font-size: 24px;
+}
+
+.wp-block-social-links {
+  background: none;
+  box-sizing: border-box;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-indent: 0;
+}
+
+.wp-block-social-links.is-style-logos-only .wp-social-link {
+  background: none;
+}
+
+.wp-block-social-link {
+  border-radius: 9999px;
+  display: block;
+  height: auto;
+  transition: transform 0.1s ease;
+}
+
+.wp-block-social-links.is-style-logos-only .wp-social-link a {
+  padding: 0;
+}
+
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor,
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor:active,
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor:hover,
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor:visited,
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor svg {
+  fill: currentColor;
+  color: currentColor;
+}
+
+.wp-block-social-links .wp-social-link a,
+.wp-block-social-links .wp-social-link a:hover {
+  border-bottom: 0;
+  box-shadow: none;
+  text-decoration: none;
+}
