@@ -145,55 +145,14 @@
       </form>
     </div>
 
-
     <div class="tab-bar__wrap">
       <div class="mdc-tab-bar tab-bar" role="tablist">
         <div class="mdc-tab-scroller">
           <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
                style="margin-bottom: 0px;">
             <div class="mdc-tab-scroller__scroll-content">
-              <a href="https://drostan.org" class="mdc-tab" id="mdc-tab-1">		<span
-                class="mdc-tab__content">
-			<span class="mdc-tab__text-label">Home</span>
-		</span>
-
-                <span class="mdc-tab-indicator
-					">
-			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-		</span>
-                <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-              </a><a href="https://drostan.org/about/" class="mdc-tab" id="mdc-tab-2">		<span
-              class="mdc-tab__content">
-			<span class="mdc-tab__text-label">About Rolf</span>
-		</span>
-
-              <span class="mdc-tab-indicator
-					">
-			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-		</span>
-              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-            </a><a href="https://drostan.org/contact/" class="mdc-tab" id="mdc-tab-3">		<span
-              class="mdc-tab__content">
-			<span class="mdc-tab__text-label">Contact</span>
-		</span>
-
-              <span class="mdc-tab-indicator
-					">
-			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-		</span>
-              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-            </a><a href="{{{or site.url siteRootPath}}}" class="mdc-tab mdc-tab--active" aria-selected="true"
-                   id="mdc-tab-4">		<span
-              class="mdc-tab__content">
-			<span class="mdc-tab__text-label">{{site.title}}</span>
-		</span>
-
-              <span class="mdc-tab-indicator mdc-tab-indicator--active
-					">
-			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-		</span>
-              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
-            </a></div>
+              {{> header-tab-bar }}
+            </div>
           </div>
         </div>
       </div>
