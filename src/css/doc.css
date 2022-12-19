@@ -1,6 +1,6 @@
 .doc h1,
 .doc h2 {
-  color: var(--heading-font-color);
+  color: var(--md-sys-color-primary);
 }
 
 .doc > h1.page:first-child {
@@ -60,11 +60,12 @@
 }
 
 .doc a {
-  color: var(--link-font-color);
+  color: var(--md-sys-color-secondary);
+  text-decoration: underline;
 }
 
 .doc a:hover {
-  color: var(--link_hover-font-color);
+  color: var(--md-sys-color-primary);
 }
 
 .doc a.bare {
@@ -72,7 +73,7 @@
 }
 
 .doc a.unresolved {
-  color: var(--link_unresolved-font-color);
+  color: var(--md-sys-color-error);
 }
 
 .doc i.fa {
@@ -83,8 +84,8 @@
 .doc p code,
 .doc thead code,
 .doc .colist > table code {
-  color: var(--code-font-color);
-  background: var(--code-background);
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface);
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
@@ -96,8 +97,6 @@
 }
 
 .doc pre {
-  font-size: calc(16 / var(--rem-base) * 1rem);
-  line-height: 1.5;
   margin: 0;
 }
 
@@ -319,28 +318,28 @@
 }
 
 .doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
-  color: var(--caution-on-color);
+  background-color: var(--md-custom-colorcaution);
+  color: var(--md-custom-colorOncaution);
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
-  color: var(--important-on-color);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
-  color: var(--note-on-color);
+  background-color: var(--md-custom-colornote);
+  color: var(--md-custom-colorOnnote);
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
+  background-color: var(--md-custom-colortip);
+  color: var(--md-custom-colorOntip);
 }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
-  color: var(--warning-on-color);
+  background-color: var(--md-custom-colorwarning);
+  color: var(--md-custom-colorOnwarning);
 }
 
 .doc .admonitionblock .icon i {
@@ -557,7 +556,7 @@
 .doc .openblock .title,
 .doc .videoblock .title,
 .doc .tableblock caption {
-  color: var(--caption-font-color);
+  color: var(--md-sys-color-secondary);
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-style: var(--caption-font-style);
   font-weight: var(--caption-font-weight);
@@ -628,7 +627,7 @@
 }
 
 .doc details.result > summary {
-  color: var(--caption-font-color);
+  color: var(--md-sys-color-secondary);
   font-style: italic;
   margin-bottom: 0;
 }
@@ -639,8 +638,8 @@
 
 .doc .exampleblock > .content,
 .doc details.result > .content {
-  background: var(--example-background);
-  border: 0.25rem solid var(--example-border-color);
+  background: var(--md-sys-color-background);
+  border: 0.25rem solid var(--md-sys-color-primary-container);
   border-radius: 0.5rem;
   padding: 0.75rem;
 }
@@ -699,7 +698,6 @@
   top: 0.25rem;
   right: 0.5rem;
   color: var(--pre-annotation-font-color);
-  font-family: var(--body-font-family);
   font-size: calc(13 / var(--rem-base) * 1rem);
   line-height: 1;
   white-space: nowrap;
@@ -756,10 +754,10 @@
   display: inline-flex;
   justify-content: center;
   margin-top: 1em;
-  background-color: var(--doc-font-color);
+  background-color: var(--md-sys-color-on-background);
   border-radius: 0.25em;
   padding: 0.5em;
-  color: var(--color-white);
+  color: var(--md-sys-color-background);
   cursor: auto;
   opacity: 0;
   transition: opacity 0.5s ease 0.5s;
@@ -772,7 +770,7 @@
   width: 1em;
   height: 1em;
   border: 0.55em solid transparent;
-  border-left-color: var(--doc-font-color);
+  border-left-color: var(--md-sys-color-on-background);
   transform: rotate(-90deg) translateX(50%) translateY(50%);
   transform-origin: left;
 }
@@ -838,7 +836,6 @@
   border: 1px solid currentColor;
   border-radius: 100%;
   display: inline-block;
-  font-family: var(--body-font-family);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
   font-style: normal;
   line-height: 1.2;
@@ -883,7 +880,7 @@
   background: var(--kbd-background);
   border: 1px solid var(--kbd-border-color);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--md-sys-color-background) inset;
   padding: 0.25em 0.5em;
   vertical-align: text-bottom;
   white-space: nowrap; /* effectively ignores hyphens setting */

@@ -2,7 +2,8 @@
   width: 100%;
   z-index: var(--z-index-nav);
   visibility: hidden;
-  background: var(--nav-background);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
 }
 
 .-has-tab-bar + .site-content .content-area {
@@ -31,12 +32,6 @@
 
 .nav-container.is-active {
   visibility: visible;
-}
-
-@media screen and (min-width: 769px) {
-  .nav {
-    box-shadow: 0.5px 0 3px var(--nav-border-color);
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -127,7 +122,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore {
-  background: var(--nav-background);
+  background: var(--md-sys-color-surface);
   display: block;
   flex-direction: column;
   position: absolute;
@@ -218,7 +213,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore .component .version a {
-  border: 1px solid var(--nav-border-color);
+  border: 1px solid var(--md-sys-color-on-surface);
   border-radius: 0.25rem;
   opacity: 0.75;
   white-space: nowrap;

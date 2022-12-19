@@ -32,7 +32,7 @@
 
 .hljs-folder:before {
   font-family: "Material Icons", sans-serif;
-  color: var(--heading-font-color);
+  color: var(--md-sys-color-primary);
   content: "\e2c8";
 }
 

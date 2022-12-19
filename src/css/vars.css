@@ -1,16 +1,10 @@
 :root {
   /* colors */
-  --color-white: #fff;
   --color-gray-10: #c1c1c1;
   --color-gray-30: #9c9c9c;
   --color-gray-40: #8e8e8e;
   --color-gray-50: #808080;
   --color-gray-70: #5d5d5d;
-  --color-jet-20: #4a4a4a;
-  --color-jet-30: #424242;
-  --color-jet-50: #2f3033;
-  --color-jet-70: #3a3435;
-  --color-jet-80: #c2185b;
   --color-second-regular: #80cbc4;
   --color-second-hover: #104d92;
   --color-highlight: #ffff80;
@@ -21,99 +15,67 @@
   --body-font-size--desktop: 1rem; /* 18px */
   --body-font-size--print: 1rem; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
   --body-font-weight-bold: 700;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
 
   /* base */
-  --body-background: var(--mdc-theme-background);
-  --panel-background: var(--mdc-theme-surface);
   --panel-border-color: var(--mdc-theme-background);
   --scrollbar-track-color: var(--mdc-theme-surface-mix-12);
   --scrollbar-thumb-color: var(--mdc-theme-surface-mix-4);
   --scrollbar_hover-thumb-color: var(--mdc-theme-surface-mix-12);
   /* nav */
-  --nav-background: var(--mdc-theme-surface);
-  --nav-border-color: var(--mdc-theme-background);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--mdc-theme-on-surface);
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--mdc-theme-surface-mix-12);
   --nav-secondary-background: var(--mdc-theme-surface-mix-4);
   /* toolbar */
-  --toolbar-background: var(--body-background);
+  --toolbar-background: var(--md-sys-color-background);
   --toolbar-border-color: var(--color-gray-10);
   --toolbar-font-color: var(--mdc-theme-surface-mix-12);
   --toolbar-muted-color: var(--mdc-theme-surface-mix-4);
   --page-version-menu-background: var(--mdc-theme-surface-mix-12);
   --page-version-missing-font-color: var(--mdc-theme-surface-mix-4);
-  /* admonitions */
-  --caution-color: #a0439c;
-  --caution-on-color: var(--color-white);
-  --important-color: #d32f2f;
-  --important-on-color: var(--color-white);
-  --note-color: #217ee7;
-  --note-on-color: var(--color-white);
-  --tip-color: #41af46;
-  --tip-on-color: var(--color-white);
-  --warning-color: #e18114;
-  --warning-on-color: var(--color-white);
-  --primary-color: #08427b;
-  --primary-on-color: var(--color-white);
-  --secondary-color: #1168bd;
-  --secondary-on-color: var(--color-white);
   /* doc */
-  --doc-font-color: var(--mdc-theme-on-background);
-  --doc-background-color: var(--mdc-theme-background);
   --doc-font-size: inherit;
   --doc-font-size--desktop: 1em;
   --doc-line-height: 1.6;
   --doc-margin: 1em auto;
   --doc-margin--desktop: 1rem 2rem;
-  --heading-font-color: var(--color-jet-80);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: var(--color-second-regular);
-  --link_hover-font-color: var(--color-second-hover);
-  --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--mdc-theme-surface-mix-12);
-  --abstract-font-color: var(--color-jet-20);
+  --abstract-font-color: var(--md-sys-color-on-background);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
+  --admonition-background: var(--md-sys-color-surface);
   --admonition-label-font-weight: var(--body-font-weight-bold);
-  --caption-font-color: var(--color-second-regular);
   --caption-font-style: italic;
   --caption-font-weight: var(--body-font-weight-bold);
-  --code-background: var(--panel-background);
-  --code-font-color: var(--body-font-color);
-  --example-background: var(--color-white);
-  --example-border-color: var(--color-gray-70);
-  --kbd-background: var(--panel-background);
-  --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
-  --pre-border-color: var(--panel-border-color);
+  --kbd-background: var(--md-sys-color-surface);
+  --kbd-border-color: var(--md-sys-color-surface);
+  --pre-background: var(--md-sys-color-surface);
+  --pre-border-color: var(--md-sys-color-surface);
   --pre-annotation-font-color: var(--color-gray-50);
-  --quote-background: var(--panel-background);
+  --quote-background: var(--md-sys-color-surface);
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-40);
   --sidebar-background: var(--mdc-theme-surface-mix-12);
   --table-border-color: var(--panel-border-color);
-  --table-stripe-background: var(--panel-background);
+  --table-stripe-background: var(--md-sys-color-surface);
   --table-footer-background: var(--mdc-theme-surface-mix-4);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
-  --toc-heading-font-color: var(--doc-font-color);
+  --toc-heading-font-color: var(--md-sys-color-on-background);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-jet-50);
-  --footer-font-color: var(--mdc-theme-surface-mix-12);
-  --footer-link-font-color: var(--link-font-color);
+  --footer-background: var(--md-sys-color-surface-variant);
+  --footer-font-color: var(--md-sys-color-on-surface-variant);
+  --footer-link-font-color: var(--md-sys-color-secondary);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);

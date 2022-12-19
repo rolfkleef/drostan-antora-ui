@@ -85,16 +85,16 @@
 }
 
 .toc .toc-menu a:hover {
-  color: var(--link-font-color);
+  color: var(--md-sys-color-secondary);
 }
 
 .toc .toc-menu a.is-active {
-  border-left-color: var(--link-font-color);
-  color: var(--doc-font-color);
+  border-left-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-background);
 }
 
 .sidebar.toc .toc-menu a:focus {
-  background: var(--panel-background);
+  background: var(--md-sys-color-surface);
 }
 
 .toc .toc-menu .is-hidden-toc {

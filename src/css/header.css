@@ -7,9 +7,9 @@ body {
 }
 
 header > nav {
-  background: var(--navbar-background);
+  background: var(--md-sys-color-primary);
   box-shadow: 0 0.1em 0.5em var(--color-gray-50);
-  color: var(--navbar-font-color);
+  color: var(--md-sys-color-on-primary);
   /* font-size: calc(16 / var(--rem-base) * 1rem); */
   height: var(--navbar-height);
   position: fixed;
@@ -30,13 +30,13 @@ header > nav a {
 }
 
 .navbar-brand .navbar-item {
-  color: var(--navbar-font-color);
+  color: var(--md-sys-color-on-primary);
 }
 
 .navbar-brand .navbar-item:first-child {
   align-self: center;
   padding: 0;
-  color: var(--navbar-font-color);
+  color: var(--md-sys-color-on-primary);
   /* font-size: calc(22 / var(--rem-base) * 1rem); */
   flex-wrap: wrap;
   line-height: 1;
@@ -57,7 +57,7 @@ header > nav a {
 }
 
 #search-input {
-  color: var(--body-font-color);
+  color: var(--md-sys-color-on-background);
   font-family: inherit;
   font-size: 0.95rem;
   width: 150px;
@@ -99,7 +99,7 @@ header > nav a {
 }
 
 .navbar-burger span {
-  background-color: var(--navbar-font-color);
+  background-color: var(--md-sys-color-on-primary);
   height: 1.5px;
   width: 1rem;
 }
@@ -313,14 +313,14 @@ header > nav a {
 
 .navbar-section > .navbar-item,
 .navbar-section .navbar-link {
-  color: var(--navbar-font-color);
+  color: var(--md-sys-color-on-primary);
 }
 
 .navbar-section > a.navbar-item:hover,
 .navbar-section .navbar-link:hover,
 .navbar-section .navbar-item.has-dropdown:hover .navbar-link {
   background: var(--navbar_hover-background);
-  color: var(--navbar-font-color);
+  color: var(--md-sys-color-on-primary);
 }
 
 .navbar-section .navbar-link::after {

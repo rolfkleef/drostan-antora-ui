@@ -70,7 +70,7 @@
 }
 
 .search-result-highlight {
-  color: var(--link-font-color);
+  color: var(--md-sys-color-secondary);
   background: rgba(143, 187, 237, 0.1);
   padding: 0.1em 0.05em;
   font-weight: 700;
