@@ -296,9 +296,37 @@
   width: 100%;
 }
 
+.doc .admonitionblock.tip {
+  background: var(--md-custom-color-tip-container);
+  color: var(--md-custom-color-on-tip-container);
+}
+
+.doc .admonitionblock.note {
+  background: var(--md-custom-color-note-container);
+  color: var(--md-custom-color-on-note-container);
+}
+
+.doc .admonitionblock.warning {
+  background: var(--md-custom-color-warning-container);
+  color: var(--md-custom-color-on-warning-container);
+}
+
+.doc .admonitionblock.caution {
+  background: var(--md-custom-color-caution-container);
+  color: var(--md-custom-color-on-caution-container);
+}
+
+.doc .admonitionblock.important {
+  background: var(--md-custom-color-important-container);
+  color: var(--md-custom-color-on-important-container);
+}
+
+.doc .admonitionblock.tip > table {
+  border: 1px solid var(--md-custom-color-tip)
+}
+
 .doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
   width: 100%;
   word-wrap: anywhere;
 }
@@ -318,8 +346,8 @@
 }
 
 .doc .admonitionblock.caution .icon {
-  background-color: var(--md-custom-colorcaution);
-  color: var(--md-custom-colorOncaution);
+  background-color: var(--md-custom-color-caution);
+  color: var(--md-custom-color-on-caution);
 }
 
 .doc .admonitionblock.important .icon {
@@ -328,18 +356,18 @@
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--md-custom-colornote);
-  color: var(--md-custom-colorOnnote);
+  background-color: var(--md-custom-color-note);
+  color: var(--md-custom-color-on-note);
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--md-custom-colortip);
-  color: var(--md-custom-colorOntip);
+  background-color: var(--md-custom-color-tip);
+  color: var(--md-custom-color-on-tip);
 }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--md-custom-colorwarning);
-  color: var(--md-custom-colorOnwarning);
+  background-color: var(--md-custom-color-warning);
+  color: var(--md-custom-color-on-warning);
 }
 
 .doc .admonitionblock .icon i {

@@ -123,8 +123,8 @@
   --md-sys-color-on-background-light: #001f25;
   --md-sys-color-surface-light: #f8fdff;
   --md-sys-color-on-surface-light: #001f25;
-  --md-sys-color-surface-variant-light: #f3dde1;
-  --md-sys-color-on-surface-variant-light: #514346;
+  --md-sys-color-surface-variant-light: #e3e1ec;
+  --md-sys-color-on-surface-variant-light: #46464f;
   --md-sys-color-outline-light: #847376;
   --md-sys-color-inverse-on-surface-light: #d6f6ff;
   --md-sys-color-inverse-surface-light: #00363f;
@@ -154,7 +154,7 @@
   --md-sys-color-on-background-dark: #a6eeff;
   --md-sys-color-surface-dark: #001f25;
   --md-sys-color-on-surface-dark: #a6eeff;
-  --md-sys-color-surface-variant-dark: #514346;
+  --md-sys-color-surface-variant-dark: #46464f;
   --md-sys-color-on-surface-variant-dark: #d6c2c5;
   --md-sys-color-outline-dark: #9e8c8f;
   --md-sys-color-inverse-on-surface-dark: #001f25;
@@ -165,10 +165,10 @@
   --md-sys-color-outline-variant-dark: #514346;
   --md-sys-color-scrim-dark: #000;
   /* Custom Colors */
-  --md-custom-color-warning: #ffb300;
-  --md-custom-color-caution: #d500f9;
-  --md-custom-color-tip: #69f0ae;
-  --md-custom-color-note: #2196f3;
+  --md-custom-color-warning-source: #ffb300;
+  --md-custom-color-caution-source: #d500f9;
+  --md-custom-color-tip-source: #69f0ae;
+  --md-custom-color-note-source: #2196f3;
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: roboto;
   --md-sys-typescale-display-large-font-family-style: regular;
