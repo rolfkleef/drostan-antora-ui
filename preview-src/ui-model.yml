@@ -52,6 +52,15 @@ site:
       version: '2.0'
       displayVersion: '2.0'
     latestVersion: *latest_version_123
+  - name: 'MMXXII'
+    title: Project 2022 (1 version only)
+    url: '#'
+    versions:
+    - &latest_version_mmxxii
+      url: '#'
+      version: '2.2'
+      displayVersion: '2.2'
+    latestVersion: *latest_version_mmxxii
 page:
   url: *home_url
   home: true

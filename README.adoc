@@ -1,4 +1,4 @@
-= Antora Default UI
+= Antora UI for drostan.org
 // Settings:
 :experimental:
 :hide-uri-scheme:
@@ -19,7 +19,14 @@
 :url-nvm-install: {url-nvm}#installation
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
-image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
+[NOTE]
+====
+This is a fork of the Antora default UI.
+The branch `drostan` contains my variation on the official default UI.
+
+My own layout and CSS setup is deviating more and more from the official version.
+I still track the upstream version to check for improvements made there.
+====
 
 This project is an archetype that demonstrates how to produce a UI bundle that can be used by {url-antora}[Antora] to generated a documentation site.
 You can see a preview of the default UI at {url-preview}.
