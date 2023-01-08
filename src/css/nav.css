@@ -2,8 +2,8 @@
   width: 100%;
   z-index: var(--z-index-nav);
   visibility: hidden;
-  background: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
 }
 
 .-has-tab-bar + .site-content .content-area {

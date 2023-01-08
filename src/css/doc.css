@@ -87,8 +87,8 @@
 .doc p code,
 .doc thead code,
 .doc .colist > table code {
-  color: var(--md-sys-color-on-surface);
-  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface-variant);
+  background: var(--md-sys-color-surface-variant);
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
@@ -522,6 +522,10 @@
 .doc .olist .listingblock,
 .doc .admonitionblock .listingblock {
   padding: 0;
+}
+
+.doc pre {
+  background: var(--md-sys-color-surface-variant);
 }
 
 .doc .ulist .title,
