@@ -100,6 +100,7 @@
 }
 
 .doc pre {
+  background: var(--md-sys-color-surface-variant);
   margin: 0;
 }
 
@@ -312,7 +313,7 @@
 }
 
 .doc .admonitionblock.tip > table {
-  border: 1px solid var(--md-custom-color-tip)
+  border: 1px solid var(--md-custom-color-tip);
 }
 
 .doc .admonitionblock td.content {
@@ -415,7 +416,6 @@
   font-size: calc(16 / var(--rem-base) * 1rem);
   padding: 0.75em 1em;
 }
-
 
 .doc ol,
 .doc ul {
@@ -522,10 +522,6 @@
 .doc .olist .listingblock,
 .doc .admonitionblock .listingblock {
   padding: 0;
-}
-
-.doc pre {
-  background: var(--md-sys-color-surface-variant);
 }
 
 .doc .ulist .title,
@@ -696,7 +692,6 @@
   font-size: inherit;
 }
 
-
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
 .doc .tableblock pre,
 .doc .listingblock.wrap pre {
@@ -856,7 +851,9 @@
 }
 
 .doc .conum[data-value] {
-  border: 1px solid currentColor;
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+  border: 2px solid var(--md-sys-color-secondary);
   border-radius: 100%;
   display: inline-block;
   font-size: calc(13.5 / var(--rem-base) * 1rem);
@@ -979,12 +976,6 @@
   margin-left: -2em;
   text-align: right;
   width: 1.5em;
-}
-
-.doc .conum[data-value] {
-  background-color: var(--md-sys-color-secondary);
-  border: 2px solid var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
 }
 
 mark {
