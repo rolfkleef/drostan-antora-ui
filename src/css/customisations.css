@@ -28,39 +28,8 @@ body.wide .doc {
   margin-left: 2.5em !important;
 }
 
-.doc .notargeticon a[target="_blank"]::after {
-  content: "";
-}
-
-.doc a[target="_blank"]::after {
-  font-family: "Material Icons", sans-serif;
-  content: "\e895";
-  margin-left: 4px;
-  font-size: x-small;
-  vertical-align: super;
-}
-
 .tableblock:not(:first-child) {
   margin-top: 1em;
-}
-
-.doc .conum[data-value] {
-  background-color: var(--md-sys-color-secondary);
-  border: 2px solid var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
-}
-
-mark {
-  background-color: var(--color-highlight);
-}
-
-.colorswatch {
-  width: 3em;
-  height: 3em;
-  border: 0.2em solid var(--table-border-color);
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
 }
 
 table.storymap tr:nth-child(1) > *,
@@ -239,10 +208,11 @@ li.version a {
   line-height: 1;
 }
 
-.colist table {
+.colist table,
+.colist td {
   border: 0;
 }
 
-.colist table tr {
-  border-top: 0;
+td {
+
 }

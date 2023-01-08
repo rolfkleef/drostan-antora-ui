@@ -1,3 +1,5 @@
+/* Headings */
+
 .doc h1,
 .doc h2 {
   color: var(--md-sys-color-primary);
@@ -28,13 +30,6 @@
   padding: 0.5rem 1rem;
 }
 
-.doc h2:not(.discrete) {
-  border-bottom: 1px solid var(--section-divider-color);
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0.4rem 1rem 0.1rem;
-}
-
 .doc :is(h1, h2, h3, h4, h5, h6) .anchor {
   position: absolute;
   text-decoration: none;
@@ -54,14 +49,10 @@
   visibility: visible;
 }
 
-.doc p,
-.doc dl {
-  margin: 0;
-}
+/* Links */
 
 .doc a {
   color: var(--md-sys-color-secondary);
-  text-decoration: underline;
 }
 
 .doc a:hover {
@@ -74,6 +65,18 @@
 
 .doc a.unresolved {
   color: var(--md-sys-color-error);
+}
+
+.doc .notargeticon a[target="_blank"]::after {
+  content: "";
+}
+
+.doc a[target="_blank"]::after {
+  font-family: "Material Icons", sans-serif;
+  content: "\e895";
+  margin-left: 4px;
+  font-size: x-small;
+  vertical-align: super;
 }
 
 .doc i.fa {
@@ -272,22 +275,9 @@
   vertical-align: middle;
 }
 
-.doc .admonitionblock {
-  margin: 1.4rem 0 0;
-}
-
-.doc .admonitionblock p,
-.doc .admonitionblock td.content {
-  font-size: calc(16 / var(--rem-base) * 1rem);
-}
-
 .doc .admonitionblock td.content > :not(.title):first-child,
 .doc .admonitionblock td.content > .title + * {
   margin-top: 0;
-}
-
-.doc .admonitionblock pre {
-  font-size: calc(15 / var(--rem-base) * 1rem);
 }
 
 .doc .admonitionblock > table {
@@ -426,44 +416,6 @@
   padding: 0.75em 1em;
 }
 
-.doc .quoteblock,
-.doc .verseblock {
-  background: var(--quote-background);
-  border-left: 5px solid var(--quote-border-color);
-  color: var(--quote-font-color);
-}
-
-.doc .quoteblock {
-  padding: 0.25rem 2rem 1.25rem;
-}
-
-.doc .quoteblock .attribution {
-  color: var(--quote-attribution-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  margin-top: 0.75rem;
-}
-
-.doc .quoteblock blockquote {
-  margin-top: 1rem;
-}
-
-.doc .quoteblock .paragraph {
-  font-style: italic;
-}
-
-.doc .quoteblock cite {
-  padding-left: 1em;
-}
-
-.doc .verseblock {
-  font-size: 1.15em;
-  padding: 1rem 2rem;
-}
-
-.doc .verseblock pre {
-  font-family: inherit;
-  font-size: inherit;
-}
 
 .doc ol,
 .doc ul {
@@ -664,6 +616,29 @@
   margin-left: -1rem;
 }
 
+/* Sidebar */
+
+.doc .sidebarblock {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.doc .sidebarblock > .content > .title {
+  font-size: calc(22.5 / var(--rem-base) * 1rem);
+  font-weight: var(--alt-heading-font-weight);
+  line-height: 1.3;
+  margin-bottom: -0.3em;
+  text-align: center;
+}
+
+.doc .sidebarblock > .content > :not(.title):first-child {
+  margin-top: 0;
+}
+
+/* Example */
+
 .doc .exampleblock > .content,
 .doc details.result > .content {
   background: var(--md-sys-color-background);
@@ -684,23 +659,39 @@
   margin-top: 0;
 }
 
-.doc .sidebarblock {
-  background: var(--sidebar-background);
-  border-radius: 0.75rem;
-  padding: 0.75rem 1.5rem;
+/* Quote and verse */
+
+.doc .quoteblock,
+.doc .verseblock {
+  color: var(--md-sys-color-tertiary);
+  border-left: 2px solid var(--md-sys-color-tertiary);
+  padding: 0.25rem 2rem 1.25rem;
 }
 
-.doc .sidebarblock > .content > .title {
-  font-size: calc(22.5 / var(--rem-base) * 1rem);
-  font-weight: var(--alt-heading-font-weight);
-  line-height: 1.3;
-  margin-bottom: -0.3em;
-  text-align: center;
+.doc .quoteblock .attribution {
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  margin-top: 0.75rem;
 }
 
-.doc .sidebarblock > .content > :not(.title):first-child {
-  margin-top: 0;
+.doc .quoteblock blockquote {
+  background: var(--md-sys-color-tertiary-container);
+  margin-top: 1rem;
 }
+
+.doc .quoteblock .paragraph {
+  font-style: italic;
+}
+
+.doc .quoteblock cite {
+  padding-left: 1em;
+}
+
+.doc .verseblock pre {
+  background: var(--md-sys-color-tertiary-container);
+  font-family: inherit;
+  font-size: inherit;
+}
+
 
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
 .doc .tableblock pre,
@@ -905,12 +896,11 @@
 .doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--rem-base) * 1rem);
-  background: var(--kbd-background);
-  border: 1px solid var(--kbd-border-color);
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border: 1px solid var(--md-sys-color-on-secondary-container);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--md-sys-color-background) inset;
   padding: 0.25em 0.5em;
-  vertical-align: text-bottom;
   white-space: nowrap; /* effectively ignores hyphens setting */
 }
 
@@ -985,4 +975,14 @@
   margin-left: -2em;
   text-align: right;
   width: 1.5em;
+}
+
+.doc .conum[data-value] {
+  background-color: var(--md-sys-color-secondary);
+  border: 2px solid var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+}
+
+mark {
+  background-color: var(--md-sys-color-tertiary-container);
 }
