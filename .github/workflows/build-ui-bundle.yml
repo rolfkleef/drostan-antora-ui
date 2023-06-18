@@ -9,6 +9,10 @@ jobs:
   antora-ui:
     runs-on: ubuntu-latest
 
+    # allow creating a release in the repo
+    permissions:
+      contents: write
+
     steps:
       - name: Get the sources
         uses: actions/checkout@v2
@@ -24,8 +28,10 @@ jobs:
       - name: Bundle
         run: npm run bundle
 
-      - name: Save bundle artifact
-        uses: actions/upload-artifact@v3
+      - name: Release bundle artifact
+        uses: ncipollo/release-action@v1
         with:
-          name: drostan-antora-ui
-          path: build/ui-bundle.zip
+          tag: drostan-antora-ui
+          allowUpdates: true
+          makeLatest: true
+          artifacts: "build/ui-bundle.zip"
