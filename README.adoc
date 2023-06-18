@@ -21,7 +21,7 @@
 
 [NOTE]
 ====
-This is a fork of the Antora default UI.
+This is a fork of {url-project}[the Antora default UI.]
 The branch `drostan` contains my variation on the official default UI.
 
 My own layout and CSS setup is deviating more and more from the official version.
