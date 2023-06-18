@@ -1,0 +1,32 @@
+name: Build the Antora UI bundle
+on:
+  push:
+    branches:
+      - drostan
+  workflow_dispatch:
+
+jobs:
+  antora-ui:
+    runs-on: ubuntu-latest
+    container: node:16-buster
+
+    steps:
+      - name: Get the sources
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+
+      - name: Setup Antora
+        run: npm ci --production
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Bundle
+        run: npm run bundle
+
+      - name: Save bundle artifact
+        uses: {% data reusables.actions.action-upload-artifact %}
+        with:
+          name: drostan-antora-ui
+          path: build/ui-bundle.zip

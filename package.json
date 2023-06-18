@@ -1,14 +1,16 @@
 {
   "name": "rolfkleef/drostan-antora-ui",
   "description": "Drostan's project that produces a UI for creating documentation sites with Antora",
-  "homepage": "https://gitlab.com/rolfkleef/drostan-antora-ui",
+  "homepage": "https://github.com/rolfkleef/drostan-antora-ui",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/rolfkleef/drostan-antora-ui.git"
+    "url": "https://github.com/rolfkleef/drostan-antora-ui.git"
   },
   "scripts": {
-    "preview": "LIVERELOAD=true gulp preview"
+    "preview": "LIVERELOAD=true gulp preview",
+    "lint": "node_modules/.bin/gulp lint",
+    "bundle": "node_modules/.bin/gulp bundle"
   },
   "engines": {
     "node": ">= 8.0.0"
