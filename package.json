@@ -56,7 +56,7 @@
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
     "sass": "^1.57.1",
-    "stylelint": "~13.3",
+    "stylelint": "~15.10",
     "stylelint-config-standard": "~20.0",
     "vinyl-fs": "~3.0"
   },
