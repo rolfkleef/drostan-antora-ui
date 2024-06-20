@@ -28,6 +28,11 @@ jobs:
       - name: Bundle
         run: npm run bundle
 
+      - name: Move tag
+        run: |
+          git tag -f drostan-antora-ui
+          git push origin drostan-antora-ui --force
+  
       - name: Release bundle artifact
         uses: ncipollo/release-action@v1
         with:
