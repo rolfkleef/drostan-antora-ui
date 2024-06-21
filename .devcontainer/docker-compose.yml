@@ -1,0 +1,6 @@
+services:
+  antora-ui:
+    image: ubuntu:24.04
+    command: sleep infinity
+    volumes:
+      - ..:/drostan/ui

@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "drostan-antora-ui",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "antora-ui",
+	"workspaceFolder": "/drostan/ui",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// (in addition to the default features included in VS Code's settings.json)
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {"version": "20.15.0"},
+		"ghcr.io/devcontainers-contrib/features/gulp-cli:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"asciidoctor.asciidoctor-vscode",
+				"github.vscode-github-actions"
+			]
+		}
+	}
+}
