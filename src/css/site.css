@@ -1,6 +1,6 @@
 /* @import "typefaces.css"; */
 @import url(md3/theme.css);
-/* @import "vars.css"; */
+@import "vars.css";
 @import "base.css";
 @import "nav.css";
 /* @import "toolbar.css"; */

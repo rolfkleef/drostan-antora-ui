@@ -1,16 +1,15 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
   <nav class="nav-menu nav">
-{{!--      {{> search }}--}}
-
     <details class="components-versions">
       <summary>
+        <i class="material-icons mdc-button__icon">library_books</i>&nbsp;
         {{#with @root.page.componentVersion}}
           <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
         {{/with}}
         {{#if (ne @root.page.component.versions.length 1) }}
           <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
         {{/if}}
-        <i class="material-icons mdc-button__icon">expand_more</i>
+        <i class="material-icons mdc-button__icon expand">expand_more</i>&nbsp;
       </summary>
       <ul class="components">
         {{#each site.components}}
@@ -21,7 +20,7 @@
                 <ul class="versions">
                   {{#each ./versions}}
                     <li class="version
-            {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+              {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
                       {{~#if (eq this ../latest)}} is-latest{{/if}}">
                       <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
                     </li>
@@ -34,8 +33,8 @@
       </ul>
     </details>
 
-    {{#with page.navigation}}
-      {{> nav-tree navigation=this}}
-    {{/with}}
+    {{!-- {{> search }} --}}
+
+    {{> nav-tree navigation=page.navigation}}
   </nav>
 </div>
