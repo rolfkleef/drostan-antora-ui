@@ -133,6 +133,7 @@ details.components-versions {
 
 details.components-versions[open] {
   max-height: 90vh;
+  background-color: var(--md-sys-color-surface);
 }
 
 details.components-versions > summary {
@@ -151,10 +152,6 @@ details.components-versions summary .mdc-button__icon {
 
 details.components-versions[open] summary .mdc-button__icon.expand {
   transform: rotate(-0.5turn);
-}
-
-details.components-versions[open] {
-  background-color: var(--md-sys-color-surface);
 }
 
 nav > ul.nav-list {

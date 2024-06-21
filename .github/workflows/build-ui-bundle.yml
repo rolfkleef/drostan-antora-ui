@@ -8,6 +8,7 @@ on:
 jobs:
   antora-ui:
     runs-on: ubuntu-latest
+    container: node:20-bookworm
 
     # allow creating a release in the repo
     permissions:
