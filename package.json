@@ -13,7 +13,7 @@
     "lint": "node_modules/.bin/gulp lint",
     "bundle": "node_modules/.bin/gulp bundle",
     "create-release": "commit-and-tag-version",
-    "update-release": "commit-and-tag-version --skip.bump"
+    "update-release": "commit-and-tag-version --skip.bump --tag-force"
   },
   "engines": {
     "node": ">= 8.0.0"
