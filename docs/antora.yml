@@ -1,5 +1,5 @@
-name: antora-ui-default
-title: Antora Default UI
-version: drostan
+name: drostan-antora-ui
+title: Antora UI for drostan.org
+version: 0.0.1
 nav:
 - modules/ROOT/nav.adoc

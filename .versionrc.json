@@ -1,0 +1,56 @@
+{
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Improvements"
+    },
+    {
+      "type": "improvement",
+      "section": "Improvements"
+    },
+    {
+      "type": "debt",
+      "section": "Debts"
+    },
+    {
+      "type": "risk",
+      "section": "Risks and compliance"
+    },
+    {
+      "type": "chore",
+      "hidden": true
+    },
+    {
+      "type": "docs",
+      "section": "Documentation"
+    },
+    {
+      "type": "style",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "hidden": true
+    },
+    {
+      "type": "perf",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "hidden": true
+    }
+  ],
+  "bumpFiles": [
+    "package.json",
+    "package-lock.json",
+    {
+      "filename": "docs/antora.yml",
+      "updater": "docs/antora-version-updater.js"
+    }
+  ]
+}

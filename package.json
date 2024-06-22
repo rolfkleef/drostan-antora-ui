@@ -1,6 +1,7 @@
 {
   "name": "rolfkleef/drostan-antora-ui",
-  "description": "Drostan's project that produces a UI for creating documentation sites with Antora",
+  "description": "Drostan's version of a UI for the Antora documentation site generator.",
+  "version": "0.1.0",
   "homepage": "https://github.com/rolfkleef/drostan-antora-ui",
   "license": "MPL-2.0",
   "repository": {
@@ -10,7 +11,9 @@
   "scripts": {
     "preview": "LIVERELOAD=true gulp preview",
     "lint": "node_modules/.bin/gulp lint",
-    "bundle": "node_modules/.bin/gulp bundle"
+    "bundle": "node_modules/.bin/gulp bundle",
+    "create-release": "commit-and-tag-version",
+    "update-release": "commit-and-tag-version --skip.bump"
   },
   "engines": {
     "node": ">= 8.0.0"
@@ -25,6 +28,7 @@
     "autoprefixer": "~9.7",
     "browser-pack-flat": "~3.4",
     "browserify": "~16.5",
+    "commit-and-tag-version": "^12.4.1",
     "cssnano": "~4.1",
     "eslint": "~6.8",
     "eslint-config-standard": "~14.1",
