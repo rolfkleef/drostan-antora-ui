@@ -168,6 +168,10 @@ nav li.nav-item {
   margin-left: 0.5rem;
 }
 
+nav.nav-menu > details > div {
+  margin-left: 1rem;
+}
+
 ul.components {
   list-style: none;
   margin-left: 0;

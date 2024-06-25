@@ -1,12 +1,12 @@
 {{#each navigation}}
   {{#if ./content}}
     {{#if ./items.length}}
-      <details open="true">
+      <details>
         <summary>
           {{> nav-tree-item}}
         </summary>
     {{else}}
-      {{> nav-tree-item}}
+      <div>{{> nav-tree-item}}</div>
     {{/if}}
   {{/if}}
   {{> nav-tree navigation=./items level=(increment ../level)}}
@@ -15,5 +15,4 @@
       </details>
     {{/if}}
   {{/if}}
-{{!--  </li>--}}
 {{/each}}
