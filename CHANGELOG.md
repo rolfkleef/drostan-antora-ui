@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.0...v0.1.1) (2024-06-25)
+
+
+### Improvements
+
+* show leaf items in navigation tree per line ([c0046f4](https://github.com/rolfkleef/drostan-antora-ui/commit/c0046f42a5a6b49846411710ff7fac36854758e3))
+
 ## 0.1.0 (2024-06-22)
 
 First version release. Consolidate work in progress to make the Antora interface resemble my website.
