@@ -1,7 +1,7 @@
 {{#each navigation}}
   {{#if ./content}}
     {{#if ./items.length}}
-      <details>
+      <details {{#unless sublevel}}open=""{{/unless}}>
         <summary>
           {{> nav-tree-item}}
         </summary>
@@ -9,7 +9,7 @@
       <div>{{> nav-tree-item}}</div>
     {{/if}}
   {{/if}}
-  {{> nav-tree navigation=./items level=(increment ../level)}}
+  {{> nav-tree navigation=./items level=(increment ../level) sublevel=true}}
   {{#if ./content}}
     {{#if ./items.length}}
       </details>

@@ -124,7 +124,6 @@ nav.nav-menu a {
 
 details.components-versions {
   transition: 0.7s;
-  max-height: 3em;
   overflow-x: hidden;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -168,8 +167,17 @@ nav li.nav-item {
   margin-left: 0.5rem;
 }
 
-nav.nav-menu > details > div {
-  margin-left: 1rem;
+nav.nav-menu > div,
+nav.nav-menu > details {
+  padding-bottom: 1rem;
+
+  > a,
+  > span,
+  > summary {
+    list-style: none;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+  }
 }
 
 ul.components {
