@@ -33,5 +33,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          makeLatest: true
+          generateReleaseNotes: true
           artifacts: "build/ui-bundle.zip"
+
