@@ -15,7 +15,8 @@
 		"vscode": {
 			"extensions": [
 				"asciidoctor.asciidoctor-vscode",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ecmel.vscode-html-css"
 			]
 		}
 	}
