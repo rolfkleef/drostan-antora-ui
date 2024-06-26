@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.3](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.2...v0.1.3) (2024-06-26)
+
+
+### Improvements
+
+* remove wordpress search from notes ([82d1773](https://github.com/rolfkleef/drostan-antora-ui/commit/82d17735fea2c61646ca1aaabb2f84677912d01a))
+
 ## [0.1.2](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.1...v0.1.2) (2024-06-25)
 
 ## [0.1.1](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.0...v0.1.1) (2024-06-25)
