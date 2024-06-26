@@ -183,6 +183,7 @@ nav.nav-menu > div {
   > div {
     list-style: none;
     font-weight: var(--body-font-weight-bold);
+    padding-bottom: 0.5rem;
   }
 
   > span {
@@ -192,11 +193,29 @@ nav.nav-menu > div {
 
     > details {
       > div {
-        margin-left: 2rem;
+        margin-left: 2.1rem;
       }
 
-      > details > div {
-        margin-left: 3rem;
+      > details {
+        margin-left: 1rem;
+
+        > div {
+          margin-left: 3rem;
+        }
+
+        > details {
+          margin-left: 2rem;
+
+          > div {
+            margin-left: 3rem;
+          }
+
+          > details {
+            > div {
+              margin-left: 4rem;
+            }
+          }
+        }
       }
     }
   }
@@ -249,8 +268,4 @@ li.version a {
 .colist table,
 .colist td {
   border: 0;
-}
-
-details > details {
-  margin-left: 1em;
 }

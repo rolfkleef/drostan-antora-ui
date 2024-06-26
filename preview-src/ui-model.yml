@@ -135,6 +135,19 @@ page:
           - content: Some Code
             url: '/xyz/5.2/index.html#some-code'
             urlType: internal
+            items:
+            - content: More Code Examples
+              url: '/xyz/5.2/index.html#more-code-examples'
+              urlType: internal
+            - content: Some Code
+              url: '/xyz/5.2/index.html#some-code'
+              urlType: internal
+          - content: More Code Examples
+            url: '/xyz/5.2/index.html#some-code'
+            urlType: internal
+        - content: Some Code
+          url: '/xyz/5.2/index.html#some-code'
+          urlType: internal
       - content: Importing and Exporting
         url: '#'
         urlType: fragment
