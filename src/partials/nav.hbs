@@ -35,6 +35,15 @@
 
     {{!-- {{> search }} --}}
 
-    {{> nav-tree navigation=page.navigation}}
+    {{#each page.navigation}}
+      {{#if ./items.length}}
+        {{#each ./items}}
+          <div>
+            <div>{{> nav-tree-item}}</div>
+            <span>{{> nav-tree navigation=./items level=(increment ../level)}}</span>
+          </div>
+        {{/each}}
+      {{/if}}
+    {{/each}}
   </nav>
 </div>

@@ -127,6 +127,14 @@ page:
       - content: Keyboard Shortcuts
         url: '#'
         urlType: fragment
+        items:
+        - content: Importing and Exporting
+          url: '/xyz/5.2/index.html#importing-and-exporting'
+          urlType: internal
+          items:
+          - content: Some Code
+            url: '/xyz/5.2/index.html#some-code'
+            urlType: internal
       - content: Importing and Exporting
         url: '#'
         urlType: fragment

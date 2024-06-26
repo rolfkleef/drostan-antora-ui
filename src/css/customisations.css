@@ -167,16 +167,38 @@ nav li.nav-item {
   margin-left: 0.5rem;
 }
 
-nav.nav-menu > div,
-nav.nav-menu > details {
-  padding-bottom: 1rem;
-
-  > a,
-  > span,
-  > summary {
-    list-style: none;
-    font-weight: bold;
+nav.nav-menu {
+  h1 {
+    font-size: 1rem;
     padding-bottom: 0.5rem;
+  }
+}
+
+nav.nav-menu > div {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* border-top: 1px solid var(--md-sys-color-outline-variant); */
+  margin-top: 0.5rem;
+
+  > div {
+    list-style: none;
+    font-weight: var(--body-font-weight-bold);
+  }
+
+  > span {
+    > div {
+      margin-left: 1rem;
+    }
+
+    > details {
+      > div {
+        margin-left: 2rem;
+      }
+
+      > details > div {
+        margin-left: 3rem;
+      }
+    }
   }
 }
 
