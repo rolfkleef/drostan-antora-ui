@@ -118,7 +118,7 @@ header > nav img {
   transform: translateY(-3.5rem);
 }
 
-nav.nav-menu a {
+.nav-container a {
   text-decoration: none;
 }
 
@@ -153,20 +153,6 @@ details.components-versions[open] summary .mdc-button__icon.expand {
   transform: rotate(-0.5turn);
 }
 
-nav > ul.nav-list {
-  list-style: none;
-  margin-left: 0;
-  padding-inline-start: 0;
-}
-
-nav > ul > li.nav-item {
-  margin-left: 0;
-}
-
-nav li.nav-item {
-  margin-left: 0.5rem;
-}
-
 nav.nav-menu {
   h1 {
     font-size: 1rem;
@@ -180,43 +166,22 @@ nav.nav-menu > div {
   /* border-top: 1px solid var(--md-sys-color-outline-variant); */
   margin-top: 0.5rem;
 
-  > div {
-    list-style: none;
+  > div:nth-child(1) {
     font-weight: var(--body-font-weight-bold);
     padding-bottom: 0.5rem;
   }
 
-  > span {
-    > div {
-      margin-left: 1rem;
+  > div:nth-child(n+2) {
+    margin-left: 1.1rem;
+  }
+
+  > details {
+    div {
+      margin-left: 2.2rem;
     }
 
-    > details {
-      > div {
-        margin-left: 2.1rem;
-      }
-
-      > details {
-        margin-left: 1rem;
-
-        > div {
-          margin-left: 3rem;
-        }
-
-        > details {
-          margin-left: 2rem;
-
-          > div {
-            margin-left: 3rem;
-          }
-
-          > details {
-            > div {
-              margin-left: 4rem;
-            }
-          }
-        }
-      }
+    details {
+      margin-left: 1.1rem;
     }
   }
 }

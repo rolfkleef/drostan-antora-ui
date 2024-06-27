@@ -62,7 +62,7 @@ html.is-clipped--nav {
   line-height: var(--nav-line-height);
 }
 
-.nav-menu h3.title {
+.nav-container h3.title {
   color: var(--nav-heading-font-color);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);

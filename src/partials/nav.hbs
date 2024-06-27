@@ -1,46 +1,46 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
+  <details class="components-versions">
+    <summary>
+      <i class="material-icons mdc-button__icon">library_books</i>&nbsp;
+      {{#with @root.page.componentVersion}}
+        <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
+      {{/with}}
+      {{#if (ne @root.page.component.versions.length 1) }}
+        <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+      {{/if}}
+      <i class="material-icons mdc-button__icon expand">expand_more</i>&nbsp;
+    </summary>
+    <ul class="components">
+      {{#each site.components}}
+        {{#unless (eq ./name "lib-style") }}
+          <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+            <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
+            {{#if (ne ./versions.length 1) }}
+              <ul class="versions">
+                {{#each ./versions}}
+                  <li class="version
+            {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+                    {{~#if (eq this ../latest)}} is-latest{{/if}}">
+                    <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </details>
+
+  {{!-- {{> search }} --}}
+
   <nav class="nav-menu nav">
-    <details class="components-versions">
-      <summary>
-        <i class="material-icons mdc-button__icon">library_books</i>&nbsp;
-        {{#with @root.page.componentVersion}}
-          <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
-        {{/with}}
-        {{#if (ne @root.page.component.versions.length 1) }}
-          <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
-        {{/if}}
-        <i class="material-icons mdc-button__icon expand">expand_more</i>&nbsp;
-      </summary>
-      <ul class="components">
-        {{#each site.components}}
-          {{#unless (eq ./name "lib-style") }}
-            <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
-              <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
-              {{#if (ne ./versions.length 1) }}
-                <ul class="versions">
-                  {{#each ./versions}}
-                    <li class="version
-              {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
-                      {{~#if (eq this ../latest)}} is-latest{{/if}}">
-                      <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            </li>
-          {{/unless}}
-        {{/each}}
-      </ul>
-    </details>
-
-    {{!-- {{> search }} --}}
-
     {{#each page.navigation}}
       {{#if ./items.length}}
         {{#each ./items}}
           <div>
             <div>{{> nav-tree-item}}</div>
-            <span>{{> nav-tree navigation=./items level=(increment ../level)}}</span>
+            {{> nav-tree navigation=./items level=(increment ../level)}}
           </div>
         {{/each}}
       {{/if}}
