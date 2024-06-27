@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.4](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.3...v0.1.4) (2024-06-27)
+
+
+### Debts
+
+* clean up nav-tree code and css ([4cb0fa5](https://github.com/rolfkleef/drostan-antora-ui/commit/4cb0fa55e7a2975af64ccb853c731563ef9b3118))
+
 ## [0.1.3](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.2...v0.1.3) (2024-06-26)
 
 
