@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.5](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.4...v0.1.5) (2024-06-28)
+
 ## [0.1.4](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.3...v0.1.4) (2024-06-27)
 
 
