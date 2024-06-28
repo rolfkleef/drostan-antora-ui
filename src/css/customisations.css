@@ -123,16 +123,14 @@ header > nav img {
 }
 
 details.components-versions {
-  transition: 0.7s;
   overflow-x: hidden;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border: 1px solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-outline-variant);
 }
 
 details.components-versions[open] {
   max-height: 90vh;
-  background-color: var(--md-sys-color-surface);
 }
 
 details.components-versions > summary {
