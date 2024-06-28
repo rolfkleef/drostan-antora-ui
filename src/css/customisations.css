@@ -172,7 +172,7 @@ nav.nav-menu > div {
   }
 
   > div:nth-child(n+2) {
-    margin-left: 1.1rem;
+    margin-left: 1.15rem;
   }
 
   > details {
@@ -181,8 +181,13 @@ nav.nav-menu > div {
     }
 
     details {
-      margin-left: 1.1rem;
+      margin-left: 1.15rem;
     }
+  }
+
+  .nav_active {
+    background-color: var(--md-sys-color-outline-variant);
+    font-weight: var(--body-font-weight-bold);
   }
 }
 

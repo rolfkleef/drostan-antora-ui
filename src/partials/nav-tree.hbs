@@ -1,6 +1,6 @@
 {{#each navigation}}
   {{#if ./items.length}}
-    <details>
+    <details{{#if (navtree-active this @root.page)}} open=""{{/if}}>
       <summary>
         {{> nav-tree-item}}
       </summary>

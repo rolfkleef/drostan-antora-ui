@@ -62,7 +62,7 @@ site:
       displayVersion: '2.2'
     latestVersion: *latest_version_mmxxii
 page:
-  url: *home_url
+  url: '/xyz/5.2/test.html'
   home: true
   title: Brand&#8217;s Hardware &amp; Software Requirements
   component: *component
@@ -116,6 +116,15 @@ page:
       - content: Cu Solet
         url: '/xyz/5.2/index.html#cu-solet'
         urlType: internal
+        items:
+        - content: Importing and Exporting
+          url: '/xyz/5.2/index.html#importing-and-exporting'
+          urlType: internal
+          items:
+          - content: Some Code
+            url: '/xyz/5.2/index.html#some-code'
+            urlType: internal
+            items:
       - content: English + 中文
         url: '/xyz/5.2/index.html#english+中文'
         urlType: internal
@@ -137,7 +146,7 @@ page:
             urlType: internal
             items:
             - content: More Code Examples
-              url: '/xyz/5.2/index.html#more-code-examples'
+              url: '/xyz/5.2/test.html'
               urlType: internal
             - content: Some Code
               url: '/xyz/5.2/index.html#some-code'
