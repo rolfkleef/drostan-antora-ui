@@ -92,11 +92,11 @@
   color: light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-outline-variant-dark));
 }
 
-
 .admonition-important {
   background-color: light-dark(var(--md-custom-color-important-light), var(--md-custom-color-important-dark));
   color: light-dark(var(--md-custom-color-on-important-light), var(--md-custom-color-on-important-dark));
 }
+
 .admonition-important-container {
   background-color: light-dark(var(--md-custom-color-important-container-light), var(--md-custom-color-important-container-dark));
   color: light-dark(var(--md-custom-color-on-important-container-light), var(--md-custom-color-on-important-container-dark));
@@ -106,6 +106,7 @@
   background-color: light-dark(var(--md-custom-color-tip-light), var(--md-custom-color-tip-dark));
   color: light-dark(var(--md-custom-color-on-tip-light), var(--md-custom-color-on-tip-dark));
 }
+
 .admonition-tip-container {
   background-color: light-dark(var(--md-custom-color-tip-container-light), var(--md-custom-color-tip-container-dark));
   color: light-dark(var(--md-custom-color-on-tip-container-light), var(--md-custom-color-on-tip-container-dark));
@@ -115,6 +116,7 @@
   background-color: light-dark(var(--md-custom-color-note-light), var(--md-custom-color-note-dark));
   color: light-dark(var(--md-custom-color-on-note-light), var(--md-custom-color-on-note-dark));
 }
+
 .admonition-note-container {
   background-color: light-dark(var(--md-custom-color-note-container-light), var(--md-custom-color-note-container-dark));
   color: light-dark(var(--md-custom-color-on-note-container-light), var(--md-custom-color-on-note-container-dark));
@@ -124,6 +126,7 @@
   background-color: light-dark(var(--md-sys-color-error-light), var(--md-sys-color-error-dark));
   color: light-dark(var(--md-sys-color-on-error-light), var(--md-sys-color-on-error-dark));
 }
+
 .admonition-error-container {
   background-color: light-dark(var(--md-sys-color-error-container-light), var(--md-sys-color-error-container-dark));
   color: light-dark(var(--md-sys-color-on-error-container-light), var(--md-sys-color-on-error-container-dark));
@@ -133,6 +136,7 @@
   background-color: light-dark(var(--md-custom-color-warning-light), var(--md-custom-color-warning-dark));
   color: light-dark(var(--md-custom-color-on-warning-light), var(--md-custom-color-on-warning-dark));
 }
+
 .admonition-warning-container {
   background-color: light-dark(var(--md-custom-color-warning-container-light), var(--md-custom-color-warning-container-dark));
   color: light-dark(var(--md-custom-color-on-warning-container-light), var(--md-custom-color-on-warning-container-dark));
@@ -142,6 +146,7 @@
   background-color: light-dark(var(--md-custom-color-caution-light), var(--md-custom-color-caution-dark));
   color: light-dark(var(--md-custom-color-on-caution-light), var(--md-custom-color-on-caution-dark));
 }
+
 .admonition-caution-container {
   background-color: light-dark(var(--md-custom-color-caution-container-light), var(--md-custom-color-caution-container-dark));
   color: light-dark(var(--md-custom-color-on-caution-container-light), var(--md-custom-color-on-caution-container-dark));

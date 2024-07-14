@@ -1,9 +1,7 @@
 @import url(md3/theme.light.css);
 @import url(md3/theme.dark.css);
 @import url(md3/colors.module.css);
-
 @import "typefaces.css";
-
 @import "vars.css";
 @import "base.css";
 @import "nav.css";
