@@ -16,7 +16,8 @@
 			"extensions": [
 				"asciidoctor.asciidoctor-vscode",
 				"github.vscode-github-actions",
-				"ecmel.vscode-html-css"
+				"ecmel.vscode-html-css",
+				"andrejunges.Handlebars"
 			]
 		}
 	}
