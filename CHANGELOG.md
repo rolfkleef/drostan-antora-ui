@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.6](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.5...v0.1.6) (2024-07-14)
+
+
+### Improvements
+
+* switch to light-dark colours in styling ([a854dfb](https://github.com/rolfkleef/drostan-antora-ui/commit/a854dfbf0ae006bd037804b656951968f759f26b))
+
+
+### Debts
+
+* add handlebars to devcontainer extensions ([f48fdce](https://github.com/rolfkleef/drostan-antora-ui/commit/f48fdcea2cffbc9d12c263c9805a4afe41d890b2))
+* move devcontainer to drostan-notes project in docker compose ([c6cb505](https://github.com/rolfkleef/drostan-antora-ui/commit/c6cb505a7100f67bb0361464c7bf88e064a5ea7b))
+
 ## [0.1.5](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.4...v0.1.5) (2024-06-28)
 
 ## [0.1.4](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.3...v0.1.4) (2024-06-27)
