@@ -7,9 +7,9 @@ body {
 }
 
 header > nav {
-  background: var(--md-sys-color-primary);
+  background: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
   box-shadow: 0 0.1em 0.5em var(--color-gray-50);
-  color: var(--md-sys-color-on-primary);
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
   /* font-size: calc(16 / var(--rem-base) * 1rem); */
   height: var(--navbar-height);
   position: fixed;
@@ -30,13 +30,13 @@ header > nav a {
 }
 
 .navbar-brand .navbar-item {
-  color: var(--md-sys-color-on-primary);
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
 }
 
 .navbar-brand .navbar-item:first-child {
   align-self: center;
   padding: 0;
-  color: var(--md-sys-color-on-primary);
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
   /* font-size: calc(22 / var(--rem-base) * 1rem); */
   flex-wrap: wrap;
   line-height: 1;
@@ -57,7 +57,7 @@ header > nav a {
 }
 
 #search-input {
-  color: var(--md-sys-color-on-background);
+  color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
   font-family: inherit;
   font-size: 0.95rem;
   width: 150px;
@@ -99,7 +99,7 @@ header > nav a {
 }
 
 .navbar-burger span {
-  background-color: var(--md-sys-color-on-primary);
+  background-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
   height: 1.5px;
   width: 1rem;
 }
@@ -313,14 +313,14 @@ header > nav a {
 
 .navbar-section > .navbar-item,
 .navbar-section .navbar-link {
-  color: var(--md-sys-color-on-primary);
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
 }
 
 .navbar-section > a.navbar-item:hover,
 .navbar-section .navbar-link:hover,
 .navbar-section .navbar-item.has-dropdown:hover .navbar-link {
   background: var(--navbar_hover-background);
-  color: var(--md-sys-color-on-primary);
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
 }
 
 .navbar-section .navbar-link::after {

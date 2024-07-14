@@ -1,8 +1,8 @@
-@import "typefaces.css";
-
+@import url(md3/theme.light.css);
+@import url(md3/theme.dark.css);
 @import url(md3/colors.module.css);
-@import url(md3/theme.light.css) (prefers-color-scheme: light);
-@import url(md3/theme.dark.css) (prefers-color-scheme: dark);
+
+@import "typefaces.css";
 
 @import "vars.css";
 @import "base.css";

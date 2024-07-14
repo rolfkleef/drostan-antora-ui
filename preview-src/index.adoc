@@ -11,97 +11,118 @@ Author Name
 
 == Colours
 
+=== Interface
+
 ++++
-<table>
-  <style>
-    table {width: 100%; border-spacing: 1rem;}
-    td {padding: 1em;}
-  </style>
-  <tr>
-    <td style="color: var(--md-sys-color-on-primary); background: var(--md-sys-color-primary)">primary</td>
-    <td style="color: var(--md-sys-color-primary); background: var(--md-sys-color-on-primary)">on primary</td>
-    <td style="color: var(--md-sys-color-on-primary-container); background: var(--md-sys-color-primary-container)">primary container</td>
-    <td style="color: var(--md-sys-color-primary-container); background: var(--md-sys-color-on-primary-container)">on primary container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-sys-color-on-secondary); background: var(--md-sys-color-secondary)">secondary</td>
-    <td style="color: var(--md-sys-color-secondary); background: var(--md-sys-color-on-secondary)">on secondary</td>
-    <td style="color: var(--md-sys-color-on-secondary-container); background: var(--md-sys-color-secondary-container)">secondary container</td>
-    <td style="color: var(--md-sys-color-secondary-container); background: var(--md-sys-color-on-secondary-container)">on secondary container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-sys-color-on-tertiary); background: var(--md-sys-color-tertiary)">tertiary</td>
-    <td style="color: var(--md-sys-color-tertiary); background: var(--md-sys-color-on-tertiary)">on tertiary</td>
-    <td style="color: var(--md-sys-color-on-tertiary-container); background: var(--md-sys-color-tertiary-container)">tertiary container</td>
-    <td style="color: var(--md-sys-color-tertiary-container); background: var(--md-sys-color-on-tertiary-container)">on tertiary container</td>
-  </tr>
+<style>
+  .styletable {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark))
+  }
 
-  <tr>
-    <td style="color: var(--md-sys-color-on-background); background: var(--md-sys-color-background)">background</td>
-    <td style="color: var(--md-sys-color-background); background: var(--md-sys-color-on-background)">on background</td>
-    <td style="color: var(--md-sys-color-on-outline); background: var(--md-sys-color-outline)">outline</td>
-    <td style="color: var(--md-sys-color-on-outline); background: var(--md-sys-color-outline-variant)">outline-variant</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-sys-color-on-surface); background: var(--md-sys-color-surface)">surface</td>
-    <td style="color: var(--md-sys-color-surface); background: var(--md-sys-color-on-surface)">on surface</td>
-    <td style="color: var(--md-sys-color-inverse-on-surface); background: var(--md-sys-color-inverse-surface)">inverse-surface</td>
-    <td style="color: var(--md-sys-color-inverse-inverse-surface); background: var(--md-sys-color-inverse-on-surface)">inverse on surface</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-sys-color-on-surface-variant); background: var(--md-sys-color-surface-variant)">surface-variant</td>
-    <td style="color: var(--md-sys-color-surface-variant); background: var(--md-sys-color-on-surface-variant)">on surface-variant</td>
-    <td style="color: var(--md-sys-color-on-primary); background: var(--md-sys-color-surface-tint)">surface-tint</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td style="color: var(--md-sys-color-on-primary-container); background: var(--md-sys-color-inverse-primary)">inverse-primary</td>
-  </tr>
+  .styletable div {
+    display: flex;
+    flex-direction: column;
+  }
 
-  <tr>
-    <td style="color: var(--md-sys-color-on-primary); background: var(--md-sys-color-shadow)">shadow</td>
-    <td style="color: var(--md-sys-color-on-primary); background: var(--md-sys-color-scrim)">scrim</td>
-  </tr>
+  .styletable div div {
+    padding: 0.5rem;
+  }
 
-  <tr>
-    <td style="color: var(--md-sys-color-on-error); background: var(--md-sys-color-error)">error</td>
-    <td style="color: var(--md-sys-color-error); background: var(--md-sys-color-on-error)">on error</td>
-    <td style="color: var(--md-sys-color-on-error-container); background: var(--md-sys-color-error-container)">error container</td>
-    <td style="color: var(--md-sys-color-error-container); background: var(--md-sys-color-on-error-container)">on error container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-custom-color-on-important); background: var(--md-custom-color-important)">important</td>
-    <td style="color: var(--md-custom-color-important); background: var(--md-custom-color-on-important)">on important</td>
-    <td style="color: var(--md-custom-color-on-important-container); background: var(--md-custom-color-important-container)">important container</td>
-    <td style="color: var(--md-custom-color-important-container); background: var(--md-custom-color-on-important-container)">on important container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-custom-color-on-warning); background: var(--md-custom-color-warning)">warning</td>
-    <td style="color: var(--md-custom-color-warning); background: var(--md-custom-color-on-warning)">on warning</td>
-    <td style="color: var(--md-custom-color-on-warning-container); background: var(--md-custom-color-warning-container)">warning container</td>
-    <td style="color: var(--md-custom-color-warning-container); background: var(--md-custom-color-on-warning-container)">on warning container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-custom-color-on-caution); background: var(--md-custom-color-caution)">caution</td>
-    <td style="color: var(--md-custom-color-caution); background: var(--md-custom-color-on-caution)">on caution</td>
-    <td style="color: var(--md-custom-color-on-caution-container); background: var(--md-custom-color-caution-container)">caution container</td>
-    <td style="color: var(--md-custom-color-caution-container); background: var(--md-custom-color-on-caution-container)">on caution container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-custom-color-on-tip); background: var(--md-custom-color-tip)">tip</td>
-    <td style="color: var(--md-custom-color-tip); background: var(--md-custom-color-on-tip)">on tip</td>
-    <td style="color: var(--md-custom-color-on-tip-container); background: var(--md-custom-color-tip-container)">tip container</td>
-    <td style="color: var(--md-custom-color-tip-container); background: var(--md-custom-color-on-tip-container)">on tip container</td>
-  </tr>
-  <tr>
-    <td style="color: var(--md-custom-color-on-note); background: var(--md-custom-color-note)">note</td>
-    <td style="color: var(--md-custom-color-note); background: var(--md-custom-color-on-note)">on note</td>
-    <td style="color: var(--md-custom-color-on-note-container); background: var(--md-custom-color-note-container)">note container</td>
-    <td style="color: var(--md-custom-color-note-container); background: var(--md-custom-color-on-note-container)">on note container</td>
-  </tr>
-</table>
+  .styletable div :first-child {
+    flex: 5rem
+  }
 
+  /* Light/dark mode styles */
+  main:has(#toggle-theme) .styletable {
+    color-scheme: light;
+  }
+
+  main:has(#toggle-theme:checked) .styletable {
+    color-scheme: dark;
+  }
+
+  #toggle-theme {
+    display: none;
+  }
+
+  /* Style for the label that will serve as our icon */
+  label[for="toggle-theme"] {
+    cursor: pointer;
+  }
+
+  label[for="toggle-theme"]:before {
+    content: 'light_mode';
+  }
+
+  /* Change the icon when the checkbox is checked */
+  #toggle-theme:checked + label[for="toggle-theme"]:before {
+    content: 'dark_mode';
+  }
+</style>
+
+<form>
+  <input type="checkbox" id="toggle-theme" name="toggle-theme"/>
+  <label for="toggle-theme" class="material-icons"></label>
+</form>
+
+<div class="styletable background">
+  <div>
+    <div class="primary">primary</div>
+    <div class="primary-container">primary container</div>
+  </div>
+  <div>
+    <div class="secondary">secondary</div>
+    <div class="secondary-container">secondary container</div>
+  </div>
+  <div>
+    <div class="tertiary">tertiary</div>
+    <div class="tertiary-container">tertiary container</div>
+  </div>
+
+  <div>
+    <div class="surface">surface</div>
+    <div class="surface-variant">surface-variant</div>
+  </div>
+  <div>
+    <div class="outline">outline</div>
+    <div class="outline-variant">outline-variant</div>
+  </div>
+</div>
+++++
+
+=== Admonitions
+
+++++
+<div class="styletable background">
+  <div>
+    <div class="admonition-important">important</div>
+    <div class="admonition-important-container">important container</div>
+  </div>
+  <div>
+    <div class="admonition-tip">tip</div>
+    <div class="admonition-tip-container">tip container</div>
+  </div>
+  <div>
+    <div class="admonition-note">note</div>
+    <div class="admonition-note-container">note container</div>
+  </div>
+  <div>
+    <div class="admonition-error">error</div>
+    <div class="admonition-error-container">error container</div>
+  </div>
+  <div>
+    <div class="admonition-warning">warning</div>
+    <div class="admonition-warning-container">warning container</div>
+  </div>
+  <div>
+    <div class="admonition-caution">caution</div>
+    <div class="admonition-caution-container">caution container</div>
+  </div>
+</div>
 ++++
 
 // end::colours[]

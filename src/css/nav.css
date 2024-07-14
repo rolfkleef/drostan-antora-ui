@@ -2,8 +2,8 @@
   width: 100%;
   z-index: var(--z-index-nav);
   visibility: hidden;
-  background: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface-variant);
+  background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
+  color: light-dark(var(--md-sys-color-on-surface-variant-light), var(--md-sys-color-on-surface-variant-dark));
 }
 
 .-has-tab-bar + .site-content .content-area {
@@ -122,7 +122,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore {
-  background: var(--md-sys-color-surface);
+  background: light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-surface-dark));
   display: block;
   flex-direction: column;
   position: absolute;
@@ -213,7 +213,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore .component .version a {
-  border: 1px solid var(--md-sys-color-on-surface);
+  border: 1px solid light-dark(var(--md-sys-color-on-surface-light), var(--md-sys-color-on-surface-dark));
   border-radius: 0.25rem;
   opacity: 0.75;
   white-space: nowrap;

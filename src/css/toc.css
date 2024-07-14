@@ -85,16 +85,16 @@
 }
 
 .toc .toc-menu a:hover {
-  color: var(--md-sys-color-secondary);
+  color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
 }
 
 .toc .toc-menu a.is-active {
-  border-left-color: var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-background);
+  border-left-color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
+  color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
 }
 
 .sidebar.toc .toc-menu a:focus {
-  background: var(--md-sys-color-surface);
+  background: light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-surface-dark));
 }
 
 .toc .toc-menu .is-hidden-toc {

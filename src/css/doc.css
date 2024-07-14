@@ -56,7 +56,7 @@
 }
 
 .doc a:hover {
-  color: var(--md-sys-color-primary);
+  color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
 }
 
 .doc a.bare {
@@ -64,7 +64,7 @@
 }
 
 .doc a.unresolved {
-  color: var(--md-sys-color-error);
+  color: light-dark(var(--md-sys-color-error-light), var(--md-sys-color-error-dark));
 }
 
 .doc .notargeticon a[target="_blank"]::after {
@@ -87,8 +87,8 @@
 .doc p code,
 .doc thead code,
 .doc .colist > table code {
-  color: var(--md-sys-color-on-surface-variant);
-  background: var(--md-sys-color-surface-variant);
+  color: light-dark(var(--md-sys-color-on-surface-variant-light), var(--md-sys-color-on-surface-variant-dark));
+  background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
@@ -100,7 +100,7 @@
 }
 
 .doc pre {
-  background: var(--md-sys-color-surface-variant);
+  background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
   margin: 0;
 }
 
@@ -342,8 +342,8 @@
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background-color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
 }
 
 .doc .admonitionblock.note .icon {
@@ -536,7 +536,7 @@
 .doc .openblock .title,
 .doc .videoblock .title,
 .doc .tableblock caption {
-  color: var(--md-sys-color-secondary);
+  color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-style: var(--caption-font-style);
   font-weight: var(--caption-font-weight);
@@ -607,7 +607,7 @@
 }
 
 .doc details.result > summary {
-  color: var(--md-sys-color-secondary);
+  color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
   font-style: italic;
   margin-bottom: 0;
 }
@@ -619,8 +619,8 @@
 /* Sidebar */
 
 .doc .sidebarblock {
-  background: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
+  background: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
+  color: light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
@@ -641,8 +641,8 @@
 
 .doc .exampleblock > .content,
 .doc details.result > .content {
-  background: var(--md-sys-color-background);
-  border: 0.25rem solid var(--md-sys-color-primary-container);
+  background: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
+  border: 0.25rem solid light-dark(var(--md-sys-color-primary-container-light), var(--md-sys-color-primary-container-dark));
   border-radius: 0.5rem;
   padding: 0.75rem;
 }
@@ -663,8 +663,8 @@
 
 .doc .quoteblock,
 .doc .verseblock {
-  color: var(--md-sys-color-tertiary);
-  border-left: 2px solid var(--md-sys-color-tertiary);
+  color: light-dark(var(--md-sys-color-tertiary-light), var(--md-sys-color-tertiary-dark));
+  border-left: 2px solid light-dark(var(--md-sys-color-tertiary-light), var(--md-sys-color-tertiary-dark));
   padding: 0.25rem 2rem 1.25rem;
 }
 
@@ -674,7 +674,7 @@
 }
 
 .doc .quoteblock blockquote {
-  background: var(--md-sys-color-tertiary-container);
+  background: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
   margin-top: 1rem;
 }
 
@@ -687,7 +687,7 @@
 }
 
 .doc .verseblock pre {
-  background: var(--md-sys-color-tertiary-container);
+  background: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
   font-family: inherit;
   font-size: inherit;
 }
@@ -772,10 +772,10 @@
   display: inline-flex;
   justify-content: center;
   margin-top: 1em;
-  background-color: var(--md-sys-color-on-background);
+  background-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
   border-radius: 0.25em;
   padding: 0.5em;
-  color: var(--md-sys-color-background);
+  color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
   cursor: auto;
   opacity: 0;
   transition: opacity 0.5s ease 0.5s;
@@ -788,7 +788,7 @@
   width: 1em;
   height: 1em;
   border: 0.55em solid transparent;
-  border-left-color: var(--md-sys-color-on-background);
+  border-left-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
   transform: rotate(-90deg) translateX(50%) translateY(50%);
   transform-origin: left;
 }
@@ -851,9 +851,9 @@
 }
 
 .doc .conum[data-value] {
-  background-color: var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
-  border: 2px solid var(--md-sys-color-secondary);
+  background-color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
+  color: light-dark(var(--md-sys-color-on-secondary-light), var(--md-sys-color-on-secondary-dark));
+  border: 2px solid light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
   border-radius: 100%;
   display: inline-block;
   font-size: calc(13.5 / var(--rem-base) * 1rem);
@@ -897,9 +897,9 @@
 .doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--rem-base) * 1rem);
-  background: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-  border: 1px solid var(--md-sys-color-on-secondary-container);
+  background: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
+  color: light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
+  border: 1px solid light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
   white-space: nowrap; /* effectively ignores hyphens setting */
@@ -979,5 +979,5 @@
 }
 
 mark {
-  background-color: var(--md-sys-color-tertiary-container);
+  background-color: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
 }
