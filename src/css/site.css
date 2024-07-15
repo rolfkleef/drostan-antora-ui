@@ -10,6 +10,8 @@
 /* @import "toc.css"; */
 @import "_doc.css";
 @import "doc.css";
+
+@import url(asciidoc/admonitions.css);
 /* @import "header.css"; */
 /* @import "footer.css"; */
 @import "highlight.css";

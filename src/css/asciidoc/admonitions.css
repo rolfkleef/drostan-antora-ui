@@ -1,0 +1,97 @@
+
+.admonitionblock {
+  /* MARK: colours */
+  &.tip {
+    background: light-dark(var(--md-custom-color-tip-container-light), var(--md-custom-color-tip-container-dark));
+    color: light-dark(var(--md-custom-color-on-tip-container-light), var(--md-custom-color-on-tip-container-dark));
+
+    .icon {
+      background-color: light-dark(var(--md-custom-color-tip-light), var(--md-custom-color-tip-dark));
+      color: light-dark(var(--md-custom-color-on-tip-light), var(--md-custom-color-on-tip-dark));
+    }
+  }
+
+  &.note {
+    background: light-dark(var(--md-custom-color-note-container-light), var(--md-custom-color-note-container-dark));
+    color: light-dark(var(--md-custom-color-on-note-container-light), var(--md-custom-color-on-note-container-dark));
+
+    .icon {
+      background-color: light-dark(var(--md-custom-color-note-light), var(--md-custom-color-note-dark));
+      color: light-dark(var(--md-custom-color-on-note-light), var(--md-custom-color-on-note-dark));
+    }
+  }
+
+  &.warning {
+    background: light-dark(var(--md-custom-color-warning-container-light), var(--md-custom-color-warning-container-dark));
+    color: light-dark(var(--md-custom-color-on-warning-container-light), var(--md-custom-color-on-warning-container-dark));
+
+    .icon {
+      background-color: light-dark(var(--md-custom-color-warning-light), var(--md-custom-color-warning-dark));
+      color: light-dark(var(--md-custom-color-on-warning-light), var(--md-custom-color-on-warning-dark));
+    }
+  }
+
+  &.caution {
+    background: light-dark(var(--md-custom-color-caution-container-light), var(--md-custom-color-caution-container-dark));
+    color: light-dark(var(--md-custom-color-on-caution-container-light), var(--md-custom-color-on-caution-container-dark));
+
+    .icon {
+      background-color: light-dark(var(--md-custom-color-caution-light), var(--md-custom-color-caution-dark));
+      color: light-dark(var(--md-custom-color-on-caution-light), var(--md-custom-color-on-caution-dark));
+    }
+  }
+
+  &.important {
+    background: light-dark(var(--md-custom-color-important-container-light), var(--md-custom-color-important-container-dark));
+    color: light-dark(var(--md-custom-color-on-important-container-light), var(--md-custom-color-on-important-container-dark));
+
+    .icon {
+      background-color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
+      color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
+    }
+  }
+
+  /* MARK: layout */
+  > table {
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+  }
+
+  td.content {
+    padding: 1rem 1rem 0.75rem;
+    width: 100%;
+    word-wrap: anywhere;
+
+    &> :not(.title):first-child,
+    &> .title + * {
+      margin-top: 0;
+    }
+  }
+
+  /* MARK: icon */
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: calc(15 / var(--rem-base) * 1rem);
+    padding: 0 0.5rem;
+    height: 1.25rem;
+    line-height: 1;
+    font-weight: var(--admonition-label-font-weight);
+    text-transform: uppercase;
+    border-radius: 0.45rem;
+    transform: translate(-0.5rem, -50%);
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+
+      &::after {
+        content: attr(title);
+      }
+    }
+  }
+
+}

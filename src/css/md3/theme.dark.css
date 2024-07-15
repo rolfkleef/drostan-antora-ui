@@ -42,7 +42,7 @@
   --md-custom-color-important-dark: var(--md-sys-color-primary-container-dark);
   --md-custom-color-on-important-dark: var(--md-sys-color-on-primary-container-dark);
   --md-custom-color-important-container-dark: var(--md-sys-color-on-primary-container-dark);
-  --md-custom-color-on-important-container-dark: var(--md-sys-color-on-primary-container-dark);
+  --md-custom-color-on-important-container-dark: var(--md-sys-color-primary-container-dark);
   --md-custom-color-warning-dark: #ffba38;
   --md-custom-color-on-warning-dark: #432c00;
   --md-custom-color-warning-container-dark: #604100;

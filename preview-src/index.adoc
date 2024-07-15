@@ -10,16 +10,13 @@ Author Name
 // tag::colours[]
 
 == Colours
-
-=== Interface
-
 ++++
 <style>
   .styletable {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    padding: 2rem 0.5rem;
     border: 1px solid light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark))
   }
 
@@ -66,30 +63,34 @@ Author Name
 
 <form>
   <input type="checkbox" id="toggle-theme" name="toggle-theme"/>
-  <label for="toggle-theme" class="material-icons"></label>
+  <label for="toggle-theme" class="material-icons">switch</label>
 </form>
+++++
 
+=== Interface
+
+++++
 <div class="styletable background">
   <div>
     <div class="primary">primary</div>
-    <div class="primary-container">primary container</div>
+    <div class="primary-container">container</div>
   </div>
   <div>
     <div class="secondary">secondary</div>
-    <div class="secondary-container">secondary container</div>
+    <div class="secondary-container">container</div>
   </div>
   <div>
     <div class="tertiary">tertiary</div>
-    <div class="tertiary-container">tertiary container</div>
+    <div class="tertiary-container">container</div>
   </div>
 
   <div>
     <div class="surface">surface</div>
-    <div class="surface-variant">surface-variant</div>
+    <div class="surface-variant">variant</div>
   </div>
   <div>
     <div class="outline">outline</div>
-    <div class="outline-variant">outline-variant</div>
+    <div class="outline-variant">variant</div>
   </div>
 </div>
 ++++
@@ -100,27 +101,27 @@ Author Name
 <div class="styletable background">
   <div>
     <div class="admonition-important">important</div>
-    <div class="admonition-important-container">important container</div>
+    <div class="admonition-important-container">container</div>
   </div>
   <div>
     <div class="admonition-tip">tip</div>
-    <div class="admonition-tip-container">tip container</div>
+    <div class="admonition-tip-container">container</div>
   </div>
   <div>
     <div class="admonition-note">note</div>
-    <div class="admonition-note-container">note container</div>
+    <div class="admonition-note-container">container</div>
   </div>
   <div>
     <div class="admonition-error">error</div>
-    <div class="admonition-error-container">error container</div>
+    <div class="admonition-error-container">container</div>
   </div>
   <div>
     <div class="admonition-warning">warning</div>
-    <div class="admonition-warning-container">warning container</div>
+    <div class="admonition-warning-container">container</div>
   </div>
   <div>
     <div class="admonition-caution">caution</div>
-    <div class="admonition-caution-container">caution container</div>
+    <div class="admonition-caution-container">container</div>
   </div>
 </div>
 ++++
