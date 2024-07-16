@@ -63,8 +63,8 @@
     width: 100%;
     word-wrap: anywhere;
 
-    &> :not(.title):first-child,
-    &> .title + * {
+    & > :not(.title):first-child,
+    & > .title + * {
       margin-top: 0;
     }
   }
@@ -93,5 +93,4 @@
       }
     }
   }
-
 }

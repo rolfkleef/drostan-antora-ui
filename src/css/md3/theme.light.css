@@ -17,24 +17,22 @@
   --md-sys-color-on-error-container-light: #410001;
   --md-sys-color-background-light: #fcfcfc;
   --md-sys-color-on-background-light: #201a1b;
-
   --md-sys-color-surface-light: #f3dde0;
   --md-sys-color-on-surface-light: #514345;
   --md-sys-color-surface-dim-light: #f3dde0;
   --md-sys-color-on-surface-dim-light: #514345;
   --md-sys-color-surface-bright-light: #f3dde0;
   --md-sys-color-on-surface-bright-light: #514345;
-
-  --md-sys-color-surface-container-light: #b0bec5;
+  --md-sys-color-surface-container-light: #cfd8dc;
   --md-sys-color-on-surface-container-light: #001f25;
-  --md-sys-color-surface-container-low-light: #cfd8dc;
+  --md-sys-color-surface-container-low-light: #eceff1;
   --md-sys-color-on-surface-container-low-light: #001f25;
   --md-sys-color-surface-container-lowest-light: #eceff1;
   --md-sys-color-on-surface-container-lowest-light: #001f25;
-  --md-sys-color-surface-container-high-light: #546e7a;
-  --md-sys-color-on-surface-container-high-light: #ffffff;
-  --md-sys-color-surface-container-highest-light: #263238;
-  --md-sys-color-on-surface-container-highest-light: #ffffff;
+  --md-sys-color-surface-container-high-light: #b0bec5;
+  --md-sys-color-on-surface-container-high-light: #001f25;
+  --md-sys-color-surface-container-highest-light: #546e7a;
+  --md-sys-color-on-surface-container-highest-light: #fff;
   --md-sys-color-surface-variant-light: #e3e1ec;
   --md-sys-color-on-surface-variant-light: #46464f;
   --md-sys-color-outline-light: #837375;

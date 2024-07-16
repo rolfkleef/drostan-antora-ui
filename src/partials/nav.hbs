@@ -1,24 +1,24 @@
-<div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
-  <details class="components-versions">
+<div class="nav-container surface-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
+  <details class="components-versions surface-container-high">
     <summary>
       <i class="material-icons mdc-button__icon">library_books</i>&nbsp;
       {{#with @root.page.componentVersion}}
-        <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
+        <a href="{{{relativize ./url}}}">{{./title}}</a>
       {{/with}}
       {{#if (ne @root.page.component.versions.length 1) }}
         <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
       {{/if}}
       <i class="material-icons mdc-button__icon expand">expand_more</i>&nbsp;
     </summary>
-    <ul class="components">
+    <ul>
       {{#each site.components}}
         {{#unless (eq ./name "lib-style") }}
           <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
             <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
             {{#if (ne ./versions.length 1) }}
-              <ul class="versions">
+              <ul>
                 {{#each ./versions}}
-                  <li class="version
+                  <li class="surface-container-highest
             {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
                     {{~#if (eq this ../latest)}} is-latest{{/if}}">
                     <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>

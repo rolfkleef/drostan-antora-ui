@@ -9,10 +9,10 @@
 /* @import "page-versions.css"; */
 /* @import "toc.css"; */
 @import "doc.css";
-
+@import url(ui/layout.css);
+@import url(ui/navcontainer.css);
 @import url(asciidoc/admonitions.css);
 @import url(asciidoc/text.css);
-
 /* @import "header.css"; */
 /* @import "footer.css"; */
 @import "highlight.css";
