@@ -9,15 +9,12 @@ Author Name
 
 // tag::colours[]
 
-== Colours
 ++++
 <style>
   .styletable {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0.5rem;
-    padding: 2rem 0.5rem;
-    border: 1px solid light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark))
   }
 
   .styletable div {
@@ -25,52 +22,51 @@ Author Name
     flex-direction: column;
   }
 
-  .styletable div div {
+  .styletable > div > div {
     padding: 0.5rem;
   }
 
-  .styletable div :first-child {
-    flex: 5rem
+  .styletable > div :first-child {
+    flex: 4rem
   }
 
   /* Light/dark mode styles */
-  main:has(#toggle-theme) .styletable {
+  main:has(#mode-light:checked) {
     color-scheme: light;
+    background-color: var(--md-sys-color-background-light);
   }
 
-  main:has(#toggle-theme:checked) .styletable {
+  main:has(#mode-dark:checked) {
     color-scheme: dark;
+    background-color: var(--md-sys-color-background-dark);
   }
 
-  #toggle-theme {
+  input {
     display: none;
   }
 
   /* Style for the label that will serve as our icon */
-  label[for="toggle-theme"] {
+  label {
     cursor: pointer;
-  }
-
-  label[for="toggle-theme"]:before {
-    content: 'light_mode';
-  }
-
-  /* Change the icon when the checkbox is checked */
-  #toggle-theme:checked + label[for="toggle-theme"]:before {
-    content: 'dark_mode';
+    color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
   }
 </style>
 
 <form>
-  <input type="checkbox" id="toggle-theme" name="toggle-theme"/>
-  <label for="toggle-theme" class="material-icons">switch</label>
+  select mode:
+  <input type="radio" id="mode-light" name="mode" value="light" checked />
+  <label for="mode-light" class="material-icons">light_mode</label>
+  <input type="radio" id="mode-dark" name="mode" value="dark" />
+  <label for="mode-dark" class="material-icons">dark_mode</label>
 </form>
 ++++
+
+== Colours
 
 === Interface
 
 ++++
-<div class="styletable background">
+<div class="styletable">
   <div>
     <div class="primary">primary</div>
     <div class="primary-container">container</div>
@@ -85,12 +81,31 @@ Author Name
   </div>
 
   <div>
-    <div class="surface">surface</div>
-    <div class="surface-variant">variant</div>
-  </div>
-  <div>
     <div class="outline">outline</div>
     <div class="outline-variant">variant</div>
+  </div>
+
+  <div>
+    <div class="surface">surface</div>
+    <div class="surface-dim">surface-dim</div>
+    <div class="surface-bright">surface-bright</div>
+  </div>
+  <div></div>
+
+  <div>
+    <div class="surface-container-lowest">surface lowest</div>
+  </div>
+  <div>
+    <div class="surface-container-low">surface low</div>
+  </div>
+  <div>
+    <div class="surface-container">surface container</div>
+  </div>
+  <div>
+    <div class="surface-container-high">surface high</div>
+  </div>
+  <div>
+    <div class="surface-container-highest">surface highest</div>
   </div>
 </div>
 ++++
@@ -98,7 +113,7 @@ Author Name
 === Admonitions
 
 ++++
-<div class="styletable background">
+<div class="styletable">
   <div>
     <div class="admonition-important">important</div>
     <div class="admonition-important-container">container</div>

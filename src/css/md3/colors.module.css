@@ -30,66 +30,57 @@
 
 .background {
   background-color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
-}
-
-.background-text {
-  color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
-}
-
-.on-background {
   background-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
-}
-
-.on-background-text {
-  color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
 }
 
 .surface {
   background-color: light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-surface-dark));
-}
-
-.surface-text {
-  color: light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-surface-dark));
-}
-
-.on-surface {
-  background-color: light-dark(var(--md-sys-color-on-surface-light), var(--md-sys-color-on-surface-dark));
-}
-
-.on-surface-text {
   color: light-dark(var(--md-sys-color-on-surface-light), var(--md-sys-color-on-surface-dark));
 }
 
-.surface-variant {
-  background-color: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
+.surface-dim {
+  background-color: light-dark(var(--md-sys-color-surface-dim-light), var(--md-sys-color-surface-dim-dark));
+  color: light-dark(var(--md-sys-color-on-surface-dim-light), var(--md-sys-color-on-surface-dim-dark));
 }
 
-.surface-variant-text {
-  color: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
+.surface-bright {
+  background-color: light-dark(var(--md-sys-color-surface-bright-light), var(--md-sys-color-surface-bright-dark));
+  color: light-dark(var(--md-sys-color-on-surface-bright-light), var(--md-sys-color-on-surface-bright-dark));
 }
 
-.on-surface-variant {
-  background-color: light-dark(var(--md-sys-color-on-surface-variant-light), var(--md-sys-color-on-surface-variant-dark));
+.surface-container {
+  background-color: light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-light), var(--md-sys-color-on-surface-container-dark));
 }
 
-.on-surface-variant-text {
-  color: light-dark(var(--md-sys-color-on-surface-variant-light), var(--md-sys-color-on-surface-variant-dark));
+.surface-container-low {
+  background-color: light-dark(var(--md-sys-color-surface-container-low-light), var(--md-sys-color-surface-container-low-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-low-light), var(--md-sys-color-on-surface-container-low-dark));
+}
+
+.surface-container-lowest {
+  background-color: light-dark(var(--md-sys-color-surface-container-lowest-light), var(--md-sys-color-surface-container-lowest-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-lowest-light), var(--md-sys-color-on-surface-container-lowest-dark));
+}
+
+.surface-container-high {
+  background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-high-light), var(--md-sys-color-on-surface-container-high-dark));
+}
+
+.surface-container-highest {
+  background-color: light-dark(var(--md-sys-color-surface-container-highest-light), var(--md-sys-color-surface-container-highest-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-highest-light), var(--md-sys-color-on-surface-container-highest-dark));
 }
 
 .outline {
   background-color: light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
-}
-
-.outline-text {
-  color: light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
+  color: light-dark(var(--md-sys-color-on-tertiary-light), var(--md-sys-color-on-tertiary-dark));
 }
 
 .outline-variant {
   background-color: light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-outline-variant-dark));
-}
-
-.outline-variant-text {
-  color: light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-outline-variant-dark));
+  color: light-dark(var(--md-sys-color-on-tertiary-container-light), var(--md-sys-color-on-tertiary-container-dark));
 }
 
 .admonition-important {
