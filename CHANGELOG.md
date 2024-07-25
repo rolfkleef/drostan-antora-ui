@@ -44,6 +44,13 @@ All notable changes to this project will be documented in this file. See [commit
 
 First version release. Consolidate work in progress to make the Antora interface resemble my website.
 
+## 0.0.1 (2024-12-13)
+
+Point of last merge from upstream into my branch.
+
+From here on, I won't make further attempts to merge from upstream.
+I will keep tracking Antora upstream for changes that benefit my version.
+
 Selected items:
 
 ### Features
