@@ -1,4 +1,4 @@
-= Antora Default UI
+= Antora Default UI Documentation
 // Settings:
 :hide-uri-scheme:
 // URLs:
@@ -53,6 +53,11 @@ npm (command: `npm`)::
 npm manages software packages (i.e., software dependencies) that it downloads from {url-npm}.
 Software this project uses includes libraries that handle compilation as well as shared assets such as font files that are distributed as npm packages.
 npm is part of Node.js.
+
+npx (command: `npx`)::
+npx runs bin scripts that are either installed in [.path]_node_modules/.bin_ or that it manages itself (if there's no package.json).
+npx is the preferred way to run any command.
+npx is part of Node.js.
 
 package.json:::
 This file keeps track of the dependencies (described using fuzzy versions) that npm (or Yarn) should fetch.
@@ -193,7 +198,7 @@ If the layout looks for a partial, that partial must be located in the [.path]_p
 The name of the partial is the stem of the file (e.g,. [.path]_partials/body.hbs_] becomes `body` and used as `> body`).
 If the partial is inside a folder, the name of that folder is not used in the partial's name.
 Additionally, any JavaScript files found in the [.path]_helpers_ directory are automatically registered as template helpers.
-The name of the helper function matches the stem of the file (e.g., [.path]_heleprs/concat.js_ becomes `concat`).
+The name of the helper function matches the stem of the file (e.g., [.path]_helpers/concat.js_ becomes `concat`).
 
 Here's how a UI would be structured if it had layouts, partials, and helpers:
 

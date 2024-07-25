@@ -19,7 +19,7 @@ const glob = {
   all: [srcDir, previewSrcDir, '!sass.css'],
   sass: [`${srcDir}/sass/**/*.scss`],
   css: [`${srcDir}/css/**/*.css`, `!${srcDir}/css/vendor/*.css`],
-  js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`, `!${srcDir}/{helpers,js}/vendor/*.js`],
+  js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/helpers/*.js`, `${srcDir}/js/**/+([^.])?(.bundle).js`],
 }
 
 const cleanTask = createTask({
