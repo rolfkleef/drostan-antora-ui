@@ -17,7 +17,8 @@
 				"asciidoctor.asciidoctor-vscode",
 				"github.vscode-github-actions",
 				"ecmel.vscode-html-css",
-				"andrejunges.Handlebars"
+				"andrejunges.Handlebars",
+				"ms-vscode.live-server"
 			]
 		}
 	}

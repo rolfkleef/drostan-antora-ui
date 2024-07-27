@@ -1,0 +1,13 @@
+main {
+  padding-top: 2em;
+
+  nav.breadcrumb {
+    font-family: Roboto,sans-serif;
+    font-size: 0.8em;
+
+    > :not(:last-child)::after {
+      content: '>';
+      margin: 0 0.5em;
+    }
+  }
+}

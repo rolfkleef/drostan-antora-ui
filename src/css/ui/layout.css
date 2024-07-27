@@ -1,9 +1,74 @@
 body {
-  min-height: 100vh;
-
+	margin: 0;
   tab-size: 4;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
 
-  > div#content {
-    min-height: calc(100vh - 6rem);
+  display: grid;
+  grid-template-columns: min(35%, 17em) min(50%, 60em) min(15%, 15em) 1fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 1em;
+
+  grid-template-areas:
+    "header header header header"
+    "docnav main pagenav ."
+    "footer footer footer footer";
+
+  header {
+    grid-area: header;
+    /* position: sticky; */
+    /* top: 0; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      flex: 1 1 auto;
+      width: max(75%, 50em);
+
+      display: flex;
+      align-items: center;
+    }
+
+    > div {
+      gap: 0.5rem;
+    }
+
+    > nav {
+      justify-content: center;
+      a {
+        flex: 1 0 auto;
+        text-align: center;
+        max-width: 10em;
+      }
+    }
+  }
+
+  .docnav {
+    grid-area: docnav;
+  }
+
+  main {
+    grid-area: main;
+    max-width: 50em;
+  }
+
+  .pagenav {
+    grid-area: pagenav;
+    padding-top: 1.5rem;
+  }
+
+  footer {
+    grid-area: footer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      flex: 1 1 auto;
+      width: max(75%, 50em);
+    }
   }
 }

@@ -1,0 +1,88 @@
+.docnav {
+  background-color: light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
+  color: light-dark(var(--md-sys-color-on-surface-container-light), var(--md-sys-color-on-surface-container-dark));
+
+  padding-top: 1.5rem;
+
+  /* Components selector */
+  > details {
+    overflow-x: hidden;
+
+    > summary {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5rem;
+
+      > span:not(.material-icons) {
+        flex-grow: 1;
+        font-weight: bold;
+      }
+
+      background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
+      color: light-dark(var(--md-sys-color-on-surface-container-high-light), var(--md-sys-color-on-surface-container-high-dark));
+    }
+
+    color: light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
+
+    &[open] {
+      background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
+      color: light-dark(var(--md-sys-color-on-surface-container-high-light), var(--md-sys-color-on-surface-container-high-dark));
+    }
+
+    /* Antora components */
+    > ul {
+      > li {
+        /* Antora versions */
+        > ul {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          list-style: none;
+          margin: 0.25rem 0 0.75rem 0;
+          padding: 0;
+
+          > li {
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  > nav {
+    > * {
+      padding: 1rem;
+
+      > *:nth-child(1) {
+        padding-left: 0;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+      }
+
+      details > a {
+        padding-left: 2.15rem;
+      }
+
+      > a {
+        padding-left: 1.15rem;
+      }
+
+      > a,
+      details > a {
+        display: block;
+      }
+
+      > details {
+        details {
+          padding-left: 1.15rem;
+        }
+      }
+    }
+  }
+
+  .is_active {
+    background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-outline-variant-dark));
+    font-weight: bold;
+  }
+}

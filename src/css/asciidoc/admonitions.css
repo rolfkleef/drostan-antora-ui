@@ -87,6 +87,7 @@
       display: inline-flex;
       align-items: center;
       height: 100%;
+      font-style: normal;
 
       &::after {
         content: attr(title);

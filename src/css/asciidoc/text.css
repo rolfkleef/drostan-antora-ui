@@ -1,7 +1,13 @@
-.doc {
+article {
   h1,
   h2 {
     color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: normal;
   }
 
   h1,
@@ -18,7 +24,7 @@
       visibility: hidden;
       font-size: 0.6em;
       font-weight: normal;
-      padding-top: 0.4em;
+      padding-top: 0.1em;
 
       &::before {
         content: "\00a7";

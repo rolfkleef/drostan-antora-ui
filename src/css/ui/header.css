@@ -1,0 +1,52 @@
+body > header {
+  background: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
+  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
+
+  h1 {
+    font-size: inherit;
+  }
+
+  img {
+    height: 2rem;
+    width: auto;
+
+  }
+
+  button {
+    background-color: initial;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    /* -webkit-user-select: none; */
+    /* user-select: none; */
+    height: 3rem;
+    width: 3rem;
+  }
+
+  #theme-selector {
+    margin-left: auto;
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  > nav {
+    a {
+      text-transform: uppercase;
+      font-size: 0.9em;
+      padding: 0.5rem 0;
+      border-bottom: 0.15rem solid transparent;
+      transition: all 0.25s ease-in-out;
+
+      &:hover, &.is-active {
+        border-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
+      }
+    }
+  }
+}

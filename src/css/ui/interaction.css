@@ -1,0 +1,46 @@
+details {
+  transition: all 0.5s ease-in-out;
+
+  summary {
+    cursor: zoom-in;
+  }
+
+  .expand {
+    transition: 0.7s;
+  }
+
+  &[open] > summary {
+    cursor: zoom-out;
+
+    .expand {
+      transform: rotate(-0.5turn);
+    }
+  }
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body:has(#mode-system:checked) {
+  label[for="mode-system"],
+  label[for="mode-dark"] {
+    display: none;
+  }
+}
+
+body:has(#mode-light:checked) {
+  color-scheme: light;
+  label[for="mode-system"],
+  label[for="mode-light"] {
+    display: none;
+  }
+}
+
+body:has(#mode-dark:checked) {
+  color-scheme: dark;
+  label[for="mode-light"],
+  label[for="mode-dark"] {
+    display: none;
+  }
+}

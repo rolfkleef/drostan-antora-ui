@@ -1,3 +1,9 @@
+body,
+.background {
+  background-color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
+  color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
+}
+
 .primary {
   background-color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
   color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
@@ -26,11 +32,6 @@
 .tertiary-container {
   background-color: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
   color: light-dark(var(--md-sys-color-on-tertiary-container-light), var(--md-sys-color-on-tertiary-container-dark));
-}
-
-.background {
-  background-color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
-  background-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
 }
 
 .surface {

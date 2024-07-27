@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/css/local-design.css" type="text/css" media="all">
+</head>
+<body>
+  <!-- MARK: header
+    -->
+  <header>
+    <div>
+      <button class="material-icons">menu</button>
+      <a href="https://drostan.org" rel="home">
+        <img src="rolfkleef_150x150.png" alt="Rolf Kleef, drostan.org">
+      </a>
+      <h1>Rolf Kleef</h1>
+      <p>Making internet work for civil society.</p>
+      <form id="theme-selector">
+        <input type="radio" id="mode-system" name="mode" value="system" checked="">
+        <label for="mode-system" title="switch to system theme" class="material-icons">dark_mode</label>
+        <input type="radio" id="mode-light" name="mode" value="light">
+        <label for="mode-light" title="switch to light theme" class="material-icons">contrast</label>
+        <input type="radio" id="mode-dark" name="mode" value="dark">
+        <label for="mode-dark" title="switch to dark theme" class="material-icons">light_mode</label>
+      </form>
+    </div>
+    <nav>
+      <a href="https://drostan.org">Home</a>
+      <a href="https://drostan.org/about.html">About me</a>
+      <a href="https://drostan.org/about.html">Now</a>
+      <a href="https://drostan.org/contact.html">Contact</a>
+      <a href="https://drostan.org/contact.html" class="is-active">Notes</a>
+    </nav>
+  </header>
+
+  <!-- MARK: docnav
+    -->
+  <div class="docnav">
+    <details>
+      <summary>
+        <span class="material-icons">library_books</span>
+        <span>Documentation system</span>
+        <span class="material-icons expand">expand_more</span>
+      </summary>
+      <ul>
+        <li>
+          <a href="https://notes.localhost/desktop/index.html">Desktop</a>
+        </li>
+        <li class="is-current">
+          <a href="https://notes.localhost/documentation_system/index.html">Documentation system</a>
+        </li>
+        <li>
+          <a href="https://notes.localhost/notes/index.html">Notes</a>
+        </li>
+        <li>
+          <a href="https://notes.localhost/software_development/index.html">Software development</a>
+        </li>
+      </ul>
+    </details>
+
+    <nav>
+      <div>
+        <a href="https://notes.localhost/documentation_system/index.html">Overview</a>
+        <a href="https://notes.localhost/documentation_system/system.html">System view and use cases</a>
+        <details>
+          <summary>
+            <a href="https://notes.localhost/documentation_system/technology_choices/index.html">Technology choices</a>
+          </summary>
+          <a href="https://notes.localhost/documentation_system/technology_choices/asciidoc-antora.html">Asciidoc and Antora</a>
+          <a href="https://notes.localhost/documentation_system/technology_choices/plantuml-kroki.html">PlantUML and Kroki</a>
+        </details>
+      </div>
+      <div>
+        <span>Tools and setup</span>
+        <details>
+          <summary>
+            <span class="">Antora</span>
+          </summary>
+          <a href="https://notes.localhost/documentation_system/setup/index.html">Setup of Antora</a>
+          <a href="https://notes.localhost/documentation_system/setup/multiple-sites.html">Combining multiple documentation sites</a>
+          <a href="https://notes.localhost/documentation_system/antora/index.html">Antora</a>
+          <a href="https://notes.localhost/documentation_system/antora/setup.html">Antora setup</a>
+        </details>
+        <details>
+          <summary>
+            <span class="">Content helpers</span>
+          </summary>
+          <a href="https://notes.localhost/documentation_system/tools/terminal-recording.html">Terminal recording</a>
+          <a href="https://notes.localhost/documentation_system/tools/mathjax.html">MathJax</a>
+        </details>
+      </div>
+      <div>
+        <span class="">Reference</span>
+        <details open="">
+          <summary>
+            <a href="https://notes.localhost/documentation_system/style_guide/index.html">Visual style</a>
+          </summary>
+          <a class="is_active" href="https://notes.localhost/documentation_system/style_guide/antora-ui.html">Antora UI styling</a>
+          <details>
+            <summary>
+              <a href="https://notes.localhost/documentation_system/style_guide/plantuml/index.html">PlantUML diagrams</a>
+            </summary>
+            <details>
+              <summary>
+                <a href="https://notes.localhost/documentation_system/style_guide/plantuml/uml.html">UML (Unified Modeling Language)</a>
+              </summary>
+              <a href="https://notes.localhost/documentation_system/style_guide/plantuml/usecase.html">Use case diagram</a>
+              <a href="https://notes.localhost/documentation_system/style_guide/plantuml/activity.html">Activity diagram</a>
+              <a href="https://notes.localhost/documentation_system/style_guide/plantuml/sequence.html">Sequence diagram</a>
+              <a href="https://notes.localhost/documentation_system/style_guide/plantuml/deployment.html">Deployment diagram</a>
+            </details>
+            <a href="https://notes.localhost/documentation_system/style_guide/plantuml/c4.html">C4 models</a>
+            <a href="https://notes.localhost/documentation_system/style_guide/plantuml/sdl.html">SDL (Specification and Description Language)</a>
+          </details>
+        </details>
+        <a href="https://notes.localhost/documentation_system/style_guide/mermaid.html">Mermaid diagrams</a>
+        <a href="https://notes.localhost/documentation_system/style_guide/treeview.html">Treeview folder structure</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MARK: main
+    -->
+  <main>
+    <nav class="breadcrumb">
+      <a href="https://notes.localhost/documentation_system/index.html">Documentation system</a>
+      <a>Reference</a>
+      <a href="https://notes.localhost/documentation_system/style_guide/index.html">Visual style</a>
+      <a href="https://notes.localhost/documentation_system/style_guide/antora-ui.html">Antora UI styling</a>
+    </nav>
+
+    <article class="entry-content hentry">
+      <section class="entry-header section-inner">
+        <h1 class="entry-title mdc-typography mdc-typography--headline2">Antora UI styling</h1>
+
+        <div id="preamble">
+          <div class="sectionbody">
+            <style>
+              .styletable {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 0.5rem;
+              }
+
+              .styletable div {
+                display: flex;
+                flex-direction: column;
+              }
+
+              .styletable>div>div {
+                padding: 0.5rem;
+              }
+
+              .styletable>div :first-child {
+                flex: 4rem
+              }
+            </style>
+
+          </div>
+        </div>
+        <!-- MARK: colours
+          -->
+        <div class="sect1">
+          <h2 id="colours"><a class="anchor" href="#colours"></a>1. Colours</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="interface"><a class="anchor" href="#interface"></a>1.1. Interface</h3>
+              <div class="styletable">
+                <div>
+                  <div class="primary">primary</div>
+                  <div class="primary-container">container</div>
+                </div>
+                <div>
+                  <div class="secondary">secondary</div>
+                  <div class="secondary-container">container</div>
+                </div>
+                <div>
+                  <div class="tertiary">tertiary</div>
+                  <div class="tertiary-container">container</div>
+                </div>
+
+                <div>
+                  <div class="outline">outline</div>
+                  <div class="outline-variant">variant</div>
+                </div>
+
+                <div>
+                  <div class="surface">surface</div>
+                  <!-- <div class="surface-dim">surface-dim</div> -->
+                  <!-- <div class="surface-bright">surface-bright</div> -->
+                </div>
+                <div></div>
+
+                <div>
+                  <div class="surface-container-lowest">surface lowest</div>
+                </div>
+                <div>
+                  <div class="surface-container-low">surface low</div>
+                </div>
+                <div>
+                  <div class="surface-container">surface container</div>
+                </div>
+                <div>
+                  <div class="surface-container-high">surface high</div>
+                </div>
+                <div>
+                  <div class="surface-container-highest">surface highest</div>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="admonitions"><a class="anchor" href="#admonitions"></a>1.2. Admonitions</h3>
+              <div class="styletable">
+                <div>
+                  <div class="admonition-important">important</div>
+                  <div class="admonition-important-container">container</div>
+                </div>
+                <div>
+                  <div class="admonition-tip">tip</div>
+                  <div class="admonition-tip-container">container</div>
+                </div>
+                <div>
+                  <div class="admonition-note">note</div>
+                  <div class="admonition-note-container">container</div>
+                </div>
+                <div>
+                  <div class="admonition-error">error</div>
+                  <div class="admonition-error-container">container</div>
+                </div>
+                <div>
+                  <div class="admonition-warning">warning</div>
+                  <div class="admonition-warning-container">container</div>
+                </div>
+                <div>
+                  <div class="admonition-caution">caution</div>
+                  <div class="admonition-caution-container">container</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MARK: typography
+          -->
+        <div class="sect1">
+          <h2 id="typography"><a class="anchor" href="#typography"></a>2. Typography</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="headings"><a class="anchor" href="#headings"></a>2.1. Headings</h3>
+              <h1 id="heading-1" class="discrete">Heading 1</h1>
+              <h2 id="heading-2" class="discrete">Heading 2</h2>
+              <h3 id="heading-3" class="discrete">Heading 3</h3>
+              <h4 id="heading-4" class="discrete">Heading 4</h4>
+              <h5 id="heading-5" class="discrete">Heading 5</h5>
+            </div>
+            <div class="sect2">
+              <h3 id="paragraphs"><a class="anchor" href="#paragraphs"></a>2.2. Paragraphs</h3>
+              <div class="paragraph lead">
+                <p><strong>Lead paragraph (preamble).</strong>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vivamus sollicitudin ac mauris eget imperdiet.
+                  Etiam vulputate nunc eget volutpat aliquam.
+                  Nulla quis luctus ex.
+                  Morbi varius lorem pharetra justo convallis blandit.
+                  Nullam lobortis, justo at sodales rhoncus, leo neque iaculis orci, ac mattis elit tellus ac magna.</p>
+              </div>
+              <div class="paragraph">
+                <p><strong>Normal paragraph.</strong>
+                  Phasellus porttitor mi at ante convallis ultrices.
+                  Pellentesque ultricies risus a lacus facilisis, id suscipit nisl tincidunt.
+                  Integer viverra mi in augue sollicitudin auctor.
+                  Nullam vel dolor quis turpis consectetur pulvinar.
+                  Nulla ut arcu et turpis tempor tincidunt at ac odio.
+                  Nullam magna sem, cursus non leo et, semper placerat tellus.
+                  Nam diam lectus, porttitor vel eros in, aliquet venenatis ipsum.</p>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="text-formatting"><a class="anchor" href="#text-formatting"></a>2.3. Text formatting</h3>
+              <div class="dlist">
+                <dl>
+                  <dt class="hdlist1">Bold</dt>
+                  <dd>
+                    <p><strong>Fusce at lectus elementum ex ornare volutpat eu sit amet leo.</strong></p>
+                  </dd>
+                  <dt class="hdlist1">Italic</dt>
+                  <dd>
+                    <p><em>Nullam a urna eget risus facilisis ultrices ut ut turpis.</em></p>
+                  </dd>
+                  <dt class="hdlist1">Monospace</dt>
+                  <dd>
+                    <p>Integer <code>eget aliquam urna, a viverra</code> dolor.</p>
+                  </dd>
+                  <dt class="hdlist1">Highlight</dt>
+                  <dd>
+                    <p>Maecenas <mark>commodo euismod mauris</mark>, at dignissim augue.</p>
+                  </dd>
+                  <dt class="hdlist1">Subscript, superscript</dt>
+                  <dd>
+                    <p>Maecenas <sub>nec</sub> sem <sup>metus</sup>.</p>
+                  </dd>
+                  <dt class="hdlist1">Curved quotation marks and apostrophes</dt>
+                  <dd>
+                    <p>Praesent “sapien” nisi, ‘rutrum’ in justo ’sit amet, inter’dum molestie’ dui.</p>
+                  </dd>
+                  <dt class="hdlist1">Underline and strikethrough</dt>
+                  <dd>
+                    <p>Nullam <span class="underline">id urna</span> sed <span class="line-through">dui aliquet</span>
+                      varius.</p>
+                  </dd>
+                  <dt class="hdlist1">Keyboard, button, menu</dt>
+                </dl>
+              </div>
+              <div class="openblock">
+                <div class="content">
+                  <div class="hdlist">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td class="hdlist1">
+                            <span class="keyseq"><kbd>Shift</kbd>+<kbd>F10</kbd></span>
+                          </td>
+                          <td class="hdlist2">
+                            <p>Vestibulum blandit ullamcorper sollicitudin.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="hdlist1">
+                            <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd></span>
+                          </td>
+                          <td class="hdlist2">
+                            <p>Nam vel nibh ultricies, mattis tellus vitae, cursus dolor.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="hdlist1">
+                            <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span>, <span
+                              class="keyseq"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
+                          </td>
+                          <td class="hdlist2">
+                            <p>Fusce blandit ante orci.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="hdlist1">
+                            <b class="button">OK</b>
+                          </td>
+                          <td class="hdlist2">
+                            <p>Vestibulum sit <b class="button">amet</b> tincidunt ipsum.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="hdlist1">
+                            Proin tincidunt
+                          </td>
+                          <td class="hdlist2">
+                            <p>Proin sit amet <span class="menuseq"><b class="menu">libero</b>&nbsp;<i
+                                  class="fa fa-angle-right caret"></i> <b class="menuitem">in nulla</b></span> consequat
+                              <span class="menuseq"><b class="menu">tincidunt</b>&nbsp;<i
+                                  class="fa fa-angle-right caret"></i> <b class="submenu">non sit</b>&nbsp;<i
+                                  class="fa fa-angle-right caret"></i> <b class="menuitem">amet mi</b></span>.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="links"><a class="anchor" href="#links"></a>2.4. Links</h3>
+              <div class="dlist">
+                <dl>
+                  <dt class="hdlist1">With URI scheme</dt>
+                  <dd>
+                    <p>Nunc dignissim <a href="https://asciidoctor.org" class="bare">https://asciidoctor.org</a> risus nec
+                      convallis laoreet.
+                      Nunc <a href="https://asciidoctor.org">porttitor eleifend</a> sodales.</p>
+                  </dd>
+                  <dt class="hdlist1">Open in new tab or window</dt>
+                  <dd>
+                    <p>Duis <a href="https://asciidoctor.org" target="_blank" rel="noopener">ut velit in lorem</a>
+                      vulputate porta.
+                      Nam eget <a href="https://asciidoctor.org" class="bare" target="_blank"
+                        rel="noopener">https://asciidoctor.org</a> facilisis felis.</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="dlist">
+                <dl>
+                  <dt class="hdlist1">Without URI scheme</dt>
+                  <dd>
+                    <p>Mauris cursus <a href="https://asciidoctor.org" class="bare">asciidoctor.org</a> sed ligula in
+                      porta.
+                      Vivamus vehicula <a href="https://asciidoctor.org" class="bare" target="_blank"
+                        rel="noopener">asciidoctor.org</a> justo eget nisl semper hendrerit.</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="paragraph">
+                <p>Mauris elit orci, venenatis id luctus ac, fermentum ac eros.
+                  Pellentesque nec facilisis ex, sollicitudin consectetur dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sect1">
+          <h2 id="lists"><a class="anchor" href="#lists"></a>3. Lists</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="unordered-list"><a class="anchor" href="#unordered-list"></a>3.1. Unordered list</h3>
+              <div class="ulist">
+                <div class="title">Unordered list title</div>
+                <ul>
+                  <li>
+                    <p>Morbi sit amet arcu vitae lacus sollicitudin pretium nec quis leo.</p>
+                  </li>
+                  <li>
+                    <p>Fusce consequat faucibus nisi, ut elementum erat semper non.</p>
+                  </li>
+                  <li>
+                    <p>Cras euismod eleifend rutrum.</p>
+                  </li>
+                  <li>
+                    <p>Proin condimentum metus ut tellus mattis pellentesque.</p>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>Sed interdum ac nibh at dapibus.</p>
+                        </li>
+                        <li>
+                          <p>Pellentesque at mattis sapien.</p>
+                        </li>
+                        <li>
+                          <p>Praesent at nisi vitae libero convallis malesuada imperdiet sed velit.</p>
+                          <div class="ulist">
+                            <ul>
+                              <li>
+                                <p>Suspendisse potenti.</p>
+                              </li>
+                              <li>
+                                <p>Proin ultricies sem urna, a sagittis purus viverra vitae.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Phasellus ultricies erat nec sem volutpat, a vulputate orci vulputate.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="ordered-list"><a class="anchor" href="#ordered-list"></a>3.2. Ordered list</h3>
+              <div class="olist arabic">
+                <div class="title">Ordered list title</div>
+                <ol class="arabic">
+                  <li>
+                    <p>Quisque a porta odio.</p>
+                  </li>
+                  <li>
+                    <p>Phasellus non ultricies ante, et condimentum orci.</p>
+                  </li>
+                  <li>
+                    <p>Praesent hendrerit, erat nec aliquam hendrerit, neque odio facilisis diam, nec sollicitudin dui
+                      diam sit amet sem.</p>
+                  </li>
+                  <li>
+                    <p>Morbi sed sagittis ante, eget tristique sem.</p>
+                    <div class="olist loweralpha">
+                      <ol class="loweralpha" type="a">
+                        <li>
+                          <p>Vestibulum tincidunt suscipit orci, sed faucibus massa dignissim vel.</p>
+                        </li>
+                        <li>
+                          <p>Aliquam placerat at est vel luctus.</p>
+                        </li>
+                        <li>
+                          <p>Donec ut nulla vitae urna egestas semper a in tortor.</p>
+                          <div class="olist lowerroman">
+                            <ol class="lowerroman" type="i">
+                              <li>
+                                <p>Mauris tempus facilisis nisl, facilisis scelerisque dui bibendum vel.</p>
+                              </li>
+                              <li>
+                                <p>Praesent volutpat, enim nec sollicitudin sollicitudin, ante metus dictum odio, egestas
+                                  interdum nibh leo sit amet sapien.</p>
+                              </li>
+                            </ol>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Pellentesque vestibulum augue dapibus tellus vulputate, id aliquam ante tempor.</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="checklists"><a class="anchor" href="#checklists"></a>3.3. Checklists</h3>
+              <div class="ulist checklist">
+                <ul class="checklist">
+                  <li>
+                    <p><i class="fa fa-check-square-o"></i> Curabitur elementum tempor ex sit amet lacinia.</p>
+                  </li>
+                  <li>
+                    <p><i class="fa fa-square-o"></i> Sed feugiat diam non neque maximus volutpat at a velit.</p>
+                    <div class="ulist checklist">
+                      <ul class="checklist">
+                        <li>
+                          <p><i class="fa fa-square-o"></i> Aenean luctus, mauris sed porta tempor, purus erat porta ex,
+                            eget lacinia urna ante vitae dolor.</p>
+                        </li>
+                        <li>
+                          <p><i class="fa fa-check-square-o"></i> Nam dignissim placerat nisi, eget dignissim augue cursus
+                            hendrerit.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="description-list"><a class="anchor" href="#description-list"></a>3.4. Description list</h3>
+              <div class="dlist">
+                <div class="title">Regular description list</div>
+                <dl>
+                  <dt class="hdlist1">Donec ipsum libero, mattis non tincidunt vel, vulputate non sapien.</dt>
+                  <dd>
+                    <p>Ut auctor turpis id posuere pellentesque.</p>
+                  </dd>
+                  <dt class="hdlist1">Sed et tincidunt tellus.</dt>
+                  <dd>
+                    <p>Praesent felis lorem, finibus et eros eget, convallis blandit dolor.</p>
+                  </dd>
+                  <dt class="hdlist1">Nulla et facilisis ligula.</dt>
+                  <dd>
+                    <p>Nullam et consequat magna.</p>
+                  </dd>
+                  <dt class="hdlist1">Mauris sollicitudin nibh mi, quis vestibulum nisl vestibulum at.</dt>
+                  <dd>
+                    <p>Nulla id porttitor enim.</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="hdlist">
+                <div class="title">Compact description list</div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="hdlist1">
+                        Nullam leo est
+                      </td>
+                      <td class="hdlist2">
+                        <p>scelerisque a erat et, venenatis pulvinar turpis.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="hdlist1">
+                        Morbi id purus
+                      </td>
+                      <td class="hdlist2">
+                        <p>eget augue aliquam scelerisque et ut nisl.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="hdlist1">
+                        Nunc sed
+                      </td>
+                      <td class="hdlist2">
+                        <p>consequat purus, vitae lacinia quam.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="question-and-answer-list"><a class="anchor" href="#question-and-answer-list"></a>3.5. Question and
+                answer list</h3>
+              <div class="qlist qanda">
+                <ol>
+                  <li>
+                    <p><em>Nullam id urna sed dui aliquet varius.</em></p>
+                    <p>Nunc dignissim risus nec convallis laoreet.</p>
+                  </li>
+                  <li>
+                    <p><em>Nunc porttitor eleifend sodales.</em></p>
+                    <p>Duis ut velit in lorem vulputate porta.</p>
+                  </li>
+                  <li>
+                    <p><em>Nam eget facilisis felis.</em></p>
+                    <p>Mauris cursus sed ligula in porta.</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sect1">
+          <h2 id="blocks"><a class="anchor" href="#blocks"></a>4. Blocks</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="admonitions-2"><a class="anchor" href="#admonitions-2"></a>4.1. Admonitions</h3>
+              <div class="sect3">
+                <h4 id="tip"><a class="anchor" href="#tip"></a>4.1.1. Tip</h4>
+                <div class="admonitionblock tip">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="icon">
+                          <i class="fa icon-tip" title="Tip"></i>
+                        </td>
+                        <td class="content">
+                          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                          Proin lobortis rhoncus venenatis.
+                          Mauris at dolor vel urna tristique mattis.
+                          Nam dignissim neque ante, quis tincidunt leo consequat vel.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sect3">
+                <h4 id="note"><a class="anchor" href="#note"></a>4.1.2. Note</h4>
+                <div class="admonitionblock note">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="icon">
+                          <i class="fa icon-note" title="Note"></i>
+                        </td>
+                        <td class="content">
+                          Curabitur lacinia dolor in nunc consectetur, quis commodo tortor molestie.
+                          Suspendisse potenti.
+                          Duis euismod est vel tempor rutrum.
+                          Ut elementum purus et ligula rhoncus dapibus.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sect3">
+                <h4 id="warning"><a class="anchor" href="#warning"></a>4.1.3. Warning</h4>
+                <div class="admonitionblock warning">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="icon">
+                          <i class="fa icon-warning" title="Warning"></i>
+                        </td>
+                        <td class="content">
+                          Nunc nec euismod massa, a porttitor nisl.
+                          Nam faucibus fringilla dolor, a sollicitudin urna pretium vel.
+                          Nam eu risus convallis purus fringilla imperdiet.
+                          Phasellus luctus felis quis lacus scelerisque, eget convallis enim tristique.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sect3">
+                <h4 id="caution"><a class="anchor" href="#caution"></a>4.1.4. Caution</h4>
+                <div class="admonitionblock caution">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="icon">
+                          <i class="fa icon-caution" title="Caution"></i>
+                        </td>
+                        <td class="content">
+                          Nulla facilisi.
+                          Donec dictum elit et turpis tincidunt mattis.
+                          Nullam tempus hendrerit orci at venenatis.
+                          Nulla facilisi.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sect3">
+                <h4 id="important"><a class="anchor" href="#important"></a>4.1.5. Important</h4>
+                <div class="admonitionblock important">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="icon">
+                          <i class="fa icon-important" title="Important"></i>
+                        </td>
+                        <td class="content">
+                          Aenean tincidunt nunc ac dui scelerisque vestibulum non sit amet felis.
+                          Mauris sodales turpis at sollicitudin vestibulum.
+                          Sed gravida posuere scelerisque.
+                          Nam tristique finibus diam eget convallis.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="sidebar"><a class="anchor" href="#sidebar"></a>4.2. Sidebar</h3>
+              <div class="sidebarblock">
+                <div class="content">
+                  <div class="title">Optional title</div>
+                  <div class="paragraph">
+                    <p>Ut dapibus, arcu at facilisis scelerisque, tellus velit posuere odio, at sagittis lorem nisi quis
+                      augue.
+                      Curabitur rhoncus in quam tempus rhoncus.
+                      Curabitur non lacus pellentesque, scelerisque dui sit amet, aliquet velit.</p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Praesent consectetur ultricies justo, at gravida massa commodo non.
+                      Suspendisse potenti.
+                      Vivamus lectus urna, gravida vitae aliquam eget, vestibulum id magna.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="example"><a class="anchor" href="#example"></a>4.3. Example</h3>
+              <div class="exampleblock">
+                <div class="title">Optional title</div>
+                <div class="content">
+                  <div class="paragraph">
+                    <p>Duis egestas scelerisque dapibus.
+                      Praesent feugiat feugiat ullamcorper.
+                      Donec ex neque, viverra et commodo sit amet, eleifend ac quam.</p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Curabitur ut sollicitudin quam, nec maximus nisi.
+                      Mauris mollis sollicitudin elementum.
+                      Sed dolor tellus, posuere nec tortor non, dignissim ullamcorper est.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="quote"><a class="anchor" href="#quote"></a>4.4. Quote</h3>
+              <div class="quoteblock">
+                <div class="title">Optional title</div>
+                <blockquote>
+                  Phasellus gravida, nunc sed congue dictum, massa nisi rutrum ligula, sed commodo libero diam non nibh.
+                  Fusce risus tortor, dapibus a varius quis, mattis ut nulla.
+                  Aenean et risus id ex ornare ultricies.
+                </blockquote>
+                <div class="attribution">
+                  — Quisque sit amet congue urna.<br>
+                  <cite>Donec laoreet vehicula neque, porttitor vulputate libero lobortis semper.</cite>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="verse"><a class="anchor" href="#verse"></a>4.5. Verse</h3>
+              <div class="verseblock">
+                <div class="title">Optional title</div>
+                <pre class="content">Proin at bibendum dolor.
+      Nam rutrum pulvinar finibus.
+      Nam at lacinia purus.
+      Pellentesque posuere cursus ligula, vitae auctor mi euismod sit amet.
+      Morbi pulvinar auctor mauris vulputate viverra.</pre>
+                <div class="attribution">
+                  — Curabitur sollicitudin efficitur elit et sagittis.<br>
+                  <cite>Aenean pellentesque convallis quam nec mollis.</cite>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="source-code"><a class="anchor" href="#source-code"></a>4.6. Source code</h3>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlightjs highlight"><code class="language-none hljs">plain text</code></pre>
+                  <div class="source-toolbox"><button class="copy-button" title="Copy to clipboard"><img
+                        src="_/img/octicons-16.svg#view-clippy" alt="copy icon" class="copy-icon"><span
+                        class="copy-toast">Copied!</span></button></div>
+                </div>
+              </div>
+              <div class="listingblock">
+                <div class="title">Optional title</div>
+                <div class="content">
+                  <pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">require 'sinatra' <i class="conum" data-value="1"></i><b>(1)</b>
+
+      ORDERED_LIST_KEYWORDS = {
+        'loweralpha' =&gt; 'a',
+        'lowerroman' =&gt; 'i',
+        'upperalpha' =&gt; 'A',
+        'upperroman' =&gt; 'I',
+      }
+
+      get '/hi' do
+        "Hello World!" <i class="conum" data-value="2"></i><b>(2)</b>
+      end</code></pre>
+                  <div class="source-toolbox"><span class="source-lang">ruby</span><button class="copy-button"
+                      title="Copy to clipboard"><img src="_/img/octicons-16.svg#view-clippy" alt="copy icon"
+                        class="copy-icon"><span class="copy-toast">Copied!</span></button></div>
+                </div>
+              </div>
+              <div class="colist arabic">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><i class="conum" data-value="1"></i><b>1</b></td>
+                      <td>Callout. Proin at feugiat ante, sagittis feugiat massa.
+                        Phasellus lectus nisl, dignissim quis pellentesque eget, sodales eget ligula.</td>
+                    </tr>
+                    <tr>
+                      <td><i class="conum" data-value="2"></i><b>2</b></td>
+                      <td>Proin mi libero, varius nec laoreet ac, ultrices et urna.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="listing"><a class="anchor" href="#listing"></a>4.7. Listing</h3>
+              <div class="listingblock">
+                <div class="title">Optional title</div>
+                <div class="content">
+                  <!-- <pre>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      Morbi dui enim, fringilla sit amet sollicitudin ut, sodales quis lorem.
+      Ut at semper dolor.
+      In hac habitasse platea dictumst.</pre> -->
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="command-line"><a class="anchor" href="#command-line"></a>4.8. Command line</h3>
+              <div class="listingblock">
+                <div class="content">
+                  <pre
+                    class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ ls -la &amp;&amp; echo "done."</code></pre>
+                  <div class="source-toolbox"><button class="copy-button" title="Copy to clipboard"><img
+                        src="_/img/octicons-16.svg#view-clippy" alt="copy icon" class="copy-icon"><span
+                        class="copy-toast">Copied!</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="collapsible-blocks"><a class="anchor" href="#collapsible-blocks"></a>4.9. Collapsible blocks</h3>
+              <details>
+                <summary class="title">Click to open/close the details (default closed)</summary>
+                <div class="content">
+                  <div class="paragraph">
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                      Proin lobortis rhoncus venenatis.
+                      Mauris at dolor vel urna tristique mattis.
+                      Nam dignissim neque ante, quis tincidunt leo consequat vel.</p>
+                  </div>
+                </div>
+              </details>
+              <details open="">
+                <summary class="title">Click to open/close the details (default open)</summary>
+                <div class="content">
+                  <div class="paragraph">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Vivamus sollicitudin ac mauris eget imperdiet.
+                      Etiam vulputate nunc eget volutpat aliquam.</p>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="sect1">
+          <h2 id="media"><a class="anchor" href="#media"></a>5. Media</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="images"><a class="anchor" href="#images"></a>5.1. Images</h3>
+              <div class="imageblock">
+                <div class="content">
+                  <img src="multirepo-ssg.svg" alt="Aenean tempus in mauris non pretium." width="400" class=" lightbox">
+                </div>
+                <div class="title">Figure 1. Optional title</div>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="video"><a class="anchor" href="#video"></a>5.2. Video</h3>
+              <div class="videoblock">
+                <div class="title">Video from Vimeo</div>
+                <div class="content">
+                  <iframe width="1000" height="500" src="https://player.vimeo.com/video/300817511" frameborder="0"
+                    allowfullscreen=""></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sect1">
+          <h2 id="tables"><a class="anchor" href="#tables"></a>6. Tables</h2>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all stretch">
+              <caption class="title">Optional title</caption>
+              <colgroup>
+                <col style="width: 33.3333%;">
+                <col style="width: 33.3333%;">
+                <col style="width: 33.3334%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="tableblock halign-left valign-top">Table header</th>
+                  <th class="tableblock halign-left valign-top">Phasellus ullamcorper et odio aliquam ornare.</th>
+                  <th class="tableblock halign-left valign-top">Phasellus finibus placerat tellus, vel pellentesque mauris
+                    ornare sed.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Odd row</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Sed condimentum vestibulum euismod.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Sed odio sem, accumsan eu tortor quis, porta tincidunt massa.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Even row</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Pellentesque quis imperdiet mi.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Maecenas egestas porttitor urna id pulvinar.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Fusce tristique nulla vitae ante mattis, luctus tincidunt eros rhoncus.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Praesent feugiat placerat justo, et dictum ipsum blandit ut.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Proin dictum augue sapien, non convallis dolor ultrices nec.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Suspendisse diam lectus, dignissim vel aliquam eget, lacinia a est.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Curabitur condimentum vehicula dolor, vel aliquam ligula ullamcorper ut.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Nunc erat eros, vehicula sit amet ornare at, auctor vel ligula.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Vivamus semper molestie augue, id semper diam commodo id.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Morbi hendrerit tempor quam, a fermentum nisi tincidunt sed.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Pellentesque rutrum vulputate nisi, ac tincidunt neque euismod in.</p>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Footer</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Aenean sollicitudin arcu vestibulum posuere dictum.</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">Curabitur interdum fringilla purus, vel venenatis nisi iaculis eu.</p>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="sect1">
+          <h2 id="special-document-sections"><a class="anchor" href="#special-document-sections"></a>7. Special document
+            sections</h2>
+          <div class="sectionbody">
+            <div class="sect2">
+              <h3 id="abstract"><a class="anchor" href="#abstract"></a>Abstract</h3>
+              <div class="quoteblock abstract">
+                <blockquote>
+                  Morbi suscipit risus quis rutrum eleifend.
+                  Quisque non placerat mi.
+                  Quisque venenatis venenatis metus, vitae viverra orci hendrerit vel.
+                </blockquote>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="appendix"><a class="anchor" href="#appendix"></a>Appendix A: Appendix</h3>
+              <div class="paragraph">
+                <p>Aliquam placerat massa purus, bibendum pellentesque dui rhoncus vel.
+                  Sed nec tortor ac ante ultrices eleifend sit amet sed elit.
+                  Aenean non est viverra, imperdiet risus quis, auctor ex.</p>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="glossary"><a class="anchor" href="#glossary"></a>Glossary</h3>
+              <div class="paragraph">
+                <p>Cras efficitur condimentum aliquam.
+                  Etiam condimentum turpis sed rhoncus placerat.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                  Nullam sit amet nunc sit amet orci vestibulum porta.</p>
+              </div>
+            </div>
+            <div class="sect2">
+              <h3 id="bibliography"><a class="anchor" href="#bibliography"></a>Bibliography</h3>
+              <div class="paragraph">
+                <p>Quisque luctus ultricies libero, in ultricies tellus lacinia quis.
+                  Sed volutpat sodales quam.
+                  Cras in diam molestie, lobortis mauris eu, dictum ligula.
+                  Praesent massa ex, ullamcorper ut convallis non, mattis sed eros.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <div class="pagenav">
+    <a href="index.php">Edit</a>
+    <a href="about.php">Source</a>
+    <a href="contact.php">Top</a>
+  </div>
+  <footer>
+    <p>&copy; 2020 My Website</p>
+  </footer>
+</body>
+</html>
