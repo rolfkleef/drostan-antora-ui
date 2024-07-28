@@ -16,6 +16,7 @@
 @import url(ui/main.css);
 @import url(ui/footer.css);
 @import url(ui/docnav.css);
+@import url(ui/docnav-popover.css);
 @import url(asciidoc/admonitions.css);
 @import url(asciidoc/text.css);
 /* @import "highlight.css"; */

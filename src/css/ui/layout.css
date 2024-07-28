@@ -14,7 +14,7 @@ body {
     "docnav main pagenav ."
     "footer footer footer footer";
 
-  header {
+  > header {
     grid-area: header;
     /* position: sticky; */
     /* top: 0; */
@@ -45,21 +45,28 @@ body {
     }
   }
 
-  .docnav {
+  > #docnav-popover {
+    height: 100dvh;
+    min-width: min(35%, 17em); /* as in grid column above */
+    max-width: 90dvw; /* leave room to close by clicking outside the popover */
+    margin-left: 0;
+  }
+
+  > .docnav {
     grid-area: docnav;
   }
 
-  main {
+  > main {
     grid-area: main;
     max-width: 50em;
   }
 
-  .pagenav {
+  > .pagenav {
     grid-area: pagenav;
     padding-top: 1.5rem;
   }
 
-  footer {
+  > footer {
     grid-area: footer;
 
     display: flex;

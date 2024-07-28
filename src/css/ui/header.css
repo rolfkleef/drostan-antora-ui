@@ -12,18 +12,6 @@ body > header {
 
   }
 
-  button {
-    background-color: initial;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    /* -webkit-user-select: none; */
-    /* user-select: none; */
-    height: 3rem;
-    width: 3rem;
-  }
-
   #theme-selector {
     margin-left: auto;
 
@@ -48,5 +36,20 @@ body > header {
         border-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
       }
     }
+  }
+}
+
+body > header,
+.docnav > header {
+  button {
+    background-color: initial;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    /* -webkit-user-select: none; */
+    /* user-select: none; */
+    height: 3rem;
+    width: 3rem;
   }
 }

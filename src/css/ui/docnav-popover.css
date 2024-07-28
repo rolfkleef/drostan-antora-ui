@@ -1,0 +1,21 @@
+#docnav-popover {
+  padding: 0;
+  border: 0;
+  box-shadow: 0.25em 0em 1em light-dark(var(--md-sys-color-surface-container-highest-light), var(--md-sys-color-surface-container-highest-dark));
+
+  animation: slidepopupmenu 0.4s;
+
+  > header {
+    display: flex;
+
+    > button {
+      margin-left: auto;
+    }
+  }
+}
+
+@keyframes slidepopupmenu {
+  from {
+    transform: translateX(-100%);
+  }
+}

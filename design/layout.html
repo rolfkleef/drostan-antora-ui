@@ -11,7 +11,7 @@
     -->
   <header>
     <div>
-      <button class="material-icons">menu</button>
+      <button class="material-icons" popovertarget="docnav-popover">menu</button>
       <a href="https://drostan.org" rel="home">
         <img src="rolfkleef_150x150.png" alt="Rolf Kleef, drostan.org">
       </a>
@@ -35,9 +35,21 @@
     </nav>
   </header>
 
+  <dialog class="docnav" id="docnav-popover" popover>
+    <header>
+      <button class="material-icons" popovertarget="docnav-popover">close</button>
+    </header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Copy the content from #docnav, to have the navigation is popup too
+        document.getElementById('docnav-popover').innerHTML += document.getElementById('docnav').innerHTML;
+      });
+    </script>
+  </dialog>
+
   <!-- MARK: docnav
     -->
-  <div class="docnav">
+  <div class="docnav" id="docnav">
     <details>
       <summary>
         <span class="material-icons">library_books</span>

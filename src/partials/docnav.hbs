@@ -1,6 +1,6 @@
   <!-- MARK: docnav
     -->
-  <div class="docnav"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
+  <div class="docnav" id="docnav"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
     <details>
       <summary>
         <span class="material-icons">library_books</span>
@@ -29,6 +29,8 @@
       </ul>
     </details>
 
+    <!-- MARK: nav tree helpers
+      -->
     {{#* inline "docnav-item"}}
       {{#if ./url}}
         <a {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}
@@ -54,6 +56,8 @@
       {{/each}}
     {{/inline}}
 
+    <!-- MARK: nav tree
+      -->
     <nav>
       {{#each page.navigation}}
         {{#if ./items.length}}
@@ -67,3 +71,17 @@
       {{/each}}
     </nav>
   </div>
+
+  <!-- MARK: popover version
+    -->
+  <dialog class="docnav" id="docnav-popover" popover>
+    <header>
+      <button class="material-icons" popovertarget="docnav-popover">close</button>
+    </header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Copy the content from #docnav, to have the navigation is popup too
+        document.getElementById('docnav-popover').innerHTML += document.getElementById('docnav').innerHTML;
+      });
+    </script>
+  </dialog>

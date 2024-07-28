@@ -1,4 +1,7 @@
-details {
+/* MARK: navigation trees
+ */
+
+.docnav details {
   transition: all 0.5s ease-in-out;
 
   summary {
@@ -17,6 +20,10 @@ details {
     }
   }
 }
+
+/* MARK: theme selector
+   Based on a form with three checkboxes, of which only one is shown at a time.
+ */
 
 :root {
   color-scheme: light dark;
