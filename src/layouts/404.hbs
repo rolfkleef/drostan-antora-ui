@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-{{> head defaultPageTitle='Untitled'}}
+{{> head defaultPageTitle='404'}}
 </head>
-
-<body class="status-404 home wp-custom-logo mdc-typography hfeed no-sidebar customize-support article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+<body>
 {{> header}}
-<div id="content" class="body site-content">
-{{> nav }}
-  <div>
-    <div id="primary" class="content-area material-archive__wide">
-      <main id="main" class="site-main">
-        {{> main }}
-        {{> pagination }}
-      </main><!-- #main -->
-    </div><!-- #primary -->
-
-    {{> secondary }}
-  </div>
-</div>
+{{> docnav}}
+{{> main }}
 {{> footer}}
 {{> icons-svg }}
 {{> footer-scripts}}
 </body>
-
 </html>

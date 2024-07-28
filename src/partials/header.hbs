@@ -1,125 +1,23 @@
-<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-<aside class="mdc-drawer material-drawer mdc-drawer--modal">
-  <div class="mdc-drawer__header">
-    <div class="logo">
-      <a href="https://drostan.org" class="custom-logo-link" rel="home" aria-current="page"><img
-        src="{{{uiRootPath}}}/img/rolfkleef_512x512.png" class="custom-logo"
-        alt="Rolf Kleef, drostan.org" decoding="async"
-        srcset="{{{uiRootPath}}}/img/rolfkleef_512x512.png 512w, {{{uiRootPath}}}/img/rolfkleef_512x512-300x300.png 300w, {{{uiRootPath}}}/img/rolfkleef_512x512-150x150.png 150w, {{{uiRootPath}}}/img/rolfkleef_512x512-50x50.png 50w"
-        sizes="(max-width: 512px) 100vw, 512px" width="512" height="512"></a></div>
-
-    <div class="mdc-drawer__title">
-      <div class="site-title__wrapper">
-        <div class="site-title__row">
-          <h1 class="site-title mdc-typography mdc-typography--headline6">
-            <a href="https://drostan.org" rel="home">Rolf Kleef</a>
-          </h1>
-
-          <button type="button"
-                  class="mdc-icon-button mdc-drawer__close mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-                  style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
-            <span class="mdc-button__ripple"></span>
-            <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
-            <span class="screen-reader-text">Close drawer</span>
-          </button>
-        </div>
-        <div class="site-tagline mdc-typography--subtitle1">Making internet work for civil society.
-        </div>
-      </div>
-    </div>
+<!-- MARK: header
+  -->
+<header>
+  <div>
+    <button class="material-icons">menu</button>
+    <a href="https://drostan.org" rel="home">
+      <img src="_/img/rolfkleef_150x150.png" alt="Rolf Kleef, drostan.org">
+    </a>
+    <h1>Rolf Kleef</h1>
+    <p>Making internet work for civil society.</p>
+    <form id="theme-selector">
+      <input type="radio" id="mode-system" name="mode" value="system" checked="">
+      <label for="mode-system" title="switch to system theme" class="material-icons">dark_mode</label>
+      <input type="radio" id="mode-light" name="mode" value="light">
+      <label for="mode-light" title="switch to light theme" class="material-icons">contrast</label>
+      <input type="radio" id="mode-dark" name="mode" value="dark">
+      <label for="mode-dark" title="switch to dark theme" class="material-icons">light_mode</label>
+    </form>
   </div>
-  <div class="mdc-drawer__content">
-
-    <nav class="mdc-list mdc-drawer__list" role="listbox">
-      <a href="https://drostan.org" class="mdc-list-item" tabindex="0"><span class="mdc-list-item__text">Home</span></a>
-      <a href="https://drostan.org/about/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">About me</span></a>
-      <a href="https://drostan.org/now/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">Now</span></a>
-      <a href="https://drostan.org/contact/" class="mdc-list-item" tabindex="-1"><span class="mdc-list-item__text">Contact</span></a>
-      <a href="{{{or site.url siteRootPath}}}" class="mdc-list-item" tabindex="-1"><span
-        class="mdc-list-item__text">{{site.title}}</span></a>
-      <ul class="sub-menu">
-        {{#each site.components}}
-          {{#unless (eq ./name "lib-style")}}
-            {{#if (eq this @root.page.component)}}
-              <a href="{{{relativize ./url}}}" class="mdc-list-item mdc-list-item--activated" aria-selected="true"
-                 tabindex="-1">
-                <span class="mdc-list-item__text">{{{./title}}}</span>
-              </a>
-            {{else}}
-              <a href="{{{relativize ./url}}}" class="mdc-list-item" tabindex="-1">
-                <span class="mdc-list-item__text">{{{./title}}}</span>
-              </a>
-            {{/if}}
-          {{/unless}}
-        {{/each}}
-      </ul>
-    </nav>
-  </div>
-</aside>
-
-<div class="mdc-drawer-scrim"></div>
-
-<header class="
-		site__navigation
-					-has-tab-bar
-				" role="banner">
-
-  <div class="mdc-top-app-bar top-app-bar ">
-    <div class="mdc-top-app-bar__row top-app-bar__header">
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <button
-          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger mdc-ripple-upgraded--unbounded mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"
-          style="--mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">
-          menu
-        </button>
-
-        <div class="logo">
-          <a href="https://drostan.org" class="custom-logo-link" rel="home" aria-current="page"><img
-            src="{{{uiRootPath}}}/img/rolfkleef_512x512.png" class="custom-logo"
-            alt="Rolf Kleef, drostan.org" decoding="async"
-            srcset="{{{uiRootPath}}}/img/rolfkleef_512x512.png 512w, {{{uiRootPath}}}/img/rolfkleef_512x512-300x300.png 300w, {{{uiRootPath}}}/img/rolfkleef_512x512-150x150.png 150w, {{{uiRootPath}}}/img/rolfkleef_512x512-50x50.png 50w"
-            sizes="(max-width: 512px) 100vw, 512px" width="512" height="512"></a></div>
-        <span class="mdc-top-app-bar__title top-app-bar__title">
-					<div class="site-title__wrapper">
-		<div class="site-title__row">
-			<h1 class="site-title mdc-typography mdc-typography--headline6">
-				<a href="https://drostan.org" rel="home">Rolf Kleef</a>
-			</h1>
-
-			<button type="button" class="mdc-icon-button mdc-drawer__close mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-              style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
-				<span class="mdc-button__ripple"></span>
-				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
-				<span class="screen-reader-text">Close drawer</span>
-			</button>
-		</div>
-		<div class="site-tagline mdc-typography--subtitle1">Making internet work for civil society.</div>
-	</div>
-				</span>
-      </section>
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
-        <button
-          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button dark-mode__button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-          aria-label="Toggle Dark Mode"
-          style="--mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;">
-          <span class="mdc-button__ripple"></span>
-          <span class="dark-mode__icon">dark_mode</span>
-        </button>
-      </section>
-    </div>
-
-    <div class="tab-bar__wrap">
-      <div class="mdc-tab-bar tab-bar" role="tablist">
-        <div class="mdc-tab-scroller">
-          <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
-               style="margin-bottom: 0px;">
-            <div class="mdc-tab-scroller__scroll-content">
-              {{> header-tab-bar }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <nav>
+    {{> header-nav}}
+  </nav>
 </header>

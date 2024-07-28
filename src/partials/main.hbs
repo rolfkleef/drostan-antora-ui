@@ -1,15 +1,47 @@
-<article class="entry-content hentry">
-{{!-- > toolbar --}}
-{{#if (eq page.layout '404')}}
-  {{> article-404 }}
-{{else}}
-{{!-- > toc --}}
-  <header class="entry-header section-inner">
-{{> meta }}
-    {{#with page.title}}
-      <h1 class="entry-title mdc-typography mdc-typography--headline2">{{{this}}}</h1>
+<main>
+  {{#if page.breadcrumbs}}
+  <nav class="breadcrumbs">
+    {{#with page.componentVersion}}
+      {{#if (and ./title (ne ./title @root.page.breadcrumbs.0.content))}}
+        <a href="{{{relativize ./url}}}">{{{./title}}}</a>
+      {{/if}}
     {{/with}}
-  </header>
+    {{#each page.breadcrumbs}}
+      {{~#if (and ./url (eq ./urlType 'internal'))~}}
+          <a href="{{{relativize ./url}}}">{{{./content}}}</a>
+      {{~else~}}
+          <a>{{{./content}}}</a>
+      {{~/if~}}
+    {{/each}}
+  </nav>
+  {{/if}}
+
+  <article>
+  {{#if (eq page.layout '404')}}
+    {{> article-404 }}
+  {{else}}
+    <h1>{{{page.title}}}</h1>
+
     {{{page.contents}}}
-{{/if}}
-</article>
+  {{/if}}
+  </article>
+
+  {{#unless (eq page.attributes.pagination undefined)}}
+  <nav class="pagination">
+    {{#if page.previous}}
+      {{#with page.previous}}
+        <a href="{{relativize ./url}}" rel="prev">{{{./content}}}</a>
+      {{/with}}
+    {{else}}
+      <span></span>
+    {{/if}}
+    {{#if page.next}}
+      {{#with page.next}}
+        <a href="{{relativize ./url}}" rel="next">{{{./content}}}</a>
+      {{/with}}
+    {{else}}
+      <span></span>
+    {{/if}}
+  </nav>
+  {{/unless}}
+</main>

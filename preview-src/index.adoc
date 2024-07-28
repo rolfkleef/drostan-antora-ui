@@ -29,36 +29,7 @@ Author Name
   .styletable > div :first-child {
     flex: 4rem
   }
-
-  /* Light/dark mode styles */
-  main:has(#mode-light:checked) {
-    color-scheme: light;
-    background-color: var(--md-sys-color-background-light);
-  }
-
-  main:has(#mode-dark:checked) {
-    color-scheme: dark;
-    background-color: var(--md-sys-color-background-dark);
-  }
-
-  input {
-    display: none;
-  }
-
-  /* Style for the label that will serve as our icon */
-  label {
-    cursor: pointer;
-    color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
-  }
 </style>
-
-<form>
-  select mode:
-  <input type="radio" id="mode-light" name="mode" value="light" checked />
-  <label for="mode-light" class="material-icons">light_mode</label>
-  <input type="radio" id="mode-dark" name="mode" value="dark" />
-  <label for="mode-dark" class="material-icons">dark_mode</label>
-</form>
 ++++
 
 == Colours
@@ -87,25 +58,23 @@ Author Name
 
   <div>
     <div class="surface">surface</div>
-    <div class="surface-dim">surface-dim</div>
-    <div class="surface-bright">surface-bright</div>
   </div>
   <div></div>
 
   <div>
-    <div class="surface-container-lowest">surface lowest</div>
+    <div class="surface-container-lowest">surface container lowest</div>
   </div>
   <div>
-    <div class="surface-container-low">surface low</div>
+    <div class="surface-container-low">surface container low</div>
   </div>
   <div>
     <div class="surface-container">surface container</div>
   </div>
   <div>
-    <div class="surface-container-high">surface high</div>
+    <div class="surface-container-high">surface container high</div>
   </div>
   <div>
-    <div class="surface-container-highest">surface highest</div>
+    <div class="surface-container-highest">surface container highest</div>
   </div>
 </div>
 ++++

@@ -1,0 +1,69 @@
+  <!-- MARK: docnav
+    -->
+  <div class="docnav"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
+    <details>
+      <summary>
+        <span class="material-icons">library_books</span>
+        <span>{{@root.page.componentVersion.title}}</span>
+        {{#if (ne @root.page.component.versions.length 1) }}
+          <span class="version" title="version">{{page.componentVersion.displayVersion}}</span>
+        {{/if}}
+        <span class="material-icons expand">expand_more</span>
+      </summary>
+      <ul>
+        {{#each site.components}}
+          <li {{#if (eq this @root.page.component)}}class="is-active"{{/if}}>
+            <a href="{{{relativize ./url}}}">{{{./title}}}</a>
+            {{#if (ne ./versions.length 1) }}
+              <ul>
+                {{#each ./versions}}
+                  <li class="{{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}}is-active{{/if~}}
+                    {{~#if (eq this ../latest)}} is-latest{{/if}}">
+                    <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    </details>
+
+    {{#* inline "docnav-item"}}
+      {{#if ./url}}
+        <a {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}
+          href="{{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}{{~else}}{{{./url}}}{{~/if}}">{{{./content}}}</a>
+      {{else}}
+        <span {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}>{{{./content}}}</span>
+      {{/if}}
+    {{/inline}}
+
+    {{#* inline "docnav-tree"}}
+      {{#each navigation}}
+        {{#if ./items.length}}
+          <details{{#if (navtree-active this @root.page)}} open{{/if}}>
+            <summary>
+              {{> docnav-item}}
+            </summary>
+            {{> docnav-tree navigation=./items}}
+          </details>
+        {{else}}
+          {{> docnav-item}}
+          {{> docnav-tree navigation=./items}}
+        {{/if}}
+      {{/each}}
+    {{/inline}}
+
+    <nav>
+      {{#each page.navigation}}
+        {{#if ./items.length}}
+          <div>
+            {{#each ./items}}
+              {{> docnav-item}}
+              {{> docnav-tree navigation=./items}}
+            {{/each}}
+          </div>
+        {{/if}}
+      {{/each}}
+    </nav>
+  </div>

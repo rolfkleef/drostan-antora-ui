@@ -1,6 +1,0 @@
-{{#if ./url}}
-  <a class="nav-link{{#if (eq ./url @root.page.url)}} nav_active{{/if}}" 
-    href="{{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}{{~else}}{{{./url}}}{{~/if}}">{{{./content}}}</a>
-{{else}}
-  <span class="{{#if (eq ./url @root.page.url)}}nav_active{{/if}}">{{{./content}}}</span>
-{{/if}}
