@@ -1,7 +1,7 @@
 @import url(theme/light.css);
 @import url(theme/dark.css);
 @import url(theme/colors.css);
-@import url(theme/typefaces.css);
+@import url(theme/local-typefaces.css);
 @import url(theme/typography.css);
 /* @import "vars.css"; */
 /* @import "base.css"; */

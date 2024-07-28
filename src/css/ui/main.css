@@ -1,13 +1,34 @@
 main {
   padding-top: 2em;
 
-  nav.breadcrumb {
+  nav.breadcrumbs {
     font-family: Roboto,sans-serif;
     font-size: 0.8em;
 
     > :not(:last-child)::after {
       content: '>';
       margin: 0 0.5em;
+    }
+  }
+
+  nav.pagination {
+    display: flex;
+    > a:first-child::before {
+      font-family: 'Material Icons';
+      content: 'chevron_left';
+      margin-right: 0.25em;
+      vertical-align: -0.2em;
+    }
+
+    a:last-child::after {
+      font-family: 'Material Icons';
+      content: 'chevron_right';
+      margin-left: 0.25em;
+      vertical-align: -0.2em;
+    }
+
+    > :last-child {
+      margin-left: auto;
     }
   }
 }

@@ -10,11 +10,12 @@
 
     > summary {
       display: flex;
+      flex-grow: 0;
       align-items: center;
       gap: 0.5em;
       padding: 0.5rem;
 
-      > span:not(.material-icons) {
+      > span:nth-child(2) {
         flex-grow: 1;
         font-weight: bold;
       }
@@ -28,6 +29,18 @@
     &[open] {
       background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
       color: light-dark(var(--md-sys-color-on-surface-container-high-light), var(--md-sys-color-on-surface-container-high-dark));
+    }
+
+    > ul > li.is-active {
+      font-weight: bold;
+      ul {
+        font-weight: normal;
+
+        .is-active {
+          background-color: light-dark(var(--md-sys-color-surface-container-highest-light), var(--md-sys-color-surface-container-highest-dark));
+          color: light-dark(var(--md-sys-color-on-surface-container-highest-light), var(--md-sys-color-on-surface-container-highest-dark));
+        }
+      }
     }
 
     /* Antora components */
