@@ -38,6 +38,7 @@ body:has(#mode-system:checked) {
 
 body:has(#mode-light:checked) {
   color-scheme: light;
+
   label[for="mode-system"],
   label[for="mode-light"] {
     display: none;
@@ -46,6 +47,7 @@ body:has(#mode-light:checked) {
 
 body:has(#mode-dark:checked) {
   color-scheme: dark;
+
   label[for="mode-light"],
   label[for="mode-dark"] {
     display: none;

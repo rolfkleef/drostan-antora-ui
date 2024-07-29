@@ -1,7 +1,6 @@
 .docnav {
   background-color: light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
   color: light-dark(var(--md-sys-color-on-surface-container-light), var(--md-sys-color-on-surface-container-dark));
-
   padding-top: 1.5rem;
 
   /* Components selector */
@@ -33,6 +32,7 @@
 
     > ul > li.is-active {
       font-weight: bold;
+
       ul {
         font-weight: normal;
 

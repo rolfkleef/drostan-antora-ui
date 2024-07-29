@@ -9,7 +9,6 @@ body > header {
   img {
     height: 2rem;
     width: auto;
-
   }
 
   #theme-selector {
@@ -32,7 +31,8 @@ body > header {
       border-bottom: 0.15rem solid transparent;
       transition: all 0.25s ease-in-out;
 
-      &:hover, &.is-active {
+      &:hover,
+      &.is-active {
         border-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
       }
     }

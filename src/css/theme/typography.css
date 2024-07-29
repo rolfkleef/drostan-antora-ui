@@ -35,12 +35,13 @@ a {
 }
 
 .material-icons {
-	font-family: 'Material Icons';
+  font-family: 'Material Icons', monospace;
   font-size: 1.2em;
 }
 
 /* MARK: hacks */
-pre, code {
+pre,
+code {
   overflow-x: hidden;
 }
 

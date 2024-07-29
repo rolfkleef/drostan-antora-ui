@@ -19,6 +19,7 @@ const glob = {
   all: [srcDir, previewSrcDir, '!sass.css'],
   css: [`${srcDir}/css/**/*.css`, `!${srcDir}/css/vendor/*.css`],
   js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/helpers/*.js`, `${srcDir}/js/**/+([^.])?(.bundle).js`],
+  jslint: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`, `!${srcDir}/{helpers,js}/vendor/*.js`],
 }
 
 const cleanTask = createTask({
@@ -36,7 +37,7 @@ const lintCssTask = createTask({
 const lintJsTask = createTask({
   name: 'lint:js',
   desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
-  call: task.lintJs(glob.js),
+  call: task.lintJs(glob.jslint),
 })
 
 const lintTask = createTask({

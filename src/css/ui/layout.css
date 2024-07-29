@@ -1,14 +1,12 @@
 body {
-	margin: 0;
+  margin: 0;
   tab-size: 4;
-  min-height: 100dvh;
+  min-height: 100vh;
   scroll-behavior: smooth;
-
   display: grid;
   grid-template-columns: min(35%, 17em) min(50%, 60em) min(15%, 15em) 1fr;
   grid-template-rows: auto 1fr auto;
   column-gap: 1em;
-
   grid-template-areas:
     "header header header header"
     "docnav main pagenav ."
@@ -26,7 +24,6 @@ body {
     > * {
       flex: 1 1 auto;
       width: max(75%, 50em);
-
       display: flex;
       align-items: center;
     }
@@ -37,6 +34,7 @@ body {
 
     > nav {
       justify-content: center;
+
       a {
         flex: 1 0 auto;
         text-align: center;
@@ -46,9 +44,9 @@ body {
   }
 
   > #docnav-popover {
-    height: 100dvh;
+    height: 100vh;
     min-width: min(35%, 17em); /* as in grid column above */
-    max-width: 90dvw; /* leave room to close by clicking outside the popover */
+    max-width: 90vw; /* leave room to close by clicking outside the popover */
     margin-left: 0;
   }
 
@@ -68,7 +66,6 @@ body {
 
   > footer {
     grid-area: footer;
-
     display: flex;
     flex-direction: column;
     align-items: center;
