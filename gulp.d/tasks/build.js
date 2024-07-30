@@ -1,6 +1,5 @@
 'use strict'
 
-const autoprefixer = require('autoprefixer')
 const browserify = require('browserify')
 const concat = require('gulp-concat')
 const cssnano = require('cssnano')
@@ -8,12 +7,8 @@ const fs = require('fs-extra')
 const imagemin = require('gulp-imagemin')
 const merge = require('merge-stream')
 const ospath = require('path')
-const path = ospath.posix
 const postcss = require('gulp-postcss')
-const postcssCalc = require('postcss-calc')
 const postcssImport = require('postcss-import')
-const postcssUrl = require('postcss-url')
-const postcssVar = require('postcss-custom-properties')
 const { Transform } = require('stream')
 const map = (transform) => new Transform({ objectMode: true, transform })
 const through = () => map((file, enc, next) => next(null, file))
@@ -34,27 +29,8 @@ module.exports = (src, dest, preview) => () => {
         const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max), file.stat.mtime)
         if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
       }),
-    postcssUrl([
-      {
-        filter: (asset) => new RegExp('^[~][^/]*(?:font|typeface)[^/]*/.*/files/.+[.](?:ttf|woff2?)$').test(asset.url),
-        url: (asset) => {
-          const relpath = asset.pathname.slice(1)
-          const abspath = require.resolve(relpath)
-          const basename = ospath.basename(abspath)
-          const destpath = ospath.join(dest, 'font', basename)
-          if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
-          return path.join('..', 'font', basename)
-        },
-      },
-    ]),
-    postcssVar({ preserve: true }),
-    // NOTE to make vars.css available to all top-level stylesheets, use the next line in place of the previous one
-    //postcssVar({ importFrom: path.join(src, 'css', 'vars.css'), preserve: preview }),
-    preview ? postcssCalc : () => {}, // cssnano already applies postcssCalc
-    autoprefixer,
     preview
-      ? () => {}
-      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
+      ? () => {} : (css, result) => cssnano({ preset: 'default' }),
   ]
 
   return merge(
@@ -126,11 +102,5 @@ function bundle ({ base: basedir, ext: bundleExt = '.bundle.js' }) {
     fs.readFile(file.path, 'UTF-8').then((contents) => {
       next(null, Object.assign(file, { contents: Buffer.from(contents) }))
     })
-  })
-}
-
-function postcssPseudoElementFixer (css, result) {
-  css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
-    rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
   })
 }
