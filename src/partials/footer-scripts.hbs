@@ -1,14 +1,2 @@
 <script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
 <script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
-{{#if env.SITE_SEARCH_PROVIDER}}
-{{> search-scripts}}
-{{/if}}
-<script type="application/json" class="js-hypothesis-config">
-{
-  "showHighlights": "whenSidebarOpen"
-}
-</script>
-<script async src="https://hypothes.is/embed.js"></script>
-<script type="text/javascript"
-        src="{{{uiRootPath}}}/js/vendor/hoverintent-js.js"
-        id="hoverintent-js-js"></script>

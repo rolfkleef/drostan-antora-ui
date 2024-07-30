@@ -37,6 +37,8 @@ a {
 .material-icons {
   font-family: 'Material Icons', monospace;
   font-size: 1.2em;
+  width: 1em;
+  height: 1em;
 }
 
 /* MARK: hacks */

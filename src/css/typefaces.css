@@ -149,7 +149,6 @@
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
-  font-display: swap;
   font-weight: 400;
   src:
     url(../font/material-icons-base-400-normal.woff2) format('woff2'),
