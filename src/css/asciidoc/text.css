@@ -36,7 +36,76 @@ article {
     }
   }
 
+  .underline {
+    text-decoration: underline;
+  }
+
+  .line-through {
+    text-decoration: line-through;
+  }
+
   a {
     color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
+
+    &[target="_blank"]::after {
+      font-family: "Material Icons", sans-serif;
+      content: "\00a0\e895\00a0";
+      color: light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
+      font-size: 0.6em;
+
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      background-color: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
+    }
+  }
+
+  code,
+  kbd,
+  pre {
+    background: light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-surface-dark));
+    color: inherit;
+    padding: 0.15em;
+    hyphens: none;
+  }
+
+  kbd {
+    border: 1px solid light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
+    border-radius: 0.25em;
+    font-size: 0.8em;
+    margin: 0 0.15em;
+    white-space: nowrap; /* effectively ignores hyphens setting */
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .button {
+    white-space: nowrap; /* effectively ignores hyphens setting */
+
+    &::before {
+      content: "[";
+      padding-right: 0.2em;
+    }
+
+    &::after {
+      content: "]";
+      padding-left: 0.2em;
+    }
+  }
+
+  mark {
+    background-color: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
+    color: inherit;
+    padding: 0.15em;
   }
 }

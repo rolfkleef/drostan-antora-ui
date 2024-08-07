@@ -1,27 +1,3 @@
-html.is-clipped--navbar {
-  overflow-y: hidden;
-}
-
-body {
-  padding-top: var(--navbar-height);
-}
-
-header > nav {
-  background: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
-  box-shadow: 0 0.1em 0.5em var(--color-gray-50);
-  color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
-  /* font-size: calc(16 / var(--rem-base) * 1rem); */
-  height: var(--navbar-height);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: var(--z-index-navbar);
-}
-
-header > nav a {
-  text-decoration: none;
-}
-
 .navbar-brand {
   display: flex;
   flex: auto;

@@ -1,23 +1,8 @@
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 a:active {
   background-color: none;
 }
 
-code,
-kbd,
-pre {
-  font-family: var(--monospace-font-family);
-}
 
-b,
 dt,
 strong,
 th {
@@ -40,13 +25,6 @@ sup {
   top: -0.5em;
 }
 
-em em { /* stylelint-disable-line */
-  font-style: normal;
-}
-
-strong strong { /* stylelint-disable-line */
-  font-weight: normal;
-}
 
 button {
   cursor: pointer;
@@ -92,30 +70,4 @@ object[type="image/svg+xml"]:not([width]) {
     }
   }
 
-  html::-webkit-scrollbar {
-    background-color: var(--scrollbar-track-color);
-    height: 12px;
-    width: 12px;
-  }
-
-  body ::-webkit-scrollbar {
-    height: 6px;
-    width: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-clip: padding-box;
-    background-color: var(--scrollbar-thumb-color);
-    border: 3px solid transparent;
-    border-radius: 12px;
-  }
-
-  body ::-webkit-scrollbar-thumb {
-    border-width: 1.75px;
-    border-radius: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar_hover-thumb-color);
-  }
 }

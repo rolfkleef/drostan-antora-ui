@@ -1,20 +1,4 @@
-
-.doc h1.sect0 {
-  background: var(--abstract-background);
-  font-size: 1.8em;
-  margin: 1.5rem -1rem 0;
-  padding: 0.5rem 1rem;
-}
-
 /* Links */
-
-.doc a:hover {
-  color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
-}
-
-.doc a.bare {
-  hyphens: none;
-}
 
 .doc a.unresolved {
   color: light-dark(var(--md-sys-color-error-light), var(--md-sys-color-error-dark));
@@ -22,14 +6,6 @@
 
 .doc .notargeticon a[target="_blank"]::after {
   content: "";
-}
-
-.doc a[target="_blank"]::after {
-  font-family: "Material Icons", sans-serif;
-  content: "\e895";
-  margin-left: 4px;
-  font-size: x-small;
-  vertical-align: super;
 }
 
 .doc i.fa {
@@ -47,10 +23,6 @@
   padding: 0.125em 0.25em;
 }
 
-.doc code,
-.doc pre {
-  hyphens: none;
-}
 
 .doc pre {
   background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
@@ -89,14 +61,6 @@
 
 .doc .stretch {
   width: 100%;
-}
-
-.doc .underline {
-  text-decoration: underline;
-}
-
-.doc .line-through {
-  text-decoration: line-through;
 }
 
 .doc .paragraph,
@@ -738,51 +702,6 @@
   height: 0;
 }
 
-.doc b.button {
-  white-space: nowrap; /* effectively ignores hyphens setting */
-}
-
-.doc b.button::before {
-  content: "[";
-  padding-right: 0.25em;
-}
-
-.doc b.button::after {
-  content: "]";
-  padding-left: 0.25em;
-}
-
-.doc kbd {
-  display: inline-block;
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  background: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
-  color: light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
-  border: 1px solid light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  white-space: nowrap; /* effectively ignores hyphens setting */
-}
-
-.doc kbd,
-.doc .keyseq {
-  line-height: 1;
-}
-
-.doc .keyseq {
-  font-size: calc(16 / var(--rem-base) * 1rem);
-}
-
-.doc .keyseq kbd {
-  margin: 0 0.125em;
-}
-
-.doc .keyseq kbd:first-child {
-  margin-left: 0;
-}
-
-.doc .keyseq kbd:last-child {
-  margin-right: 0;
-}
 
 .doc .menuseq,
 .doc .path {
@@ -834,8 +753,4 @@
   margin-left: -2em;
   text-align: right;
   width: 1.5em;
-}
-
-mark {
-  background-color: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
 }

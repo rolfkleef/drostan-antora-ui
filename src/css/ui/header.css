@@ -1,6 +1,7 @@
 body > header {
   background: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
   color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
+  z-index: 1000;
 
   h1 {
     font-size: inherit;
