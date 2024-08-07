@@ -41,7 +41,7 @@
     </header>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Copy the content from #docnav, to have the navigation is popup too
+        // Copy the content from #docnav, to have the navigation in the popup too
         document.getElementById('docnav-popover').innerHTML += document.getElementById('docnav').innerHTML;
       });
     </script>
@@ -153,7 +153,7 @@
         <style>
           .styletable {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
             gap: 0.5rem;
           }
 
@@ -197,8 +197,9 @@
                 <!-- <div class="surface-dim">surface-dim</div> -->
                 <!-- <div class="surface-bright">surface-bright</div> -->
               </div>
-              <div></div>
-
+            </div>
+            <p>Surfaces</p>
+            <div class="styletable">
               <div>
                 <div class="surface-container-lowest">surface lowest</div>
               </div>
@@ -1043,7 +1044,7 @@
       <a href="test" rel="next">Special document sections</a>
     </nav>
   </main>
-  <div class="pagenav">
+  <div class="pagenav" id="pagenav">
     <a href="index.php">Edit</a>
     <a href="about.php">Source</a>
     <a href="contact.php">Top</a>

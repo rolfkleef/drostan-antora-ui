@@ -35,6 +35,7 @@ a {
 }
 
 .material-icons {
+  display: inline-block;
   font-family: 'Material Icons', monospace;
   font-size: 1.2em;
   width: 1em;

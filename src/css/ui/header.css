@@ -11,31 +11,33 @@ body > header {
     width: auto;
   }
 
-  #theme-selector {
-    margin-left: auto;
-
-    input {
-      display: none;
-    }
-
-    label {
-      cursor: pointer;
-    }
+  form {
+    padding-right: 1em;
   }
 
-  > nav {
-    a {
-      text-transform: uppercase;
-      font-size: 0.9em;
-      padding: 0.5rem 0;
-      border-bottom: 0.15rem solid transparent;
-      transition: all 0.25s ease-in-out;
+  > nav a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 0.5rem 0;
+    border-bottom: 0.15rem solid transparent;
+    transition: all 0.25s ease-in-out;
 
-      &:hover,
-      &.is-active {
-        border-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
-      }
+    &:hover,
+    &.is-active {
+      border-color: light-dark(var(--md-sys-color-on-primary-light), var(--md-sys-color-on-primary-dark));
     }
+  }
+}
+
+#theme-selector {
+  margin-left: auto;
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
   }
 }
 
