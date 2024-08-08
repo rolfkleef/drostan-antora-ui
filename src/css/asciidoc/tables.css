@@ -1,0 +1,56 @@
+article {
+  table {
+    border: 0px solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
+    border-collapse: collapse;
+
+    caption {
+      padding-bottom: 1em;
+    }
+
+    td,
+    th {
+      border: 0px solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
+      padding-inline: 0.25em;
+      vertical-align: top;
+    }
+
+    &.frame-all {
+      border-width: 1px;
+    }
+
+    &.frame-ends {
+      border-width: 1px 0;
+    }
+
+    &.frame-sides {
+      border-width: 0 1px;
+    }
+
+    &.grid-all {
+      td,
+      th {
+        border-width: 1px;
+      }
+    }
+
+    &.grid-cols {
+      td,
+      th {
+        border-width: 0 1px;
+      }
+    }
+
+    &.grid-rows {
+      td {
+        border-width: 1px 0;
+      }
+    }
+
+    &.stripes-all > tbody > tr,
+    &.stripes-odd > tbody > tr:nth-of-type(odd),
+    &.stripes-even > tbody > tr:nth-of-type(even),
+    &.stripes-hover > tbody > tr:hover {
+      background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
+    }
+  }
+}

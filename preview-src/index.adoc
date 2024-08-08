@@ -58,6 +58,7 @@ Author Name
 
   <div>
     <div class="surface">surface</div>
+    <div class="surface-variant">variant</div>
   </div>
   <div></div>
 
@@ -442,8 +443,10 @@ video::300817511[vimeo,1000,500]
 
 == Tables
 
+=== With grid (no grid given) and stripes="even"
+
 .Optional title
-[cols="3*", options="footer"]
+[cols="3*", options="footer", stripes="even"]
 |===
 |Table header |Phasellus ullamcorper et odio aliquam ornare. |Phasellus finibus placerat tellus, vel pellentesque mauris ornare sed.
 
@@ -470,6 +473,66 @@ video::300817511[vimeo,1000,500]
 |Footer
 |Aenean sollicitudin arcu vestibulum posuere dictum.
 |Curabitur interdum fringilla purus, vel venenatis nisi iaculis eu.
+|===
+
+=== With grid="cols" and frame="none"
+
+.Optional title
+[cols="3*", grid="cols", frame="none"]
+|===
+|Table header |Phasellus ullamcorper et odio aliquam ornare. |Phasellus finibus placerat tellus, vel pellentesque mauris ornare sed.
+
+|Odd row
+|Sed condimentum vestibulum euismod.
+|Sed odio sem, accumsan eu tortor quis, porta tincidunt massa.
+
+|Even row
+|Pellentesque quis imperdiet mi.
+|Maecenas egestas porttitor urna id pulvinar.
+
+|Fusce tristique nulla vitae ante mattis, luctus tincidunt eros rhoncus.
+|Praesent feugiat placerat justo, et dictum ipsum blandit ut.
+|Proin dictum augue sapien, non convallis dolor ultrices nec.
+|===
+
+=== With grid="rows" and frame="none"
+
+.Optional title
+[cols="3*", grid="rows", frame="none"]
+|===
+|Table header |Phasellus ullamcorper et odio aliquam ornare. |Phasellus finibus placerat tellus, vel pellentesque mauris ornare sed.
+
+|Odd row
+|Sed condimentum vestibulum euismod.
+|Sed odio sem, accumsan eu tortor quis, porta tincidunt massa.
+
+|Even row
+|Pellentesque quis imperdiet mi.
+|Maecenas egestas porttitor urna id pulvinar.
+
+|Fusce tristique nulla vitae ante mattis, luctus tincidunt eros rhoncus.
+|Praesent feugiat placerat justo, et dictum ipsum blandit ut.
+|Proin dictum augue sapien, non convallis dolor ultrices nec.
+|===
+
+=== With grid="none" and frame="none"
+
+.Optional title
+[cols="3*", grid="none", frame="none"]
+|===
+|Table header |Phasellus ullamcorper et odio aliquam ornare. |Phasellus finibus placerat tellus, vel pellentesque mauris ornare sed.
+
+|Odd row
+|Sed condimentum vestibulum euismod.
+|Sed odio sem, accumsan eu tortor quis, porta tincidunt massa.
+
+|Even row
+|Pellentesque quis imperdiet mi.
+|Maecenas egestas porttitor urna id pulvinar.
+
+|Fusce tristique nulla vitae ante mattis, luctus tincidunt eros rhoncus.
+|Praesent feugiat placerat justo, et dictum ipsum blandit ut.
+|Proin dictum augue sapien, non convallis dolor ultrices nec.
 |===
 
 == Special document sections

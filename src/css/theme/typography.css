@@ -4,9 +4,13 @@
   line-height: 125%;
 }
 
-pre, tt, code, kbd, samp {
-	font-family: "Roboto Mono", monospace;
-  font-size: 0.9em;
+pre,
+tt,
+code,
+kbd,
+samp {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8em;
 }
 
 h1 {
@@ -39,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+dt {
+  font-weight: bold;
+}
+
 .material-icons {
   display: inline-block;
   font-family: "Material Icons", monospace;
@@ -58,7 +66,7 @@ strong strong { /* stylelint-disable-line */
 /* MARK: hacks */
 pre,
 code {
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 iframe {

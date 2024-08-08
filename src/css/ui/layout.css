@@ -41,6 +41,7 @@ body {
     }
   }
 
+  /* stylelint-disable-next-line */
   > #docnav-popover:popover-open {
     height: 100vh;
     min-width: min(35%, 17em); /* as in grid column above */
@@ -80,15 +81,14 @@ body {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
-    "header"
-    "docnav"
-    "pagenav"
-    "main"
-    "footer";
+      "header"
+      "docnav"
+      "pagenav"
+      "main"
+      "footer";
 
     > header > * {
       width: 100vw;
-
     }
 
     > header > div > p,

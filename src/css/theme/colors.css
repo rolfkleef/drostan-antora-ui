@@ -44,9 +44,9 @@ body,
   color: light-dark(var(--md-sys-color-on-surface-dim-light), var(--md-sys-color-on-surface-dim-dark));
 }
 
-.surface-bright {
-  background-color: light-dark(var(--md-sys-color-surface-bright-light), var(--md-sys-color-surface-bright-dark));
-  color: light-dark(var(--md-sys-color-on-surface-bright-light), var(--md-sys-color-on-surface-bright-dark));
+.surface-variant {
+  background-color: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
+  color: light-dark(var(--md-sys-color-on-surface-variant-light), var(--md-sys-color-on-surface-variant-dark));
 }
 
 .surface-container {

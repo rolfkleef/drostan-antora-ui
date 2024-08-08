@@ -23,26 +23,12 @@
   padding: 0.125em 0.25em;
 }
 
-
-.doc pre {
-  background: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-surface-variant-dark));
-  margin: 0;
-}
-
 .doc blockquote {
   margin: 0;
 }
 
 .doc .paragraph.lead > p {
   font-size: calc(18 / var(--rem-base) * 1rem);
-}
-
-.doc .right {
-  float: right;
-}
-
-.doc .left {
-  float: left;
 }
 
 .doc .float-gap.right {
@@ -68,95 +54,12 @@
 .doc .hdlist,
 .doc .olist,
 .doc .ulist,
-.doc .exampleblock,
-.doc .imageblock,
-.doc .listingblock,
-.doc .literalblock,
-.doc .sidebarblock,
-.doc .verseblock,
-.doc .videoblock,
-.doc .quoteblock,
 .doc .partintro,
 .doc details,
 .doc hr {
   margin-top: 1rem;
 }
 
-.doc table.tableblock {
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  margin: 1.5rem 0 0;
-}
-
-.doc table.tableblock + * {
-  margin-top: 1.5rem;
-}
-
-.doc p.tableblock + p.tableblock {
-  margin-top: 0.5rem;
-}
-
-.doc td.tableblock > .content > :first-child {
-  margin-top: 0;
-}
-
-.doc table.tableblock th,
-.doc table.tableblock td {
-  padding: 0.5rem;
-}
-
-.doc table.tableblock,
-.doc table.tableblock > * > tr > * {
-  border: 0 solid var(--table-border-color);
-}
-
-.doc table.grid-all > * > tr > * {
-  border-width: 1px;
-}
-
-.doc table.grid-cols > * > tr > * {
-  border-width: 0 1px;
-}
-
-.doc table.grid-rows > * > tr > * {
-  border-width: 1px 0;
-}
-
-.doc table.grid-all > thead th,
-.doc table.grid-rows > thead th {
-  border-bottom-width: 2.5px;
-}
-
-.doc table.frame-all {
-  border-width: 1px;
-}
-
-.doc table.frame-ends {
-  border-width: 1px 0;
-}
-
-.doc table.frame-sides {
-  border-width: 0 1px;
-}
-
-.doc table.frame-none > colgroup + * > :first-child > *,
-.doc table.frame-sides > colgroup + * > :first-child > * {
-  border-top-width: 0;
-}
-
-/* NOTE let the grid win in case of frame-none */
-.doc table.frame-sides > :last-child > :last-child > * {
-  border-bottom-width: 0;
-}
-
-.doc table.frame-none > * > tr > :first-child,
-.doc table.frame-ends > * > tr > :first-child {
-  border-left-width: 0;
-}
-
-.doc table.frame-none > * > tr > :last-child,
-.doc table.frame-ends > * > tr > :last-child {
-  border-right-width: 0;
-}
 
 .doc table.stripes-all > tbody > tr,
 .doc table.stripes-odd > tbody > tr:nth-of-type(odd),
@@ -438,36 +341,7 @@
   margin-left: -1rem;
 }
 
-/* Sidebar */
-
-.doc .sidebarblock {
-  background: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
-  color: light-dark(var(--md-sys-color-on-secondary-container-light), var(--md-sys-color-on-secondary-container-dark));
-  border-radius: 0.75rem;
-  padding: 0.75rem 1.5rem;
-}
-
-.doc .sidebarblock > .content > .title {
-  font-size: calc(22.5 / var(--rem-base) * 1rem);
-  font-weight: var(--alt-heading-font-weight);
-  line-height: 1.3;
-  margin-bottom: -0.3em;
-  text-align: center;
-}
-
-.doc .sidebarblock > .content > :not(.title):first-child {
-  margin-top: 0;
-}
-
 /* Example */
-
-.doc .exampleblock > .content,
-.doc details.result > .content {
-  background: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
-  border: 0.25rem solid light-dark(var(--md-sys-color-primary-container-light), var(--md-sys-color-primary-container-dark));
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-}
 
 .doc .exampleblock > .content::after,
 .doc details.result > .content::after {
@@ -479,145 +353,6 @@
 .doc .exampleblock > .content > :first-child,
 .doc details > .content > :first-child {
   margin-top: 0;
-}
-
-/* Quote and verse */
-
-.doc .quoteblock,
-.doc .verseblock {
-  color: light-dark(var(--md-sys-color-tertiary-light), var(--md-sys-color-tertiary-dark));
-  border-left: 2px solid light-dark(var(--md-sys-color-tertiary-light), var(--md-sys-color-tertiary-dark));
-  padding: 0.25rem 2rem 1.25rem;
-}
-
-.doc .quoteblock .attribution {
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  margin-top: 0.75rem;
-}
-
-.doc .quoteblock blockquote {
-  background: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
-  margin-top: 1rem;
-}
-
-.doc .quoteblock .paragraph {
-  font-style: italic;
-}
-
-.doc .quoteblock cite {
-  padding-left: 1em;
-}
-
-.doc .verseblock pre {
-  background: light-dark(var(--md-sys-color-tertiary-container-light), var(--md-sys-color-tertiary-container-dark));
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
-.doc .tableblock pre,
-.doc .listingblock.wrap pre {
-  white-space: pre-wrap;
-}
-
-.doc pre.highlight code,
-.doc .listingblock pre:not(.highlight),
-.doc .literalblock pre {
-  display: block;
-  overflow-x: auto;
-}
-
-.doc .listingblock > .content {
-  position: relative;
-}
-
-.doc .source-toolbox {
-  display: flex;
-  visibility: hidden;
-  position: absolute;
-  top: 0.25rem;
-  right: 0.5rem;
-  color: var(--pre-annotation-font-color);
-  font-size: calc(13 / var(--rem-base) * 1rem);
-  line-height: 1;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.doc .listingblock:hover .source-toolbox {
-  visibility: visible;
-}
-
-.doc .source-toolbox .source-lang {
-  text-transform: uppercase;
-  letter-spacing: 0.075em;
-}
-
-.doc .source-toolbox > :not(:last-child)::after {
-  content: "|";
-  letter-spacing: 0;
-  padding: 0 1ch;
-}
-
-.doc .source-toolbox .copy-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: none;
-  border: none;
-  color: inherit;
-  outline: none;
-  padding: 0;
-  font-size: inherit;
-  line-height: inherit;
-  width: 1em;
-  height: 1em;
-}
-
-.doc .source-toolbox .copy-icon {
-  flex: none;
-  width: inherit;
-  height: inherit;
-}
-
-.doc .source-toolbox img.copy-icon {
-  filter: invert(50.2%);
-}
-
-.doc .source-toolbox svg.copy-icon {
-  fill: currentColor;
-}
-
-.doc .source-toolbox .copy-toast {
-  flex: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  margin-top: 1em;
-  background-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
-  border-radius: 0.25em;
-  padding: 0.5em;
-  color: light-dark(var(--md-sys-color-background-light), var(--md-sys-color-background-dark));
-  cursor: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease 0.5s;
-}
-
-.doc .source-toolbox .copy-toast::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 1em;
-  height: 1em;
-  border: 0.55em solid transparent;
-  border-left-color: light-dark(var(--md-sys-color-on-background-light), var(--md-sys-color-on-background-dark));
-  transform: rotate(-90deg) translateX(50%) translateY(50%);
-  transform-origin: left;
-}
-
-.doc .source-toolbox .copy-button.clicked .copy-toast {
-  opacity: 1;
-  transition: none;
 }
 
 .doc .language-console .hljs-meta {
@@ -656,52 +391,11 @@
   padding-left: 0.25rem;
 }
 
-.doc .colist {
-  font-size: calc(16 / var(--rem-base) * 1rem);
-  margin: 0.25rem 0 -0.25rem;
-}
-
-.doc .colist > table > tr > :first-child,
-.doc .colist > table > tbody > tr > :first-child {
-  padding: 0.25em 0.5rem 0;
-  vertical-align: top;
-}
-
-.doc .colist > table > tr > :last-child,
-.doc .colist > table > tbody > tr > :last-child {
-  padding: 0.25rem 0;
-}
-
-.doc .conum[data-value] {
-  background-color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
-  color: light-dark(var(--md-sys-color-on-secondary-light), var(--md-sys-color-on-secondary-dark));
-  border: 2px solid light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
-  border-radius: 100%;
-  display: inline-block;
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
-  font-style: normal;
-  line-height: 1.2;
-  text-align: center;
-  width: 1.25em;
-  height: 1.25em;
-  letter-spacing: -0.25ex;
-  text-indent: -0.25ex;
-}
-
-.doc .conum[data-value]::after {
-  content: attr(data-value);
-}
-
-.doc .conum[data-value] + b {
-  display: none;
-}
-
 .doc hr {
   border: solid var(--section-divider-color);
   border-width: 2px 0 0;
   height: 0;
 }
-
 
 .doc .menuseq,
 .doc .path {

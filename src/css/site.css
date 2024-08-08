@@ -17,8 +17,10 @@
 @import url(ui/footer.css);
 @import url(ui/docnav.css);
 @import url(ui/docnav-popover.css);
-@import url(asciidoc/admonitions.css);
 @import url(asciidoc/text.css);
+@import url(asciidoc/admonitions.css);
+@import url(asciidoc/blocks.css);
+@import url(asciidoc/tables.css);
 /* @import "highlight.css"; */
 /* @import "lightbox.css"; */
 /* @import "print.css"; */

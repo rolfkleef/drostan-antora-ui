@@ -1,6 +1,7 @@
 article {
   h1,
-  h2 {
+  h2,
+  .title {
     color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
   }
 
@@ -19,8 +20,8 @@ article {
     .anchor {
       position: absolute;
       text-decoration: none;
-      width: 1.75ex;
-      margin-left: -1.5ex;
+      width: 0.7em;
+      margin-left: -0.7em;
       visibility: hidden;
       font-size: 0.6em;
       font-weight: normal;
@@ -49,10 +50,10 @@ article {
 
     &[target="_blank"]::after {
       font-family: "Material Icons", sans-serif;
-      content: "\00a0\e895\00a0";
+      content: "open_in_new";
       color: light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
       font-size: 0.6em;
-
+      padding-inline: 0.15em 0.25em;
     }
 
     &:hover {
@@ -76,8 +77,8 @@ article {
   kbd {
     border: 1px solid light-dark(var(--md-sys-color-outline-light), var(--md-sys-color-outline-dark));
     border-radius: 0.25em;
-    font-size: 0.8em;
-    margin: 0 0.15em;
+    font-size: 0.6em;
+    margin: 0 0.1em;
     white-space: nowrap; /* effectively ignores hyphens setting */
 
     &:first-child {
@@ -107,5 +108,13 @@ article {
     background-color: light-dark(var(--md-sys-color-secondary-container-light), var(--md-sys-color-secondary-container-dark));
     color: inherit;
     padding: 0.15em;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .left {
+    float: left;
   }
 }
