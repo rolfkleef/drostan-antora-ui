@@ -27,6 +27,7 @@
 
 :root {
   color-scheme: light dark;
+  scroll-behavior: smooth;
 }
 
 body:has(#mode-system:checked) {
@@ -55,11 +56,8 @@ body:has(#mode-dark:checked) {
 }
 
 /* MARK: scrolling
+   See above for :root
  */
-
-:root {
-  scroll-behavior: smooth;
-}
 
 [id] {
   scroll-margin-top: 10em;
