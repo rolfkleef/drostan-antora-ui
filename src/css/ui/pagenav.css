@@ -1,0 +1,34 @@
+#pagenav {
+  nav.toc {
+    font-family: Roboto, sans-serif;
+    font-size: 0.8em;
+    position: sticky;
+    top: 8.75em;
+
+    > p {
+      margin-block-start: 0;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li[data-level="2"] {
+        padding-left: 1.5em;
+        text-indent: 2.25em hanging;
+      }
+
+      li[data-level="3"] a {
+        padding-left: 2.25rem;
+        text-indent: 3.5em hanging;
+      }
+
+      li {
+        border-left: 2px solid light-dark(var(--md-sys-color-surface-light), var(--md-sys-color-outline-variant-dark));
+        padding-left: 0.25em;
+      }
+    }
+  }
+}

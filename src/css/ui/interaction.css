@@ -53,3 +53,28 @@ body:has(#mode-dark:checked) {
     display: none;
   }
 }
+
+/* MARK: scrolling
+ */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 10em;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}

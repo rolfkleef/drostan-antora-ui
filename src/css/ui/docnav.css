@@ -64,6 +64,9 @@
   }
 
   > nav {
+    position: sticky;
+    top: 6em;
+
     > * {
       padding: 1em;
 

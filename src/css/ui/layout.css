@@ -2,7 +2,6 @@ body {
   margin: 0;
   tab-size: 4;
   min-height: 100vh;
-  scroll-behavior: smooth;
   display: grid;
   grid-template-columns: min(35%, 17em) min(50%, 60em) min(15%, 15em) 1fr;
   grid-template-rows: auto 1fr auto;

@@ -1,13 +1,13 @@
 ;(function () {
   'use strict'
 
-  var sidebar = document.querySelector('aside.toc.sidebar')
+  var sidebar = document.querySelector('#pagenav .toc')
   if (!sidebar) return
   if (document.querySelector('body.-toc')) return sidebar.parentNode.removeChild(sidebar)
   var levels = parseInt(sidebar.dataset.levels || 2, 10)
   if (levels < 0) return
 
-  var articleSelector = 'article.doc'
+  var articleSelector = 'article'
   var article = document.querySelector(articleSelector)
   if (!article) return
   var headingsSelector = []
@@ -37,21 +37,7 @@
     return accum
   }, document.createElement('ul'))
 
-  var menu = sidebar.querySelector('.toc-menu')
-  if (!menu) (menu = document.createElement('div')).className = 'toc-menu'
-
-  var title = document.createElement('h3')
-  title.textContent = sidebar.dataset.title || 'Contents'
-  menu.appendChild(title)
-  menu.appendChild(list)
-
-  var startOfContent = !document.getElementById('toc') && article.querySelector('h1.page ~ :not(.is-before-toc)')
-  if (startOfContent) {
-    var embeddedToc = document.createElement('aside')
-    embeddedToc.className = 'toc embedded'
-    embeddedToc.appendChild(menu.cloneNode(true))
-    startOfContent.parentNode.insertBefore(embeddedToc, startOfContent)
-  }
+  sidebar.appendChild(list)
 
   window.addEventListener('load', function () {
     onScroll()
@@ -59,7 +45,7 @@
   })
 
   function onScroll () {
-    var scrolledBy = window.pageYOffset
+    var scrolledBy = window.scrollY
     var buffer = getNumericStyleVal(document.documentElement, 'fontSize') * 1.15
     var ceil = article.offsetTop
     if (scrolledBy && window.innerHeight + scrolledBy + 2 >= document.documentElement.scrollHeight) {
