@@ -1,6 +1,6 @@
 article {
   table {
-    border: 0px solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
+    border: 0 solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
     border-collapse: collapse;
 
     caption {
@@ -9,7 +9,7 @@ article {
 
     td,
     th {
-      border: 0px solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
+      border: 0 solid light-dark(var(--md-sys-color-outline-variant-light), var(--md-sys-color-surface-dark));
       padding-inline: 0.25em;
       vertical-align: top;
     }

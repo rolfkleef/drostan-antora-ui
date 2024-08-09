@@ -60,14 +60,6 @@
   margin-top: 1rem;
 }
 
-
-.doc table.stripes-all > tbody > tr,
-.doc table.stripes-odd > tbody > tr:nth-of-type(odd),
-.doc table.stripes-even > tbody > tr:nth-of-type(even),
-.doc table.stripes-hover > tbody > tr:hover {
-  background: var(--table-stripe-background);
-}
-
 .doc table.tableblock > tfoot {
   background: var(--table-footer-background);
 }

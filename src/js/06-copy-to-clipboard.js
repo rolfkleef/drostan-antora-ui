@@ -8,7 +8,6 @@
   var supportsCopy = window.navigator.clipboard
 
   ;[].slice.call(document.querySelectorAll('article pre.highlight, article .literalblock pre')).forEach(function (pre) {
-    console.log('test');
     var code, language, lang, copy, toast, toolbox
     if (pre.classList.contains('highlight')) {
       code = pre.querySelector('code')

@@ -65,7 +65,7 @@
 
   > nav {
     > * {
-      padding: 1rem;
+      padding: 1em;
 
       > *:nth-child(1) {
         padding-left: 0;
