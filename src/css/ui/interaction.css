@@ -60,7 +60,7 @@ body:has(#mode-dark:checked) {
  */
 
 [id] {
-  scroll-margin-top: 10em;
+  scroll-margin-top: 3.5em;
 }
 
 @media (prefers-reduced-motion) {
