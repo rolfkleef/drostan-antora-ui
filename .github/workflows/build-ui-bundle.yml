@@ -34,5 +34,4 @@ jobs:
         with:
           allowUpdates: true
           generateReleaseNotes: true
-          artifacts: "build/ui-bundle.zip"
-
+          artifacts: "dist/ui-bundle.zip"

@@ -15,13 +15,13 @@ const observer = new IntersectionObserver((entries, observer) => {
   threshold: 0.9
 });
 
-export const addToc = function(targetElement: HTMLElement): void {
+const addToc = function(targetElement: HTMLElement): void {
   const headings = document.querySelectorAll('article h2[id]:not(.discrete), article h3[id]:not(.discrete)');
 
   const toc = document.createElement('ul');
   targetElement.appendChild(toc);
 
-  for (const heading of headings) {
+  headings.forEach(heading => {
     const item = document.createElement('li');
     toc.appendChild(item);
     item.classList.add(heading.tagName.toLowerCase());
@@ -33,9 +33,11 @@ export const addToc = function(targetElement: HTMLElement): void {
     link.textContent = heading.textContent;
 
     observer.observe(heading)
-  }
+  })
 }
 
-if (tocElement) {
-  addToc(tocElement);
+export default {
+  if (tocElement) {
+    addToc(tocElement);
+  }
 }
