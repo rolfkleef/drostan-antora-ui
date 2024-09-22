@@ -7,6 +7,15 @@
   > details {
     overflow-x: hidden;
 
+    a {
+      display: block;
+
+      &:hover {
+        background-color: light-dark(var(--md-sys-color-surface-container-highest-light), var(--md-sys-color-surface-container-highest-dark));
+        color: light-dark(var(--md-sys-color-on-surface-container-highest-light), var(--md-sys-color-on-surface-container-highest-dark));
+      }
+    }
+
     > summary {
       display: flex;
       flex-grow: 0;
@@ -67,6 +76,11 @@
     position: sticky;
     top: 6em;
 
+    a:hover {
+      background-color: light-dark(var(--md-sys-color-surface-container-highest-light), var(--md-sys-color-surface-container-highest-dark));
+      color: light-dark(var(--md-sys-color-on-surface-container-highest-light), var(--md-sys-color-on-surface-container-highest-dark));
+    }
+
     > * {
       padding: 1em;
 
@@ -98,7 +112,7 @@
   }
 
   .is_active {
-    background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-outline-variant-dark));
+    background-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
     font-weight: bold;
   }
 }

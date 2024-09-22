@@ -1,0 +1,35 @@
+# Antora playbook for a preview
+
+site:
+  title: UI Preview
+  # url: https://notes.drostan.org
+  start_page: drostan-antora-ui::index.adoc
+
+output:
+  dir: build
+  clean: true
+
+content:
+  sources:
+  - url: ./../..
+    branches: HEAD
+    start_paths:
+    - docs
+
+ui:
+  bundle:
+    url: ./../../dist/ui-bundle.zip
+    snapshot: true
+
+# tag::asciidoc[]
+asciidoc:
+  attributes:
+    page-pagination: true
+    hide-uri-scheme@: true # <1>
+    allow-uri-read: true
+    experimental: true
+# end::asciidoc[]
+    _yamldoc: >
+      tag::asciidoc-notes[]
+      <1> Don't show https:// etc on bare links
+      end::asciidoc-notes[]

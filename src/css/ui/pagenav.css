@@ -21,8 +21,12 @@
       li {
         border-left: 2px solid light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
 
+        a {
+          display: block;
+        }
+
         &.is_active {
-          background-color: light-dark(var(--md-sys-color-surface-variant-light), var(--md-sys-color-outline-variant-dark));
+          background-color: light-dark(var(--md-sys-color-surface-container-light), var(--md-sys-color-surface-container-dark));
           border-color: light-dark(var(--md-sys-color-surface-container-high-light), var(--md-sys-color-surface-container-high-dark));
         }
 
@@ -32,12 +36,12 @@
         }
       }
 
-      .h2 {
+      .h2 a {
         padding-left: 0.25rem;
         text-indent: 1em hanging;
       }
 
-      .h3 {
+      .h3 a {
         padding-left: 1.25rem;
         text-indent: 1.8em hanging;
       }

@@ -36,7 +36,7 @@ const addToc = function(targetElement: HTMLElement): void {
   })
 }
 
-export default {
+export default () => {
   if (tocElement) {
     addToc(tocElement);
   }
