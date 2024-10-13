@@ -15,7 +15,7 @@ export default {
   },
   base: './',
   build: {
-    minify: false,
+    // minify: false,
     assetsInlineLimit: 0,
     rollupOptions: {
       plugins: [

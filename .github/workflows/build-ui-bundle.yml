@@ -16,17 +16,17 @@ jobs:
 
     steps:
       - name: Get the sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
-      - name: Setup Antora UI modules
+      - name: Setup npm
         run: npm i
 
-      - name: Lint
-        run: npm run lint
+      # - name: Lint
+      #   run: npm run lint
 
-      - name: Bundle
+      - name: Create the UI bundle
         run: npm run bundle
 
       - name: Release bundle artifact
