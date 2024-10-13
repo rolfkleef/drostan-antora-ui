@@ -13,8 +13,9 @@
   "scripts": {
     "dev": "vite dev",
     "preview": "vite preview --outDir build",
-    "docs": "antora --stacktrace antora/playbooks/preview.yml",
     "bundle": "vite build",
+    "docs": "antora --stacktrace antora/playbooks/docs.yml",
+    "redocs": "npm run bundle && npm run docs",
     "create-release": "commit-and-tag-version",
     "update-release": "commit-and-tag-version --skip.bump --tag-force"
   },
