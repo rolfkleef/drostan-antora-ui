@@ -1,6 +1,5 @@
 import '../css/site.css'
 import './highlight'
 
-import articleToc from './toc'
-
-const tocElement = articleToc()
+import articleToc from './ui/toc'
+articleToc(document.getElementById('toc'))
