@@ -1,0 +1,63 @@
+= History and changes
+
+I started with the default Antora UI.
+I followed the suggestion to create my own fork,
+and use it as a starting point for my own customisations.
+The longer I worked on it,
+the more I wanted to make more radical changes to how everything was organised.
+
+I still maintain the git history of the original Antora UI,
+as a way to acknowledge the work done by previous contributors.
+However, they will probably not recognise a lot of their work in the current version anymore.
+
+== Changes made
+
+=== Build system
+
+I replaced the Gulp build system with Vite.
+
+Vite is much faster than Gulp,
+and also comes with a lot of defaults to replace Gulp tasks and plugins.
+
+The original UI project has a single-page preview mode,
+to see changes as you develop the templates.
+
+Instead, I am using Antora itself,
+to generate the documentation of the UI,
+and use that as a preview of the UI.
+
+I am also using tooling to create new release versions.
+With an added GitHub action,
+these releases are automatically published in the repository.
+
+=== Development setup
+
+I am relying on a "devcontainer" setup, using VS Code.
+This should ensure that the proper versions of Node.js and npm are used.
+
+=== Development workflow
+
+In the original UI,
+you would edit the Handlebars templates to change the UI.
+
+I have opted to start with a static HTML page,
+and use Vite's development server to preview this "design version".
+
+This let's me make CSS and Javascript changes,
+with very fast reloading in the browser.
+
+If I also make changes to the HTML structure,
+I still need to port those changes to the Handlebars templates.
+
+Since Vite is able to quickly generate a local UI bundle,
+and Antora can generate the UI documentation very fast too,
+I can check the changes
+and also add additional pages to verify certain edge cases.
+
+=== Organisation of templates and CSS
+
+The original UI project offers flexibility to override UI templates in specific sites.
+
+Since I don't really need this flexibility,
+I reorganised the templates to more closely match the semantic structure of the UI.
+I have also reorganised the CSS files to match this structure.

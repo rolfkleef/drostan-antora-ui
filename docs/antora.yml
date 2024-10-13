@@ -1,3 +1,5 @@
 name: drostan-antora-ui
 title: Antora UI for drostan.org
 version: '0.1.6'
+nav:
+- nav.adoc
