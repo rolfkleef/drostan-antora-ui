@@ -1,5 +1,6 @@
 import hljs from 'highlight.js'
 import '../css/theme/hljs-github-light-dark.css'
+import hl_treeview from './vendor/hljs-treeview.js'
 
 // Asciidoctor puts callouts as HTML in <pre><code> blocks.
 // HighlightJS likes to strip those out.
@@ -18,4 +19,7 @@ hljs.addPlugin({
     });
   }
 });
+
+hl_treeview(hljs)
+
 hljs.highlightAll()

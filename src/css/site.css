@@ -8,7 +8,6 @@
 /* @import "nav.css"; */
 /* @import "toolbar.css"; */
 /* @import "page-versions.css"; */
-/* @import "toc.css"; */
 /* @import "doc.css"; */
 @import url(ui/interaction.css);
 @import url(ui/layout.css);
@@ -22,10 +21,13 @@
 @import url(asciidoc/admonitions.css);
 @import url(asciidoc/blocks.css);
 @import url(asciidoc/tables.css);
-/* @import "highlight.css"; */
+@import url(vendor/highlight.css);
 /* @import "lightbox.css"; */
 /* @import "print.css"; */
 /* @import "customisations.css"; */
 /* @import "from-wp.css"; */
 /* @import "search.css"; */
-@import "vendor/treeview.css";
+@import url(vendor/treeview.css);
+@import url(../vendor/fontawesome/css/regular.css);
+@import url(../vendor/fontawesome/css/solid.css);
+@import url(../vendor/fontawesome/css/brands.css);

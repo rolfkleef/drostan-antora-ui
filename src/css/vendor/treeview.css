@@ -1,156 +1,175 @@
 /**
  * Treeview syntax highlighting based on highlight.js
  * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * Adapted 2024, Rolf Kleef
  * https://github.com/asciidocfx/highlight-treeview.js
  */
-:root {
-  --folder-icon-height: 1rem;
-  --folder-icon-width: 1rem;
+
+.language-treeview {
+  ::before {
+    font-family: "Material Icons", sans-serif;
+    font-size: 1.35em;
+    padding-right: 0.25em;
+    vertical-align: middle;
+    color: light-dark(var(--md-sys-color-secondary-light), var(--md-sys-color-secondary-dark));
+  }
 }
 
-.hljs-folder,
-.hljs-hiddenfile,
-.hljs-file {
-  position: relative;
-  vertical-align: baseline;
-  display: inline-block;
-  height: var(--folder-icon-height);
-}
-
-.hljs-folder:before,
-.hljs-file:before,
+/* MARK: Material Icons
+*/
 .hljs-hiddenfile:before {
-  top: 2px;
-  content: "";
-  width: var(--folder-icon-width);
-  height: var(--folder-icon-height);
-  /* margin-top: 0px; */
-  margin-right: 3px;
-  position: relative;
-  display: inline-block;
-}
-
-.hljs-folder:before {
-  font-family: "Material Icons", sans-serif;
-  color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
-  content: "\e2c8";
-}
-
-.hljs-hiddenfile:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e8f5";
-}
-
-.hljs-file:before,
-.hljs-hiddenfile:before {
-  height: var(--folder-icon-height);
-  margin-left: 1px;
+  content: "visibility_off";
 }
 
 .hljs-hiddenfile {
   opacity: 0.6;
 }
 
-.hljs-file.photo:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e3f4";
-}
-
 .hljs-file.plain:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
   content: "\e24d";
 }
 
-.hljs-file.source:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e86f";
-}
-
-.hljs-file.css:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e41d";
-}
-
 .hljs-file.settings:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
   content: "\e896";
 }
 
 .hljs-file.layout:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
   content: "\e8f1";
 }
 
 .hljs-file.archive:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
   content: "\e149";
 }
 
-.hljs-file.audio:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e3a1";
-}
-
-.hljs-file.video:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e63a";
-}
-
-.hljs-file.pdf:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e415";
-}
-
-.hljs-file.book:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\ea19";
-}
-
-.hljs-file.xls:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e265";
+.hljs-file.spreadsheet:before {
+  content: "table_chart";
 }
 
 .hljs-file.document:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
-  content: "\e873";
+  content: "description";
 }
 
 .hljs-file.ppt:before {
-  font-family: "Material Icons", sans-serif;
-  color: var(--color-second-regular);
   content: "\e41b";
 }
 
+/* MARK: FA-Free
+*/
+
+.hljs-folder::before {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f07c";
+  color: light-dark(var(--md-sys-color-primary-light), var(--md-sys-color-primary-dark));
+}
+
+.hljs-file.book:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f02d";
+}
+
+.hljs-file.pdf:before {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f1c1";
+}
+
+.hljs-file.word:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f1c2";
+  color: light-dark(#2b579a, #3b7dc7);
+}
+
+.hljs-file.excel:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f1c3";
+  color: light-dark(#1a9c3b, #2dbf4f);
+}
+
+.hljs-file.powerpoint:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f1c4";
+  color: light-dark(#d24726, #f36f4a);
+}
+
+.hljs-file.csv:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f6dd";
+}
+
+.hljs-file.image:before {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f1c5";
+}
+
+.hljs-file.audio:before {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f1c7";
+}
+
+.hljs-file.video:before {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f1c8";
+}
+
+.hljs-file.source:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f1c9";
+}
+
+.hljs-file.typescript:before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f1c9";
+  color: light-dark(#235a97, #358ef1);
+}
+
+/* MARK: FA-Brands
+*/
+
+.hljs-file.html:before {
+  font-family: 'Font Awesome 6 Brands';
+  content: "\f13b";
+  color: light-dark(#e34c26, #f36837);
+}
+
+.hljs-file.css:before {
+  font-family: 'Font Awesome 6 Brands';
+  content: "\f38b";
+  color: light-dark(#006eba, #14a0dc);
+}
+
+.hljs-file.javascript:before {
+  font-family: 'Font Awesome 6 Brands';
+  content: "\f3b8";
+  color: light-dark(#e8c82f, #fedc20);
+}
+
+.hljs-file.markdown:before {
+  font-family: 'Font Awesome 6 Brands';
+  content: "\f60f";
+}
+
+/* MARK: Lines
+ */
 .hljs-tvline {
     margin-left: 6px;
     position: absolute;
     text-indent: -99em;
-    padding-bottom: 8px;
+    padding-bottom: 1em;
     vertical-align: sub;
     display: inline-block;
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: var(--toolbar-muted-color);
 }
 
 .hljs-folder-branch {
-    width: 8px;
-    height: 8px;
+    width: 0.5em;
+    height: 0.7em;
     margin-top: -1px;
     margin-left: 6px;
     text-indent: -99em;
@@ -159,17 +178,11 @@
     display: inline-block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: var(--toolbar-muted-color);
-}
-
-.hljs-folder-branch.win {
-    width: 14px;
-    margin-right: 2px;
 }
 
 .hljs-folder-last-branch {
-    height: 7px;
-    width: 7px;
+    height: 0.6em;
+    width: 0.5em;
     margin-left: 6px;
     text-indent: -99em;
     position: relative;
@@ -177,13 +190,6 @@
     display: inline-block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: var(--toolbar-muted-color);
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: var(--toolbar-muted-color);
-}
-
-.hljs-folder-last-branch.win {
-    width: 13px;
-    margin-right: 2px;
 }

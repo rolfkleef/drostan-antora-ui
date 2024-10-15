@@ -1,26 +1,34 @@
 Treeview
 ├── Documents
+│   ├── asciidoc.adoc
+│   ├── markdown.md
 │   ├── book.epub
-│   ├── document.docx
+│   ├── word.docx
+│   ├── document.odt
 │   ├── pdf.pdf
-│   ├── spreadsheet.xlsx
+│   ├── excel.xlsx
+│   ├── spreadsheet.ods
+│   ├── powerpoint.pptx
+│   ├── latex.tex
 │   └── table.csv
-├── Images
+├── Media
 │   ├── image.png
 │   ├── meme.gif
 │   ├── photo.jpeg
-│   └── vector-drawing.svg
-├── Markup
-│   ├── asciidoc.adoc
-│   ├── markdown.md
-│   └── latex.tex
+│   ├── vector-drawing.svg
+│   ├── audio.mp3
+│   └── video.avi
+├── Sources
+│   ├── cpp-file.cpp
+│   ├── php-file.php
+│   ├── typescript-file.ts
+│   ├── css-file.css
+│   ├── html-file.html
+│   └── javascript-file.js
 ├── Settings
 │   ├── config.ini
 │   ├── json-file.json
 │   └── yaml-file.yml
-├── Source code
-│   ├── html-file.html
-│   └── js-file.js
 └── Subfolder
     ├── .Hidden-folder
     │   └── .hidden-file

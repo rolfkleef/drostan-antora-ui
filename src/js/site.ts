@@ -1,5 +1,5 @@
 import '../css/site.css'
-import './highlight'
+import './highlightjs'
 
 import articleToc from './ui/toc'
 articleToc(document.getElementById('toc'))
