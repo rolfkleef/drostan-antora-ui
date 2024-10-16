@@ -29,14 +29,14 @@
       </ul>
     </details>
 
-    <!-- MARK: nav tree helpers
-      -->
+    {{! MARK: nav tree helpers
+    }}
     {{#* inline "docnav-item"}}
       {{#if ./url}}
         <a {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}
           href="{{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}{{~else}}{{{./url}}}{{~/if}}">{{{./content}}}</a>
       {{else}}
-        <span {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}>{{{./content}}}</span>
+        <div {{#if (eq ./url @root.page.url)}}class="is_active"{{/if}}>{{{./content}}}</div>
       {{/if}}
     {{/inline}}
 
@@ -61,12 +61,12 @@
     <nav>
       {{#each page.navigation}}
         {{#if ./items.length}}
-          <div>
-            {{#each ./items}}
+          {{#each ./items}}
+            <div>
               {{> docnav-item}}
               {{> docnav-tree navigation=./items}}
-            {{/each}}
-          </div>
+            </div>
+          {{/each}}
         {{/if}}
       {{/each}}
     </nav>

@@ -1,5 +1,6 @@
 <div id="pagenav" class="pagenav">
   <nav class="toc" id="toc">
-    <p><a href="#">{{{or page.attributes.toctitle 'On this page'}}}:</a></p>
+    <p>{{{or page.attributes.toctitle 'On this page'}}}:</p>
+    <p><strong><a href="#">{{{or page.title defaultPageTitle}}}</a></strong></p>
   </nav>
 </div>

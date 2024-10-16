@@ -82,16 +82,20 @@
     }
 
     > * {
-      padding: 1em;
+      padding: 1em 1em 0 1em;
 
       > *:nth-child(1) {
         padding-left: 0;
         font-weight: bold;
-        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
       }
 
-      details > a {
+      details {
         padding-left: 2.15rem;
+
+        > summary {
+          text-indent: -2.15rem;
+        }
       }
 
       > a {
