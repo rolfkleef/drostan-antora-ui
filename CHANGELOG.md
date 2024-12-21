@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.7](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.6...v0.1.7) (2024-12-21)
+
+
+### Features
+
+* add a local design version ([ce0d4bd](https://github.com/rolfkleef/drostan-antora-ui/commit/ce0d4bd34ef56f3479bf6982bf399cd75932f8af))
+* add popover version of docnav ([bc560fe](https://github.com/rolfkleef/drostan-antora-ui/commit/bc560fe5e54e321a235db044dfe073fd1ae68c59))
+* add treeview for directory listings ([7f41bcc](https://github.com/rolfkleef/drostan-antora-ui/commit/7f41bcc563d3bd2c76af5d4f397606d057c71f64))
+* first responsive version ([ee13403](https://github.com/rolfkleef/drostan-antora-ui/commit/ee134038f25216100d515a5f96f25aee9b518b70))
+
+
+### Improvements
+
+* layout and script fixes ([f4ab316](https://github.com/rolfkleef/drostan-antora-ui/commit/f4ab3161ea9ab94c93e8280d959adc1beb5af3e1))
+* tweak code font size ([eb46416](https://github.com/rolfkleef/drostan-antora-ui/commit/eb4641670b14b2f7f07abe308cf87fbb7ac0db84))
+* update admonition colours ([39e00df](https://github.com/rolfkleef/drostan-antora-ui/commit/39e00df11c2f5e5f6770c35b69467cc52c2f22c9))
+
+
+### Debts
+
+* clean up build environment ([f11db4f](https://github.com/rolfkleef/drostan-antora-ui/commit/f11db4fff1bec5f68c357d0c73c26b1935f746f3))
+* clean up css and scripts ([9fd2c13](https://github.com/rolfkleef/drostan-antora-ui/commit/9fd2c1365f9d790e62fab8fa17951c55cb5aec9c))
+* fix HTML design preview ([2bdc87a](https://github.com/rolfkleef/drostan-antora-ui/commit/2bdc87abf77af4d401bd398ca91149f2ef1c5e49))
+* gety the fonts working across versions ([ede5aa2](https://github.com/rolfkleef/drostan-antora-ui/commit/ede5aa2e3f5cbcc25e8c20a2dcd09d04f62d477f))
+
+
+### Documentation
+
+* update ([ea6d883](https://github.com/rolfkleef/drostan-antora-ui/commit/ea6d883c696f9089748141fa5027f92ff42fd6cd))
+* update docs, part 1 ([0b51704](https://github.com/rolfkleef/drostan-antora-ui/commit/0b5170419086f17ed7acfb68dbc3c2bbf87c3b21))
+
 ## [0.1.6](https://github.com/rolfkleef/drostan-antora-ui/compare/v0.1.5...v0.1.6) (2024-07-14)
 
 
