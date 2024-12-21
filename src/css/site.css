@@ -1,14 +1,8 @@
+@import url(typefaces.css);
 @import url(theme/light.css);
 @import url(theme/dark.css);
 @import url(theme/colors.css);
-@import url(typefaces.css);
 @import url(theme/typography.css);
-/* @import "vars.css"; */
-/* @import "base.css"; */
-/* @import "nav.css"; */
-/* @import "toolbar.css"; */
-/* @import "page-versions.css"; */
-/* @import "doc.css"; */
 @import url(ui/interaction.css);
 @import url(ui/layout.css);
 @import url(ui/header.css);
@@ -22,11 +16,6 @@
 @import url(asciidoc/blocks.css);
 @import url(asciidoc/tables.css);
 @import url(vendor/highlight.css);
-/* @import "lightbox.css"; */
-/* @import "print.css"; */
-/* @import "customisations.css"; */
-/* @import "from-wp.css"; */
-/* @import "search.css"; */
 @import url(vendor/treeview.css);
 @import url(../vendor/fontawesome/css/regular.css);
 @import url(../vendor/fontawesome/css/solid.css);

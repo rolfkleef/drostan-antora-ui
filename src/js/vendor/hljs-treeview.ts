@@ -34,7 +34,7 @@ export default (hljs) => {
           begin: /\||\¦|\│|\+|\├/,
           relevance: 0
         },
-        // MARK: Documents
+        // MARK: documents
         {
           className: 'file document',
           begin: /[^ \n\t  ].+\.(asc(iidoc)?|ad(oc)?|tex)/,

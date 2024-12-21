@@ -49,7 +49,7 @@ export default {
             case 'jpeg':
             case 'gif':
             case 'svg':
-              return 'images/[name].[ext]';  // Place image files in the images/ folder
+              return 'img/[name].[ext]';  // Place image files in the img/ folder
             default:
               return 'assets/[name].[ext]';  // Default case for other assets
           }
