@@ -50,7 +50,7 @@
     "package-lock.json",
     {
       "filename": "docs/antora.yml",
-      "updater": "docs/antora-version-updater.js"
+      "updater": "docs/antora-version-updater.cjs"
     }
   ]
 }
