@@ -34,7 +34,7 @@ Author Name
 </style>
 ++++
 
-=== 1.1. Interface and main text
+=== Interface and main text
 
 ++++
 <div class="styletable">
@@ -416,8 +416,6 @@ In hac habitasse platea dictumst.
 
  $ ls -la && echo "done."
 
-// end::blocks[]
-
 === Collapsible blocks
 
 .Click to open/close the details (default closed)
@@ -436,6 +434,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Vivamus sollicitudin ac mauris eget imperdiet.
 Etiam vulputate nunc eget volutpat aliquam.
 ====
+
+// end::blocks[]
 
 == Media
 

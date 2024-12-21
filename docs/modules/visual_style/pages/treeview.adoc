@@ -38,3 +38,13 @@ Or replace the Unicode whitespace in the output:
 
     $ tree --noreport -a --dirsfirst <folder> | sed -e 's/\xC2\xA0/ /g'
 ====
+
+== Implementation
+
+The source highlighting for treeview is done with two files:
+
+`/src/js/vendor/hljs-treeview.ts` contains regular expressions to match file and folder names,
+and to assign CSS class names.
+
+`/src/css/vendor/treeview.css` contains the CSS classes to style each element.
+These classes assign icons from several fonts (Material Icons, Font Awesome free, and Font Awesome brands).

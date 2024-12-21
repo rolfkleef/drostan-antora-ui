@@ -1,0 +1,13 @@
+drostan-antora-ui
+|-- antora <.>
+|-- build <.>
+|-- .devcontainer <.>
+|-- dist <.>
+|   |-- build outputs
+|   `-- ui-bundle.zip
+|-- docs <.>
+|-- .github <.>
+|-- public <.>
+|-- src <.>
+|-- index.html <.>
+`-- vite.config.js <.>

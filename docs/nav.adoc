@@ -1,6 +1,7 @@
 * Overview
 ** xref:index.adoc[]
 ** xref:history.adoc[]
+** xref:architecture-and-technology.adoc[]
 
 * How to
 ** xref:prerequisites.adoc[]
