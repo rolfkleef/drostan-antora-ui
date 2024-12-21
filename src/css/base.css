@@ -2,9 +2,6 @@ a:active {
   background-color: none;
 }
 
-
-dt,
-strong,
 th {
   font-weight: var(--body-font-weight-bold);
 }
@@ -24,7 +21,6 @@ sub {
 sup {
   top: -0.5em;
 }
-
 
 button {
   cursor: pointer;
@@ -69,5 +65,4 @@ object[type="image/svg+xml"]:not([width]) {
       scrollbar-color: var(--scrollbar-thumb-color) transparent;
     }
   }
-
 }
